@@ -1,0 +1,990 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
+
+
+.wrapperStartPage{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header .logo{
+  margin-top: 0;
+  display: flex;
+}
+.header .logo img{
+  height: 90px;
+  margin-right: 6px;
+  margin-bottom: 20px;
+}
+.header .logo span{
+  font-size: 27px;
+  font-weight: 800;
+  margin-top: 43px;
+  
+}
+
+
+.header{
+  display: flex;
+  height: 130px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav{
+  width: 22%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkMenu{
+  text-decoration: none;
+  color: #000000;
+}
+
+
+
+.buttonsHeader{
+  display: flex;
+  margin-left: 30px;
+}
+
+
+.header .regisButton{
+  position: relative;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.header .regisButton img{
+  width: 188px;
+  height: 40px;
+  
+}
+.header .regisButton span{
+  color: #fff;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+
+}
+
+
+
+
+.header .loginButton{
+  position: relative;
+  margin-top: 20px;
+}
+.header .loginButton img{
+  width: 148px;
+  height: 40px;
+  
+}
+.header .loginButton span{
+  color: #fff;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+}
+
+
+
+.modal_wrapper h2{
+  text-align: center;
+  font-size: 40px;
+}
+.modal_wrapper .close_icon{
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal_form span{
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.modal_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  justify-content: start;
+}
+.modal_form input{
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+}
+.modal_form .btnStartStudy{
+  width: 300px;
+  height: 40px;
+}
+
+
+.modal_form .regisButton{
+  position: relative;
+  margin-top: 25px;
+}
+.modal_form .regisButton span{
+  position: absolute;
+  left: 80px;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+.changeLanguage{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.changeLanguage img{
+  margin-left: 3px;
+  width: 13px;
+  height: 10px;
+}
+
+
+
+
+
+
+/* Banner */
+.bannerWrapper{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.bannerWrapper .bannerInfo{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.bannerWrapper h2{
+  color: #E14545;
+  font-weight: 600;
+  font-size: 120px;
+  margin: 0;
+  padding: 0;
+}
+.bannerWrapper h1{
+  color: #ADADAD;
+  font-weight: 800;
+  font-size: 120px;
+  margin: 0;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.bannerWrapper h4{
+  font-size: 31px;
+  margin: 0;
+}
+.bannerWrapper .smallBtn{
+  height: 8px;
+  width: 70px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.bannerWrapper span{
+  font-size: 18px;
+}
+
+
+
+
+.bannerWrapper .regisButton{
+  position: relative;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.bannerWrapper .regisButton img{
+  width: 280px;
+  height: 43px;
+  margin-top: 25px;
+  
+}
+.bannerWrapper .regisButton span{
+  color: #fff;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .logo{
+  margin-top: 0;
+  display: flex;
+}
+.footer .logo img{
+  height: 90px;
+  margin-right: 6px;
+  margin-bottom: 20px;
+}
+.footer .logo h3{
+  font-size: 27px;
+  font-weight: 800;
+  margin: 0;
+  margin-top: 33px;
+  
+}
+.footer .logo span{
+  font-size: 16px;
+}
+
+
+.footer .infoFooter span{
+  margin-left: 40px;
+}
+
+
+.footer .socialNetworks{
+  display: flex;
+  align-items: center;
+}
+.footer .socialNetworks img{
+  margin-left: 8px;
+}
+
+
+
+
+.bannerPhoto{
+  height: 540px;
+  width: 570px;
+}
+
+
+
+
+
+
+/* FirstForm */
+.firstForm{
+  margin-top: 50px;
+}
+.infoForm{
+  display: flex;
+  justify-content: space-between;
+}
+
+.photoForm{
+  position: relative;
+}
+
+
+.photoForm .flagForm{
+  position: absolute;
+  top: 35px;
+  left: 135px;
+}
+
+
+.firstForm .photoForm h2{
+  font-size: 250px;
+  color: #E04545;
+  font-weight: 800;
+  margin: 0;
+
+  position: absolute;
+  left: 20px;
+  top: -10px;
+}
+.firstForm .photoForm h3{
+  font-size: 40px;
+  color: #EB4436;
+  font-weight: 800;
+  margin: 0;
+
+  position: absolute;
+  left: 180px;
+  top: 190px;
+}
+.firstForm .photoForm h4{
+  font-size: 30px;
+  color: #000000;
+  font-weight: 500;
+  margin: 0;
+
+  position: absolute;
+  left: 180px;
+  top: 158px;
+}
+
+
+
+
+.textForm{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 100px;
+}
+.btnStartStudy{
+  height: 8px;
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+
+
+.form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.form input{
+  width: 400px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+}
+.firstForm .form .btnStartStudy{
+  width: 400px;
+  height: 50px;
+}
+
+
+.form .regisButton{
+  position: relative;
+}
+.form .regisButton span{
+  position: absolute;
+  top: 12px;
+  left: 110px;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* WhyWe */
+
+.WhyWe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 80px;
+}
+
+.WhyWe .trainBlock{
+  position: relative;
+}
+.WhyWe .trainBlock .trainCircle{
+  width: 300px;
+  height: 220px;
+}
+.WhyWe .trainBlock .trainPhoto{
+  position: absolute;
+  top: -20px;
+  left: 100px;
+
+  width: 150px;
+  height: 150px;
+}
+.WhyWe .trainBlock div{
+  position: absolute;
+  left: 90px;
+  bottom: 50px;
+}
+.WhyWe .trainBlock div span{
+  color: #EB3A2D;
+}
+
+
+
+
+.WhyWe .readBlock{
+  position: relative;
+}
+.WhyWe .readBlock .readCircle{
+  width: 290px;
+  height: 210px;
+}
+.WhyWe .readBlock .readPhoto{
+  position: absolute;
+  top: 10px;
+  left: 90px;
+
+  width: 120px;
+  height: 120px;
+}
+.WhyWe .readBlock div{
+  position: absolute;
+  left: 80px;
+  bottom: 50px;
+}
+.WhyWe .readBlock div span{
+  color: #EB3A2D;
+}
+
+
+
+
+
+.WhyWe .developBlock{
+  position: relative;
+}
+.WhyWe .developBlock .developCircle{
+  width: 330px;
+  height: 180px;
+}
+.WhyWe .developBlock .developPhoto{
+  position: absolute;
+  top: -10px;
+  left: 110px;
+
+  width: 130px;
+  height: 130px;
+}
+.WhyWe .developBlock div{
+  position: absolute;
+  left: 70px;
+  bottom: 30px;
+}
+.WhyWe .developBlock div span{
+  color: #EB3A2D;
+}
+
+
+
+
+
+.WhyWe .travelBlock{
+  position: relative;
+}
+.WhyWe .travelBlock .travelCircle{
+  width: 260px;
+  height: 240px;
+}
+.WhyWe .travelBlock .travelPhoto{
+  position: absolute;
+  top: 20px;
+  left: 60px;
+
+  width: 120px;
+  height: 120px;
+}
+.WhyWe .travelBlock div{
+  position: absolute;
+  left: 70px;
+  bottom: 60px;
+}
+.WhyWe .travelBlock div span{
+  color: #EB3A2D;
+}
+
+
+
+
+
+
+/* UniqueTechnique */
+
+.uniqueTechnique{
+  display: flex;
+  justify-content: space-between;
+}
+
+.uniqueTechnique .uniqueVideo{
+  width: 45%;
+}
+
+.uniqueTechnique .uniqueTechniqueText{
+  width: 45%;
+}
+.uniqueTechnique .uniqueTechniqueText .btnStartStudy{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.uniqueTechniqueWrapper h1{
+  font-size: 250px;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
+}
+
+
+
+/* SecondFormStartPage */
+.secondFormWrapper{
+  display: flex;
+  margin-top: 30px;
+}
+
+
+.leftVoice {
+  position: relative;
+}
+.leftVoice .photoSecondForm{
+  width: 70%;
+}
+.leftVoice h1{
+  font-size: 200px;
+  color: #E04545;
+  font-weight: 800;
+  margin: 0;
+
+  position: absolute;
+  right: 170px;
+  top: -30px;
+}
+.leftVoice .flagForm{
+  position: absolute;
+  top: 35px;
+  right: 90px;
+  width: 110px;
+}
+
+
+.leftVoice h3{
+  font-size: 27px;
+  color: #EB4436;
+  font-weight: 800;
+  margin: 0;
+
+  position: absolute;
+  right: 20px;
+  top: 165px;
+}
+.leftVoice h4{
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+  margin: 0;
+
+  position: absolute;
+  right: 110px;
+  top: 140px;
+}
+
+
+
+
+.rightForm h2{
+  margin: 0;
+}
+.rightForm span{
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.rightForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  justify-content: start;
+  margin-left: 200px;
+}
+.rightForm input{
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+}
+.rightForm .btnStartStudy{
+  width: 300px;
+  height: 40px;
+}
+
+
+.rightForm .regisButton{
+  position: relative;
+  margin-top: 25px;
+}
+.rightForm .regisButton span{
+  position: absolute;
+  left: 80px;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+
+
+/* StudyByTravelling */
+
+
+.studyAndTravelWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.studyAndTravelWrapper .leftPartText{
+  width: 45%;
+}
+
+.studyAndTravelWrapper .leftPartText .amount{
+  color: #E04545;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.studyAndTravelWrapper .leftPartText h3{
+  font-size: 23px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+
+.studyAndTravelWrapper .leftPartText .informationAboutCountry{
+  margin-bottom: 60px;
+}
+
+.studyAndTravelWrapper .leftPartText .informationAboutCountry .aboutCountry{
+  font-size: 15px;
+}
+
+.studyAndTravelWrapper .leftPartText .levelsCircle{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.levelsCircle .A1_circle, .levelsCircle .A2_circle, .levelsCircle .B1_circle, .levelsCircle .B2_circle, .levelsCircle .C1_circle{
+  position: relative;
+  cursor: pointer;
+}
+.levelsCircle .A1_circle img, .levelsCircle .A2_circle img, .levelsCircle .B1_circle img, .levelsCircle .B2_circle img, .levelsCircle .C1_circle img{
+  height: 75px;
+  width: 85px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.levelsCircle .A1_circle .A1_circle_NO_active span, .levelsCircle .A2_circle .A2_circle_NO_active span, .levelsCircle .B1_circle .B1_circle_NO_active span, .levelsCircle .B2_circle .B2_circle_NO_active span, .levelsCircle .C1_circle .C1_circle_NO_active span{
+  position: absolute;
+  top: 20px;
+  left: 25px;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+
+.levelsCircle .A1_circle .A1_circle_active span{
+  position: absolute;
+  top: 20px;
+  left: 25px;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+
+
+
+
+.studyAndTravelWrapper .rightPartCountries{
+  width: 40%;
+  height: 700px;
+
+  position: relative;
+}
+
+.liechtenstein_country{
+  position: absolute;
+
+  left: 137px;
+  bottom: 102px;
+}
+.luxembourg_country{
+  position: absolute;
+  top: 336px;
+  left: -17px;
+}
+.switzerland_country{
+  position: absolute;
+
+  bottom: 30px;
+  left: -60px;
+}
+.austria_country{
+  position: absolute;
+
+  bottom: 40px;
+  left: 158px;
+}
+
+.rightPartCountries .A1_map_circle{
+  position: absolute;
+
+  bottom: -23px;
+  left: 170px;
+}
+.rightPartCountries .A2_map_circle{
+  position: absolute;
+
+  bottom: 212px;
+  left: -97px;
+}
+.rightPartCountries .B1_map_circle{
+  position: absolute;
+
+  bottom: -25px;
+  left: -150px;
+}
+.rightPartCountries .B2_map_circle{
+  position: absolute;
+
+  bottom: 232px;
+  left: 454px;
+}
+.rightPartCountries .C1_map_circle{
+  position: absolute;
+
+  top: 65px;
+  left: 0px;
+}
+
+.rightPartCountries .A1_map_circle .A1_map_circle_active{
+  position: relative;
+  cursor: pointer;
+}
+.rightPartCountries .A1_map_circle .A1_map_circle_NO_active, .rightPartCountries .A2_map_circle .A2_map_circle_NO_active, .rightPartCountries .B1_map_circle .B1_map_circle_NO_active, .rightPartCountries .B2_map_circle .B2_map_circle_NO_active, .rightPartCountries .C1_map_circle .C1_map_circle_NO_active{
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.rightPartCountries .A1_map_circle img, .rightPartCountries .A2_map_circle img, .rightPartCountries .B1_map_circle img, .rightPartCountries .B2_map_circle img, .rightPartCountries .C1_map_circle img{
+  height: 55px;
+  width: 65px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.rightPartCountries .A1_map_circle .A1_map_circle_NO_active span, .rightPartCountries .A2_map_circle .A2_map_circle_NO_active span, .rightPartCountries .B1_map_circle .B1_map_circle_NO_active span, .rightPartCountries .B2_map_circle .B2_map_circle_NO_active span, .rightPartCountries .C1_map_circle .C1_map_circle_NO_active span{
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.rightPartCountries .A1_map_circle .A1_map_circle_active span{
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+.rightPartCountries .a1_line{
+  position: absolute;
+
+  bottom: 40px;
+  left: 147px;
+
+  z-index: 2;
+}
+.rightPartCountries .a2_line{
+  position: absolute;
+
+  bottom: 275px;
+  left: -46px;
+
+  z-index: 2;
+}
+.rightPartCountries .b1_line{
+  position: absolute;
+
+  bottom: 25px;
+  left: -95px;
+
+  z-index: 2;
+}
+.rightPartCountries .b2_line{
+  position: absolute;
+
+  bottom: 180px;
+  left: 466px;
+
+  z-index: 2;
+}
+.rightPartCountries .c1_line{
+  position: absolute;
+
+  top: 90px;
+  left: 50px;
+
+  z-index: 2;
+}
+
+
+
+
+
+
+
+/* Country Block */
+
+.liechtenstein_block{
+  width: 90%;
+  height: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  border-radius: 30px;
+
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+}
+
+.liechtenstein_block h1{
+  font-size: 150px;
+  text-align: center;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
+}
+
+.liechtenstein_block_about{
+  display: flex;
+}
+.liechtenstein_block_about .part_photo_country{
+  width: 40%;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.liechtenstein_block_about .part_photo_country img{
+  display: block;
+  margin: 0 auto;
+}
+.liechtenstein_block_about .part_photo_country .line_under_country{
+  width: 90%;
+  margin-top: 25px;
+}
+
+
+
+
+
+
+.liechtenstein_block_about .part_about_country{
+  width: 50%;
+}
+.part_about_country .title_about_country{
+  display: flex;
+  align-items: center;
+}
+.part_about_country .A1_circle_active {
+  position: relative;
+  cursor: pointer;
+
+  display: inline-block;
+  margin: 0;
+}
+.part_about_country .A1_circle_active img{
+  height: 65px;
+  width: 75px;
+  margin-right: 10px;
+  
+}
+.part_about_country .A1_circle_active span{
+  position: absolute;
+  top: 17px;
+  left: 22px;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+.part_about_country h2{
+  margin: 0;
+  display: inline-block;
+}
+
+.part_about_country p{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+
+.part_about_country .point_list{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.part_about_country .point_list img{
+  width: 29px;
+  height: 29px;
+
+  margin-right: 10px;
+}
+
+.part_about_country .point_list span{
+  margin-top: 6px;
+  line-height: 1.5;
+
+  font-weight: 600;
+}

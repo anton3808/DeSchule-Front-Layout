@@ -1,0 +1,90 @@
+.header{
+  grid-area: h;
+  background-color: #fff;
+  display: flex;
+  border-left: 2px solid #F4F4F4;  
+}
+.header .logo img{
+  height: 90px;
+  
+  margin-left: 20px;
+  margin-right: 6px;
+}
+.logo{
+  border-right: 1px solid #F4F4F4;
+  width: 298px;
+  margin-top: 0;
+  height: 100%;
+  display: flex;
+
+}
+.logo span{
+  font-size: 27px;
+  font-weight: 800;
+  margin-top: 43px;
+  
+}
+
+
+.header_menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.currentPage{
+  width: 150px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+.currentPage span{
+  color: #020202;
+  font-size: 17px;
+}
+
+.loginBlock {
+  float: right;
+}
+
+.loginBlock a{
+  color: white;
+}
+
+
+.time{
+  margin-left: 200px;
+}
+
+.dictionary_img{
+  height: 26px;
+  margin-left: 370px;
+}
+.bell{
+  height: 24px;
+  margin-left: 20px;
+}
+.user_data{
+  display: flex;
+  margin-left: 20px;
+}
+
+.user_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6px;
+  margin-bottom: -10px;
+}
+
+.name{
+  font-size: 14px;
+}
+
+.status{
+  font-size: 13px;
+  color: #838383;
+}

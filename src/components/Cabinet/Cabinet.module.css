@@ -1,0 +1,99 @@
+.wrapperUserData{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.userData{
+    width: 40%;
+}
+
+.achievements{
+
+    height: 340px;
+    background-color: #F4F4F4;
+    border-radius: 30px 30px 0 0;
+    margin-bottom: 30px;
+}
+
+.editData{
+
+    height: 156px;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    border: 1px solid #D8D8D8;
+}
+
+.cabinetChallenge{
+    width: 40%;
+}
+.cabinetChallenge h1{
+    margin: 0 auto;
+    color: #E0E0E0;
+    font-size: 60px;
+}
+
+.cabinetChallenge img{
+    margin: 0;
+    height: 500px;
+    width: 500px;
+}
+
+
+
+
+
+
+.modal_wrapper h2{
+  text-align: center;
+  font-size: 40px;
+}
+.modal_wrapper .close_icon{
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal_form span{
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.modal_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  justify-content: start;
+}
+.modal_form input{
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+}
+.modal_form .btnStartStudy{
+  width: 300px;
+  height: 40px;
+}
+
+
+.modal_form .regisButton{
+  position: relative;
+  margin-top: 35px;
+}
+.modal_form .regisButton span{
+  position: absolute;
+  left: 130px;
+  color: #fff;
+  font-size: 16px;
+}
+

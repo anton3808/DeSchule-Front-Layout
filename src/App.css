@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
+
+.app-wrapper{
+  display: grid;
+
+  
+  margin: 0 auto;
+
+  grid-template-areas: 
+  "n h"
+  "n c";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: auto 9.5fr;
+  /* grid-gap: 10px; */
+}
+
+.app-wrapper-content{
+  grid-area: c;
+  background-color: #fff;
+  border-left: 2px solid #F4F4F4;
+  height: 700px;
+}
