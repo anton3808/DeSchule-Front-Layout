@@ -23,7 +23,11 @@ const customStyles = {
 
 {/* <ProfileInfo profile={props.profile} status={ props.status } updateStatus={props.updateStatus} />
       <MyPostsContainer  /> */}
-const Cabinet = (props) => {
+const Cabinet = ({ auth }) => {
+
+  useEffect(() => {
+    console.log('AUTHHHHHH', auth);
+  }, [auth])
 
   let subtitle;
   const [loginFormIsOpen, setLoginFormIsOpen] = React.useState(false);
@@ -49,13 +53,12 @@ const Cabinet = (props) => {
         </div>
         <div className={s.cabinetChallenge}>
           <h1>CHALLENGE</h1>
-          <img src={ circle_challenge }/>
+          <img src={circle_challenge} />
         </div>
       </div>
 
 
-
-      <Modal
+      {auth !== '1'  && <Modal
         isOpen={loginFormIsOpen}
         onAfterOpen={afterOpenLoginForm}
         style={customStyles}
@@ -66,8 +69,8 @@ const Cabinet = (props) => {
           <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Створити пароль</h2>
 
           <form className={s.modal_form}>
-            <input type="text" value="Пароль"/>
-            <input type="text" value="Підтвердити пароль"/>
+            <input type="text" value="Пароль" />
+            <input type="text" value="Підтвердити пароль" />
 
             <div className={s.regisButton}>
               <img className={s.btnStartStudy} src={btnBanner} />
@@ -75,12 +78,13 @@ const Cabinet = (props) => {
             </div>
           </form>
         </div>
-              
-      </Modal>
+
+      </Modal>}
+
 
 
     </div>
-    
+
   );
 
 }

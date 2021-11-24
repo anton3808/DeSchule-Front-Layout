@@ -65,7 +65,7 @@ const App = (props) => {
         {/* Route это компонента еоторая смотрит за url, если он совпадает то делает render */}
         {/* <Route path="/calendar" render={ () => <DialogsContainer /> } /> */}
 
-        <Route path="/cabinet" render={() => <Cabinet />} /> {/* :userId - параметр з урл адреса, ? - етот знак сообщает что етот параметр не обязательний*/}
+        <Route path="/cabinet" render={() => <Cabinet auth={localStorage.getItem('auth')} />} /> {/* :userId - параметр з урл адреса, ? - етот знак сообщает что етот параметр не обязательний*/}
         <Route path="/calendar" render={() => <Calendar />} />
         <Route path="/news" render={() => <NewsContainer />} />
         <Route path="/challenge" render={() => <Challenge />} />
