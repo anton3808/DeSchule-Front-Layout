@@ -1,10 +1,11 @@
 import React from 'react';
 import s from '../StartPage.module.css';
-import {NavLink, Route} from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import Modal from 'react-modal';
 import bannerPhoto from '../../../assets/images/bannerPhoto.png';
 import btnBanner from '../../../assets/images/btnBanner.png';
 import close_icon from '../../../assets/images/close.svg';
+import ModalRegAuth from '../../ModalRegAuth/ModalRegAuth';
 
 
 
@@ -20,7 +21,7 @@ const customStyles = {
 };
 
 const BannerStartPage = () => {
-  
+
   let subtitle;
   const [registrationFormIsOpen, setRegistrationFormIsOpen] = React.useState(false);
 
@@ -33,7 +34,7 @@ const BannerStartPage = () => {
 
   let afterOpenRegistrationForm = () => {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    // subtitle.style.color = '#f00';
   }
 
 
@@ -42,9 +43,13 @@ const BannerStartPage = () => {
     setRegistrationFormIsOpen(false);
   }
 
-        
+  const onReg = () => {
+    console.log('click reg');
+  }
+
+
   return (
-    
+
     <div className={s.bannerWrapper}>
       <div className={s.bannerInfo}>
         <h2>Hallo</h2>
@@ -55,16 +60,24 @@ const BannerStartPage = () => {
 
         <span>Вивчай німецьку легко та цікаво з нашою унікальною методикою асоціативного викладення матеріалу.</span>
 
-        
+
 
         <div onClick={openRegistrationForm} className={s.regisButton}>
           <img className={s.btnStartStudy} src={btnBanner} />
           <span>Спробувати безкоштовно!</span>
         </div>
 
-        
-            
-        <Modal
+        <ModalRegAuth
+          type='reg'
+          isOpen={registrationFormIsOpen}
+          onAfterOpen={afterOpenRegistrationForm}
+          onRequestClose={closeRegistrationForm}
+          style={customStyles}
+          contentLabel="Example Modal"
+          funcClick={onReg}
+        />
+
+        {/* <Modal
           isOpen={registrationFormIsOpen}
           onAfterOpen={afterOpenRegistrationForm}
           onRequestClose={closeRegistrationForm}
@@ -77,27 +90,28 @@ const BannerStartPage = () => {
             <img onClick={closeRegistrationForm} src={close_icon} className={s.close_icon}></img>
 
             <form className={s.modal_form}>
-              <input type="text" value="Ваше ім’я"/>
-              <input type="text" value="Номер телефону"/>
 
-              <div className={s.regisButton}>
+              <input type="text" value="Ваше ім’я" />
+              <input type="text" value="Номер телефону" />
+
+              <div onClick className={s.regisButton}>
                 <img className={s.btnStartStudy} src={btnBanner} />
                 <span>Розпочати навчання</span>
               </div>
             </form>
           </div>
-              
-
-        </Modal>
 
 
-        
+        </Modal> */}
+
+
+
       </div>
 
-      
+
 
       <img className={s.bannerPhoto} src={bannerPhoto} />
-      
+
 
     </div>
   );

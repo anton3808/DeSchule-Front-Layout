@@ -137,6 +137,7 @@
 .modal_form .regisButton{
   position: relative;
   margin-top: 25px;
+  cursor: pointer;
 }
 .modal_form .regisButton span{
   position: absolute;
