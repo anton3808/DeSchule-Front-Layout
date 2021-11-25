@@ -91,7 +91,12 @@
 }
 
 
-
+.modal_wrapper{
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
 .modal_wrapper h2{
   text-align: center;
   font-size: 40px;
@@ -105,20 +110,84 @@
   right: 10px;
 }
 
-.modal_form span{
+.packagesOfCourse{
+  display: flex;
+}
+
+.modal_wrapper .freeCoupleOfLessons{
+  display: inline-block;
+  width: 400px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: #d8d7d7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.modal_wrapper .freeCoupleOfLessons h3{
+  text-align: center;
+  margin-top: 20px;
+}
+.modal_wrapper .freeCoupleOfLessons span{
+  background-color: #E84A47;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.modal_wrapper .wholeCourse{
+  display: inline-block;
+  width: 400px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: #d8d7d7;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.modal_wrapper .wholeCourse h3{
+  text-align: center;
+  margin-top: 20px;
+}
+.modal_wrapper .wholeCourse span{
+  background-color: #E84A47;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+}
+
+
+
+
+
+
+
+
+ 
+.resetPasswordForm span{
   width: 300px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.modal_form{
+.resetPasswordForm{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
   justify-content: start;
+
+  margin: 0 auto;
+  margin-top: 20px;
 }
-.modal_form input{
+.resetPasswordForm input{
   width: 300px;
   height: 40px;
   border-radius: 40px;
@@ -128,18 +197,93 @@
   color: #6A6A6A;
   margin-top: 15px;
 }
-.modal_form .btnStartStudy{
+.resetPasswordForm .btnStartStudy{
   width: 300px;
   height: 40px;
 }
 
 
-.modal_form .regisButton{
+.resetPasswordForm .regisButton{
   position: relative;
   margin-top: 25px;
   cursor: pointer;
 }
-.modal_form .regisButton span{
+.resetPasswordForm .sendToResertPassword{
+  position: absolute;
+  left: 120px;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+
+.modal_demo_form, .modal_full_form{
+  position: fixed;
+  top: -800px;
+
+  transition: 0.7s all ease;
+
+  /* display: none; */
+  
+  
+ 
+  /* height: 400px;
+  width: 200px; */
+  
+}
+
+.modal_demo_form.open, .modal_full_form.open{
+  position: relative;
+  top: 0;
+  /* height: 400px; */
+  
+}
+
+
+.modal_demo_form span{
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.modal_demo_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: start;
+
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.modal_demo_form input{
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+}
+.modal_demo_form .btnStartStudy{
+  width: 300px;
+  height: 40px;
+}
+
+
+.modal_demo_form .regisButton{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.modal_demo_form .login_button_text{
+  position: absolute;
+  left: 130px;
+  color: #fff;
+  font-size: 16px;
+}
+.modal_demo_form .regisButton .reg_button_text{
   position: absolute;
   left: 80px;
   color: #fff;
@@ -148,6 +292,48 @@
 
 
 
+
+
+.modal_full_form{
+  margin: 0 auto;
+}
+.modal_full_form span{
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.modal_full_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  justify-content: start;
+}
+.modal_full_form input{
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+}
+.modal_full_form .btnStartStudy{
+  width: 300px;
+  height: 40px;
+}
+.modal_full_form .regisButton{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.modal_full_form .regisButton span{
+  position: absolute;
+  left: 80px;
+  color: #fff;
+  font-size: 16px;
+}
 
 
 
