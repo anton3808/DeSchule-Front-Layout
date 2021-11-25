@@ -1,6 +1,6 @@
 import React from 'react';
 import s from '../StartPage.module.css';
-import { NavLink, Route } from "react-router-dom";
+import { NavLink, Route, useHistory } from "react-router-dom";
 import Modal from 'react-modal';
 import bannerPhoto from '../../../assets/images/bannerPhoto.png';
 import btnBanner from '../../../assets/images/btnBanner.png';
@@ -21,6 +21,8 @@ const customStyles = {
 };
 
 const BannerStartPage = () => {
+
+  const history = useHistory()
 
   let subtitle;
   const [registrationFormIsOpen, setRegistrationFormIsOpen] = React.useState(false);
@@ -43,8 +45,14 @@ const BannerStartPage = () => {
     setRegistrationFormIsOpen(false);
   }
 
-  const onReg = () => {
-    console.log('click reg');
+  const onReg = (name, surname, phone) => {
+    localStorage.setItem('auth', 2)
+    localStorage.setItem('name', name)
+    localStorage.setItem('surname', surname)
+    localStorage.setItem('phone', phone)
+
+    history.push('/cabinet')
+    // console.log('click reg', name, phone);
   }
 
 

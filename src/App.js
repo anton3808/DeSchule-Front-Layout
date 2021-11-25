@@ -6,34 +6,58 @@ import Navbar from './components/Navbar/Navbar';
 import Courses from './components/Courses/Courses';
 import Teacher from './components/Teacher/Teacher';
 import AboutUs from './components/AboutUs/AboutUs';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, useHistory } from "react-router-dom";
 
 import Calendar from './components/Calendar/Calendar';
 import CabinetContainer from './components/Cabinet/CabinetContainer';
 import Challenge from './components/Challenge/Challenge';
 import NewsContainer from './components/News/NewsContainer';
 import StartPageContainer from './components/StartPage/StartPageContainer';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Header from './components/Header/Header';
 import Cabinet from './components/Cabinet/Cabinet';
 import StartPage from './components/StartPage/StartPage';
+import { setUserAction } from './redux/reducers/auth-reducer';
 
 
 
 const App = (props) => {
 
   const { dataUser } = useSelector(state => state.auth)
+  const dispatch = useDispatch()
+  const history = useHistory()
 
   useEffect(() => {
     console.log('DATA USER REDUX', dataUser)
   }, [dataUser])
 
   useEffect(() => {
-    console.log('AUTH', localStorage.getItem('auth'));
-
+    const getItem = localStorage.getItem('userData')
+    if(getItem) {
+      if(Object.keys(JSON.parse(getItem)).length > 0) {
+        dispatch(setUserAction(JSON.parse(getItem)))
+      }
+    }
+    
   }, [])
 
+  useEffect(() => {
+    console.log('AUTH', localStorage.getItem('auth'));
+    if (localStorage.getItem('auth') === '0' || localStorage.getItem('auth') === null) {
+      history.push('/')
+    }
+  }, [])
+
+  useEffect(() => {
+    if (history.location.pathname === '/' && (localStorage.getItem('auth') === '1' || localStorage.getItem('auth') === '2')) {
+      // console.log('ZASHLI');
+      history.push('/cabinet')
+    }
+    // console.log(history.location, localStorage.getItem('auth') === '1');
+  }, [history.location.path])
+
   if (localStorage.getItem('auth') === '0' || localStorage.getItem('auth') === null) {
+
     return (
       <Route exact path="/" render={() => <StartPage />} />
     )

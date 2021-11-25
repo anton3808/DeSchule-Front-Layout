@@ -9,6 +9,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
 
     const [firstArea, setFirstArea] = useState('')
     const [secondArea, setSecondArea] = useState('')
+    const [thirdArea, setThirdArea] = useState('')
 
     useEffect(() => {
         if(!isOpen) {
@@ -40,12 +41,18 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                     />
                     <input
                         type={type === 'reg' ? "text" : 'password'}
-                        placeholder={type === 'reg' ? "Номер телефону" : "Пароль"}
+                        placeholder={type === 'reg' ? "Ваша фамилия" : "Пароль"}
                         value={secondArea}
                         onChange={e => setSecondArea(e.target.value)}
                     />
+                    {type === 'reg' && <input
+                        type={type === 'reg' ? "text" : 'password'}
+                        placeholder={type === 'reg' ? "Номер телефону" : "Пароль"}
+                        value={thirdArea}
+                        onChange={e => setThirdArea(e.target.value)}
+                    />}
 
-                    <div onClick={() => funcClick(firstArea, secondArea)} className={s.regisButton}>
+                    <div onClick={() => funcClick(firstArea, secondArea, thirdArea)} className={s.regisButton}>
                         <img className={s.btnStartStudy} src={btnBanner} />
                         {/* <input type='submit' value="Розпочати навчання" /> */}
                         <span>{type === 'reg' ? "Розпочати навчання" : "Увійти"}</span>
