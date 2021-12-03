@@ -45,10 +45,10 @@ const BannerStartPage = () => {
     setRegistrationFormIsOpen(false);
   }
 
-  const onReg = (name, surname, phone) => {
+  const onReg = (name, phone) => {
     localStorage.setItem('auth', 2)
     localStorage.setItem('name', name)
-    localStorage.setItem('surname', surname)
+    // localStorage.setItem('surname', surname)
     localStorage.setItem('phone', phone)
 
     history.push('/cabinet')
@@ -84,36 +84,6 @@ const BannerStartPage = () => {
           contentLabel="Example Modal"
           funcClick={onReg}
         />
-
-        {/* <Modal
-          isOpen={registrationFormIsOpen}
-          onAfterOpen={afterOpenRegistrationForm}
-          onRequestClose={closeRegistrationForm}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-          <div className={s.modal_wrapper}>
-            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Реєстрація</h2>
-
-            <img onClick={closeRegistrationForm} src={close_icon} className={s.close_icon}></img>
-
-            <form className={s.modal_form}>
-
-              <input type="text" value="Ваше ім’я" />
-              <input type="text" value="Номер телефону" />
-
-              <div onClick className={s.regisButton}>
-                <img className={s.btnStartStudy} src={btnBanner} />
-                <span>Розпочати навчання</span>
-              </div>
-            </form>
-          </div>
-
-
-        </Modal> */}
-
-
-
       </div>
 
 

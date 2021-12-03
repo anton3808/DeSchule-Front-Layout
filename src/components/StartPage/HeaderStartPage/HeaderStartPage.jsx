@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from '../StartPage.module.css';
 import { NavMenu, NavLink, Route, useHistory } from "react-router-dom";
 import dragon from '../../../assets/images/Dragon.png';
@@ -35,6 +35,8 @@ const HeaderStartPage = () => {
   const [registrationFormIsOpen, setRegistrationFormIsOpen] = React.useState(false);
   const [loginFormIsOpen, setLoginFormIsOpen] = React.useState(false);
 
+  const [errorText, setErrorText] = useState('')
+
   let openRegistrationForm = () => {
     setRegistrationFormIsOpen(true);
   }
@@ -52,6 +54,8 @@ const HeaderStartPage = () => {
     // subtitle.style.color = '#f00';
   }
 
+  
+
 
   let closeRegistrationForm = () => {
     setRegistrationFormIsOpen(false);
@@ -60,9 +64,16 @@ const HeaderStartPage = () => {
     setLoginFormIsOpen(false);
   }
 
-  const onReg = () => {
-    console.log('click reg');
+  const onReg = (name, phone) => {
+    localStorage.setItem('auth', 2)
+    localStorage.setItem('name', name)
+    // localStorage.setItem('surname', surname)
+    localStorage.setItem('phone', phone)
+
+    history.push('/cabinet')
+    // console.log('click reg', name, phone);
   }
+
 
   const onAuth = (login, password) => {
     axios.post(`${BASE_URL}/login`, {
@@ -75,15 +86,16 @@ const HeaderStartPage = () => {
           'Content-Type': 'application/json'
         }
       }).then(function (res) {
-        console.log('DATA LOGIN', res.data);
+        console.log('DATA LOGIN', res);
         localStorage.setItem('userData', JSON.stringify(res.data))
         localStorage.setItem('auth', 1)
         dispatch(setUserAction(res.data))
         history.push('/cabinet')
+        setErrorText('')
       }).catch(function (error) {
-        console.log('ERR', error);
+        console.log('ERR', error.name, error.message, error.stack);
+        setErrorText('Почта или пароль введены не правильно')
       })
-    console.log('click auth', login, password);
   }
 
 
@@ -123,6 +135,7 @@ const HeaderStartPage = () => {
           style={customStyles}
           contentLabel="Example Modal"
           funcClick={onReg}
+          errorText={errorText}
         />
 
         {/* <Modal
