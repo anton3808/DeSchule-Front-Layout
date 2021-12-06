@@ -10,6 +10,8 @@ import { useDispatch } from 'react-redux';
 import { setUserAction } from '../../redux/reducers/auth-reducer';
 import { useHistory } from 'react-router';
 
+import './Modal.scss'
+
 const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, contentLabel, funcClick, subtitle, errorText }) => {
 
     const [firstArea, setFirstArea] = useState('')
@@ -17,6 +19,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
     const [error, setError] = useState({ code: '', message: '' })
 
     const [forgotPass, setForgotPass] = useState(false)
+    const [showForgotPass, setShowForgotPass] = useState(false)
     const [inputForgotPass, setInputForgotPass] = useState('')
 
 
@@ -54,6 +57,10 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
             setError({ code: 'mail', message: 'Неверный формат почты' })
         } else if (objReg.mail.length === 0) {
             setError({ code: 'mail', message: 'Обязательное поле: Почта' })
+        } else if (objReg.name.length === 0) {
+            setError({ code: 'phone', message: 'Обязательное поле: Телефон' })
+        } else if (objReg.name.length === 0) {
+            setError({ code: 'name', message: 'Обязательное поле: Имя' })
         } else if (objReg.pass.length === 0) {
             setError({ code: 'pass', message: 'Обязательное поле: Пароль' })
         } else if (objReg.repPass.length === 0) {
@@ -108,6 +115,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                     console.log('REG DATA', res);
                     setInputForgotPass('')
                     setForgotPass(true)
+                    setShowForgotPass(false)
                 }).catch(function (error) {
                     console.log('ERR', error);
                 })
@@ -116,7 +124,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
 
     const changePass = (userData) => {
         if (userData.code.length === 0) {
-            setError({ code: 'mail', message: 'Обязательное поле: Почта' })
+            setError({ code: 'code', message: 'Обязательное поле: Код' })
         } else if (userData.new_password.length === 0) {
             setError({ code: 'pass', message: 'Обязательное поле: Пароль' })
         } else if (userData.new_password_confirmation.length === 0) {
@@ -166,9 +174,13 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
             contentLabel={contentLabel}
         >
             <div className={s.modal_wrapper}>
-                <h2>{type === 'reg' ? 'Реєстрація' : 'Увійти'}</h2>
+                {!showForgotPass && !forgotPass && <h2>{type === 'reg' ? 'Реєстрація' : 'Увійти'}</h2>}
 
-                <img onClick={onRequestClose} src={close_icon} className={s.close_icon}></img>
+                <img onClick={() => {
+                    setShowForgotPass(false)
+                    setForgotPass(false)
+                    onRequestClose()
+                }} src={close_icon} className={s.close_icon}></img>
 
                 {type === 'reg' ?
                     <div className={s.packagesOfCourse}>
@@ -193,24 +205,25 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                     </div>
                     :
 
-                    <form
+                    !showForgotPass && !forgotPass && <form
                         className={`${s.modal_demo_form} ${s.open}`}
                     >
 
                         <input
+                            className={errorText.length > 0 ? 'errorInput' : ''}
                             type="text"
                             placeholder={type === 'reg' ? "Ваше ім’я" : "Ваше логин(номер телефона)"}
                             value={firstArea}
                             onChange={e => setFirstArea(e.target.value)}
                         />
                         <input
+                            className={errorText.length > 0 ? 'errorInput' : ''}
                             type={type === 'reg' ? "text" : 'password'}
                             placeholder={type === 'reg' ? "Номер телефону" : "Пароль"}
                             value={secondArea}
                             onChange={e => setSecondArea(e.target.value)}
                         />
-
-                        <div>{errorText}</div>
+                        <div className='errorMessage'>{errorText}</div>
 
                         <div onClick={() => funcClick(firstArea, secondArea)} className={s.regisButton}>
                             <img className={s.btnStartStudy} src={btnBanner} />
@@ -219,7 +232,9 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
 
                         </div>
 
-                        {type === 'reg' ? null : <span className={s.resetPasswordText}> Забули пароль?</span>}
+                        {type === 'reg' ? null : <span onClick={() => {
+                            setShowForgotPass(true)
+                        }} className={s.resetPasswordText}> Забули пароль?</span>}
                     </form>
 
                 }
@@ -227,38 +242,40 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
 
 
 
-                {forgotPass
-                    ? <form
+                {forgotPass &&
+                    <form
                         className={`${s.resetPasswordForm} ${s.open}`}
                     >
                         <h3>Відновлення пароля</h3>
 
-                        <input type="text" value={userNewPass.code} placeholder='Код' onChange={(e) => setUserNewPass({...userNewPass, code: e.target.value})} />
-                        <input type="text" value={userNewPass.new_password} placeholder='Новый пароль' onChange={(e) => setUserNewPass({...userNewPass, new_password: e.target.value})} />
-                        <input type="text" value={userNewPass.new_password_confirmation} placeholder='Подтвердите пароль' onChange={(e) => setUserNewPass({...userNewPass, new_password_confirmation: e.target.value})} />
+                        <input className={error.code === 'code' && 'errorInput'} type="text" value={userNewPass.code} placeholder='Код' onChange={(e) => setUserNewPass({ ...userNewPass, code: e.target.value })} />
+                        <input className={error.code === 'pass' && 'errorInput'} type="password" value={userNewPass.new_password} placeholder='Новый пароль' onChange={(e) => setUserNewPass({ ...userNewPass, new_password: e.target.value })} />
+                        <input className={error.code === 'pass' && 'errorInput'} type="password" value={userNewPass.new_password_confirmation} placeholder='Подтвердите пароль' onChange={(e) => setUserNewPass({ ...userNewPass, new_password_confirmation: e.target.value })} />
 
-                        <div>{error.message}</div>
+                        <div className='errorMessage'>{error.message}</div>
 
                         <div onClick={() => changePass(userNewPass)} className={s.regisButton}>
                             <img className={s.btnStartStudy} src={btnBanner} />
                             <span className={s.sendToResertPassword}>Подтвердить</span>
                         </div>
                     </form>
-                    : <form
-                        className={`${s.resetPasswordForm} ${s.open}`}
-                    >
-                        <h3>Відновлення пароля</h3>
-
-                        <input type="text" value={inputForgotPass} placeholder='Почта' onChange={(e) => setInputForgotPass(e.target.value)} />
-
-                        {<div>{error.message}</div>}
-
-                        <div onClick={() => forgoPassFunc(inputForgotPass)} className={s.regisButton}>
-                            <img className={s.btnStartStudy} src={btnBanner} />
-                            <span className={s.sendToResertPassword}>Надіслати</span>
-                        </div>
-                    </form>
                 }
+                {showForgotPass && <form
+                    className={`${s.resetPasswordForm} ${s.open}`}
+                >
+                    <h3>Відновлення пароля</h3>
+
+                    <input className={error.code === 'mail' && 'errorInput'} type="text" value={inputForgotPass} placeholder='Почта' onChange={(e) => setInputForgotPass(e.target.value)} />
+
+                    <div className='errorMessage'>{error.message}</div>
+
+                    <div onClick={() => {
+                        forgoPassFunc(inputForgotPass)
+                    }} className={s.regisButton}>
+                        <img className={s.btnStartStudy} src={btnBanner} />
+                        <span className={s.sendToResertPassword}>Надіслати</span>
+                    </div>
+                </form>}
 
 
 
@@ -268,6 +285,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                 >
 
                     <input
+                        className={error.code === 'name' && 'errorInput'}
                         type="text"
                         placeholder={type === 'reg' ? "Ваше ім’я" : "Ваше логин(номер телефона)"}
                         value={firstArea}
@@ -295,10 +313,10 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
 
                 <form className={openFullForm ? `${s.modal_full_form} ${s.open}` : `${s.modal_full_form}`}>
 
-                    <input type="text" value={fullReg.name} onChange={(e) => setFullReg(({ ...fullReg, name: e.target.value }))} placeholder="Ім'я" />
+                    <input className={error.code === 'name' && 'errorInput'} type="text" value={fullReg.name} onChange={(e) => setFullReg(({ ...fullReg, name: e.target.value }))} placeholder="Ім'я" />
                     <input type="text" value={fullReg.surname} onChange={(e) => setFullReg(({ ...fullReg, surname: e.target.value }))} placeholder="Фамілія" />
                     <input type="text" value={fullReg.login} onChange={(e) => setFullReg(({ ...fullReg, login: e.target.value }))} placeholder="Логин" />
-                    <input type="text" value={fullReg.mail} onChange={(e) => setFullReg(({ ...fullReg, mail: e.target.value }))} placeholder="Почта" />
+                    <input className={error.code === 'mail' && 'errorInput'} type="text" value={fullReg.mail} onChange={(e) => setFullReg(({ ...fullReg, mail: e.target.value }))} placeholder="Почта" />
                     <input
                         ref={refDate}
                         type="text"
@@ -310,10 +328,10 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                     />
                     {/* <input type="text" value="Дата народження" /> */}
                     <input type="text" value={fullReg.phone} onChange={(e) => setFullReg({ ...fullReg, phone: e.target.value })} placeholder="Номер телефона" />
-                    <input type="text" value={fullReg.pass} onChange={(e) => setFullReg({ ...fullReg, pass: e.target.value })} placeholder="Пароль" />
-                    <input type="text" value={fullReg.repPass} onChange={(e) => setFullReg({ ...fullReg, repPass: e.target.value })} placeholder="Подтвердить пароль" />
+                    <input className={error.code === 'pass' && 'errorInput'} type="password" value={fullReg.pass} onChange={(e) => setFullReg({ ...fullReg, pass: e.target.value })} placeholder="Пароль" />
+                    <input className={error.code === 'pass' && 'errorInput'} type="password" value={fullReg.repPass} onChange={(e) => setFullReg({ ...fullReg, repPass: e.target.value })} placeholder="Подтвердить пароль" />
 
-                    {error.message}
+                    <div className='errorMessage'>{error.message}</div>
 
                     <div onClick={() => fullRegFunc(fullReg)} className={s.regisButton}>
                         <img className={s.btnStartStudy} src={btnBanner} />

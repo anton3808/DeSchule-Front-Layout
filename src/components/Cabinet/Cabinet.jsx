@@ -55,9 +55,13 @@ const Cabinet = ({ auth }) => {
   const validForm = (nextData) => {
     // console.log(nextData);
     if (/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(nextData.email) === false) {
-      setError({ code: 'email', message: 'Неверный формат почты' })
+      setError({ code: 'mail', message: 'Неверный формат почты' })
+    } else if (nextData.name.length === 0) {
+      setError({ code: 'name', message: 'Обязательное поле: Имя' })
+    } else if (nextData.name.length === 0) {
+      setError({ code: 'phone', message: 'Обязательное поле: Телефон' })
     } else if (nextData.email.length === 0) {
-      setError({ code: 'email', message: 'Обязательное поле: Почта' })
+      setError({ code: 'mail', message: 'Обязательное поле: Почта' })
     } else if (nextData.pass.length === 0) {
       setError({ code: 'pass', message: 'Обязательное поле: Пароль' })
     } else if (nextData.repPass.length === 0) {
@@ -78,7 +82,7 @@ const Cabinet = ({ auth }) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           }
-        }).then(res => {
+        }).then((res) => {
           console.log('REG DATA', res);
           localStorage.setItem('userData', JSON.stringify(res.data))
           localStorage.setItem('auth', 1)
@@ -124,12 +128,14 @@ const Cabinet = ({ auth }) => {
 
             <>
               <input
+                className={error.code === 'name' && 'errorInput'}
                 type="text"
                 placeholder="Ваше ім’я"
                 value={userNextData.name}
                 onChange={e => setUserNext(({ ...userNextData, name: e.target.value }))}
               />
               <input
+                className={error.code === 'phone' && 'errorInput'}
                 type="text"
                 placeholder="Номер телефону"
                 value={userNextData.phone}
@@ -137,16 +143,16 @@ const Cabinet = ({ auth }) => {
               />
             </>
 
-            <input type="text" placeholder="Почта" onChange={(e) => setUserNext(({ ...userNextData, email: e.target.value }))} />
-            <input type="text" placeholder="Пароль" onChange={(e) => setUserNext(({ ...userNextData, pass: e.target.value }))} />
-            <input type="text" placeholder="Підтвердити пароль" onChange={(e) => setUserNext(({ ...userNextData, repPass: e.target.value }))} />
+            <input className={error.code === 'mail' && 'errorInput'} type="text" placeholder="Почта" onChange={(e) => setUserNext(({ ...userNextData, email: e.target.value }))} />
+            <input className={error.code === 'pass' && 'errorInput'} type="password" placeholder="Пароль" onChange={(e) => setUserNext(({ ...userNextData, pass: e.target.value }))} />
+            <input className={error.code === 'pass' && 'errorInput'} type="password" placeholder="Підтвердити пароль" onChange={(e) => setUserNext(({ ...userNextData, repPass: e.target.value }))} />
 
             <div onClick={() => validForm(userNextData)} className={s.regisButton}>
               <img className={s.btnStartStudy} src={btnBanner} />
               <span>Увійти</span>
             </div>
           </form>
-          {error.message && <div>{error.message}</div>} {//ДОБАВИТЬ СЮДА СТИЛЕЙ
+          {<div className='errorMessage'>{error.message}</div>} {//ДОБАВИТЬ СЮДА СТИЛЕЙ
           }
 
         </div>

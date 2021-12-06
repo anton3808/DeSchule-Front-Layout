@@ -87,6 +87,7 @@ const HeaderStartPage = () => {
         }
       }).then(function (res) {
         console.log('DATA LOGIN', res);
+        console.log('DATA LOGIN', res.json());
         localStorage.setItem('userData', JSON.stringify(res.data))
         localStorage.setItem('auth', 1)
         dispatch(setUserAction(res.data))
@@ -178,6 +179,7 @@ const HeaderStartPage = () => {
           style={customStyles}
           contentLabel="Example Modal"
           funcClick={onAuth}
+          errorText={errorText}
         />
 
         {/* <Modal
