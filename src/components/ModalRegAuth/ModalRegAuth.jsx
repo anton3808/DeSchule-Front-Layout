@@ -148,6 +148,9 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                         'Content-Type': 'application/json'
                     }
                 }).then(res => {
+                    setFirstArea('')
+                    setSecondArea('')
+                    setError({ code: '', message: '' })
                     console.log('REG DATA', res);
                     setForgotPass(false)
                     history.push('/')
