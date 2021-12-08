@@ -23,6 +23,9 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
     const [inputForgotPass, setInputForgotPass] = useState('')
 
 
+    useEffect(() => {
+        console.log('error', error);
+    }, [error])
 
 
     const [fullReg, setFullReg] = useState({
@@ -93,7 +96,8 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                     dispatch(setUserAction(res.data))
                     history.push('/cabinet')
                 }).catch(function (error) {
-                    console.log('ERR', error);
+                    setError({ code: Object.keys(error.response.data.errors)[0], message: Object.values(error.response.data.errors)[0][0] })
+                    // console.log('ERR', Object.keys(error.response.data.errors)[0]);
                 })
         }
     }
@@ -265,7 +269,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                 >
                     <h3>Відновлення пароля</h3>
 
-                    <input className={error.code === 'mail' && 'errorInput'} type="text" value={inputForgotPass} placeholder='Почта' onChange={(e) => setInputForgotPass(e.target.value)} />
+                    <input className={(error.code === 'mail' || error.code === 'email') && 'errorInput'} type="text" value={inputForgotPass} placeholder='Почта' onChange={(e) => setInputForgotPass(e.target.value)} />
 
                     <div className='errorMessage'>{error.message}</div>
 
@@ -316,7 +320,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                     <input className={error.code === 'name' && 'errorInput'} type="text" value={fullReg.name} onChange={(e) => setFullReg(({ ...fullReg, name: e.target.value }))} placeholder="Ім'я" />
                     <input type="text" value={fullReg.surname} onChange={(e) => setFullReg(({ ...fullReg, surname: e.target.value }))} placeholder="Фамілія" />
                     <input type="text" value={fullReg.login} onChange={(e) => setFullReg(({ ...fullReg, login: e.target.value }))} placeholder="Логин" />
-                    <input className={error.code === 'mail' && 'errorInput'} type="text" value={fullReg.mail} onChange={(e) => setFullReg(({ ...fullReg, mail: e.target.value }))} placeholder="Почта" />
+                    <input className={(error.code === 'mail' || error.code === 'email') && 'errorInput'} type="text" value={fullReg.mail} onChange={(e) => setFullReg(({ ...fullReg, mail: e.target.value }))} placeholder="Почта" />
                     <input
                         ref={refDate}
                         type="text"
@@ -327,7 +331,7 @@ const ModalRegAuth = ({ type, isOpen, onAfterOpen, onRequestClose, style, conten
                         placeholder='Дата народження'
                     />
                     {/* <input type="text" value="Дата народження" /> */}
-                    <input type="text" value={fullReg.phone} onChange={(e) => setFullReg({ ...fullReg, phone: e.target.value })} placeholder="Номер телефона" />
+                    <input className={error.code === 'phone' && 'errorInput'} type="text" value={fullReg.phone} onChange={(e) => setFullReg({ ...fullReg, phone: e.target.value })} placeholder="Номер телефона" />
                     <input className={error.code === 'pass' && 'errorInput'} type="password" value={fullReg.pass} onChange={(e) => setFullReg({ ...fullReg, pass: e.target.value })} placeholder="Пароль" />
                     <input className={error.code === 'pass' && 'errorInput'} type="password" value={fullReg.repPass} onChange={(e) => setFullReg({ ...fullReg, repPass: e.target.value })} placeholder="Подтвердить пароль" />
 

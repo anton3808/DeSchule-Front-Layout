@@ -94,7 +94,7 @@ const HeaderStartPage = () => {
         history.push('/cabinet')
         setErrorText('')
       }).catch(function (error) {
-        console.log('ERR', error.name, error.message, error.stack);
+        console.log('ERR', error.response);
         setErrorText('Почта или пароль введены не правильно')
       })
   }

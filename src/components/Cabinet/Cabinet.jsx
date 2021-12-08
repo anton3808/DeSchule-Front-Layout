@@ -90,7 +90,7 @@ const Cabinet = ({ auth }) => {
           localStorage.removeItem('phone')
           dispatch(setUserAction(res.data))
         }).catch(function (error) {
-          console.log('ERR', error);
+          setError({ code: Object.keys(error.response.data.errors)[0], message: Object.values(error.response.data.errors)[0][0] })
         })
 
     }
@@ -143,7 +143,7 @@ const Cabinet = ({ auth }) => {
               />
             </>
 
-            <input className={error.code === 'mail' && 'errorInput'} type="text" placeholder="Почта" onChange={(e) => setUserNext(({ ...userNextData, email: e.target.value }))} />
+            <input className={(error.code === 'mail' || error.code === 'email') && 'errorInput'} type="text" placeholder="Почта" onChange={(e) => setUserNext(({ ...userNextData, email: e.target.value }))} />
             <input className={error.code === 'pass' && 'errorInput'} type="password" placeholder="Пароль" onChange={(e) => setUserNext(({ ...userNextData, pass: e.target.value }))} />
             <input className={error.code === 'pass' && 'errorInput'} type="password" placeholder="Підтвердити пароль" onChange={(e) => setUserNext(({ ...userNextData, repPass: e.target.value }))} />
 
