@@ -1,0 +1,842 @@
+.wrapperCalendar{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+
+.study_plan_wrapper{
+    margin-left: 30px;
+    width: 350px;
+
+    
+}   
+.study_plan_wrapper h2{
+    padding: 10px 10px 10px 20px;
+    margin: 0;
+    border-radius: 15px 15px 0 0;
+    width: 140px;
+
+
+    background-color: #EB4436;
+    color: #fff;
+    font-size: 17px;
+}
+
+.study_plan_block .map_calendar_wrapper{
+    width: 350px;
+    height: 340px;
+    background-color: #ECECEC;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 0px 25px 0 0;
+
+    position: relative;
+
+}
+
+.study_plan_block .map_calendar_wrapper .map_calendar{
+    margin: 0 auto;
+    height: 280px;
+}
+
+.line_A1_calendar{
+    position: absolute;
+
+    bottom: 28px;
+    left: 133px;
+}
+.line_A2_calendar{
+    position: absolute;
+
+    bottom: 178px;
+    left: 47px;
+}
+.line_B1_calendar{
+    position: absolute;
+
+    bottom: 38px;
+    left: 41px;
+}
+.line_B2_calendar{
+    position: absolute;
+
+    bottom: 95px;
+    right: 37px;
+}
+.line_C1_calendar{
+    position: absolute;
+
+    top: 130px;
+    right: 60px;
+}
+
+
+.A1_map_calendar{
+    position: absolute;
+
+    height: 40px;
+    bottom: 5px;
+    left: 145px;
+}
+.A2_map_calendar{
+    position: absolute;
+
+    height: 30px;
+    bottom: 160px;
+    left: 20px;
+}
+.B1_map_calendar{
+    position: absolute;
+
+    height: 40px;
+    bottom: 15px;
+    left: 15px;
+}
+.B2_map_calendar{
+    position: absolute;
+
+    height: 36px;
+    bottom: 80px;
+    right: 10px;
+}
+.C1_map_calendar{
+    position: absolute;
+
+    height: 35px;
+    top: 105px;
+    right: 38px;
+}
+
+
+
+.country_none{
+    display: none;
+}
+.liechtenshtein_country_wrapper, .switzerland_country_wrapper, .luxembourg_country_wrapper, .austria_country_wrapper, .germany_country_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border: 1px solid #DBDBDB;
+    border-bottom: none;
+    border-radius: 0 20px 0 0px;
+}
+.liechtenshtein_country_wrapper h1{
+    font-size: 38px;
+    font-weight: 800;
+    color: #EB4436;
+    opacity: 0.2;
+
+    margin: 0;
+    margin-bottom: 10px;
+}
+.switzerland_country_wrapper h1{
+    font-size: 58px;
+    font-weight: 800;
+    color: #EB4436;
+    opacity: 0.2;
+
+    margin: 0;
+    margin-bottom: 20px;
+}
+.luxembourg_country_wrapper h1{
+    font-size: 46px;
+    font-weight: 800;
+    color: #EB4436;
+    opacity: 0.2;
+
+    margin: 0;
+    margin-bottom: 10px;
+}
+.austria_country_wrapper h1{
+    font-size: 65px;
+    font-weight: 800;
+    color: #EB4436;
+    opacity: 0.2;
+
+    margin: 0;
+    margin-bottom: 20px;
+}
+.germany_country_wrapper h1{
+    font-size: 60px;
+    font-weight: 800;
+    color: #EB4436;
+    opacity: 0.2;
+
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+.liechtenshtein_country{
+    height: 300px;
+    width: 170px;
+    
+}
+.switzerland_country{
+    width: 290px;
+}
+.luxembourg_country{
+    height: 300px;
+    width: 170px;
+}
+.austria_country{
+    width: 290px;
+}
+.germany_country{
+    height: 300px;
+    width: 240px;
+}
+
+
+
+
+
+
+
+.accordion {
+    width: 350px;
+
+    border-radius: 3px;
+}
+.accordion h3{
+    font-size: 16px;
+}
+
+.A1_accardion, .A2_accardion, .B1_accardion, .B2_accardion, .C1_accardion{
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #CECECE;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.accordion_visible {
+    background: #EB4436;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #CECECE;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.accordion span {
+    padding: 15px 0;
+    font-size: 17px;
+}
+.accordion img {
+    width: 18px;
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease-in-out;
+}
+.accordion img.active {
+    transform: rotate(0deg)
+}
+.accordion h2 {
+    font-size: 20px;
+}
+
+
+
+
+
+.accordion_toggle {
+    height: 0px;
+    font-size: 18px;
+    opacity: 0;
+    transition:  
+    opacity 0.3s ease-in-out,
+    height 0.3s 0.3s ease-in-out;
+    color: #333;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.animated {
+    opacity: 1;
+    transition:  
+    height 0.3s ease-in-out,
+    opacity 0.3s 0.3s ease-in-out;
+}
+.accordion_toggle .accordionLessons {
+    margin: 0;
+    padding: 10px 10px;
+    pointer-events: none;
+    line-height: 0.5;
+    border-left: 1px solid #DBDBDB;
+    border-right: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+
+}
+
+
+
+
+.blockLessonPass{
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+.blockLessonPass .numberOfLesson{
+    padding-top: 10px;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 17px;
+}
+.blockLessonPass .themeOfLesson {
+    font-weight: 300;
+    font-size: 16px;
+    color: #8E8E8E;
+}
+.blockLessonPass .homeworkLink{
+    display: flex;
+    align-items: center;
+}
+.blockLessonPass .homeworkLink .point_hw{
+    width: 7px;
+    height: 7px;
+    background-color: #F8832E;
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left: 3px;
+}
+.blockLessonPass .homeworkLink span{
+    font-size: 13px;
+    color: #6A6A6A;
+}
+
+
+
+
+
+
+
+.blockLessonActive{
+    background-color: #FFEFB7;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+
+    border-radius: 15px;
+    
+}
+
+.blockLessonActive .numberOfLesson{
+    padding-top: 10px;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 19px;
+}
+.blockLessonActive .themeOfLesson {
+    font-weight: 300;
+    font-size: 18px;
+}
+.blockLessonActive .homeworkLink{
+    display: flex;
+    align-items: center;
+}
+.blockLessonActive .homeworkLink .point_hw{
+    width: 7px;
+    height: 7px;
+    background-color: #F8832E;
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left: 3px;
+}
+.blockLessonActive .homeworkLink span{
+    font-size: 15px;
+}
+
+
+
+
+
+
+.blockLesson{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.blockLesson .lessonTitle{
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.blockLesson .numberOfLesson{
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+.blockLesson .themeOfLesson {
+    font-weight: 300;
+    font-size: 17px;
+}
+.blockLesson .homeworkLinkActive{
+    display: flex;
+    align-items: center;
+    background-color: #FFEFB7;
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    border-radius: 15px;
+}
+.blockLesson .homeworkLinkActive .point_hw{
+    width: 9px;
+    height: 9px;
+    background-color: #F8832E;
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left: 3px;
+}
+.blockLesson .homeworkLinkActive span{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+.blockLessonNext{
+    padding-right: 20px;
+    padding-top: 15px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.blockLessonNext .numberOfLesson{
+    padding-top: 10px;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 17px;
+}
+.blockLessonNext .themeOfLesson {
+    font-weight: 300;
+    font-size: 16px;
+    color: #8E8E8E;
+    line-height: 1.5;
+}
+.blockLessonNext .homeworkLinkNone{
+    display: none;
+    align-items: center;
+}
+.blockLessonNext .homeworkLink .point_hw{
+    width: 7px;
+    height: 7px;
+    background-color: #F8832E;
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left: 3px;
+}
+.blockLessonNext .homeworkLink span{
+    font-size: 14px;
+    color: #6A6A6A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Calendar */
+.classScheule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 850px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+.classScheule h2{
+   margin: 0;
+   margin-top: 20px;
+   margin-bottom: 25px;
+}
+
+.classScheule .scaleOfDay{
+    width: 130px;
+    height: 40px;
+    font-size: 17px;
+    color: #8E8E8E;
+
+    background-color: #fff;
+    border: 1px solid #8E8E8E;
+    border-radius: 20px;
+
+    margin-right: 15px;
+
+}
+.classScheule .scaleOfMonth{
+    width: 130px;
+    height: 40px;
+    font-size: 17px;
+    color: #E84A47;
+
+    background-color: #fff;
+    border: 1px solid #E84A47;
+    border-radius: 20px;
+}
+
+
+
+.calendarDecember, .calendarJanuary, .calendarFebruary, .calendarMarch, .calendarApril, .calendarMay, .calendarJune, .calendarJuly, .calendarAugust, .calendarSeptember, .calendarOctober, .calendarNovember{
+    width: 850px;
+    background-color: #EDEDED;
+    margin-top: 30px;
+    display: grid;
+    border-radius: 20px 20px 0 20px;
+}
+.month_indicator{
+    height: 80px;
+    width: 850px;
+    display: flex;
+    align-items: center;
+}
+.month_indicator .arrow_back_month{
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.month_indicator span{
+    font-size: 22px;
+    font-weight: 700;
+    color: #EB4436;  
+}
+
+.calendarDecember .month_indicator .arrow_next_month{
+    margin-left: 560px;
+}
+.calendarJanuary .month_indicator .arrow_next_month{
+    margin-left: 580px;
+}
+.calendarFebruary .month_indicator .arrow_next_month{
+    margin-left: 580px;
+}
+.calendarMarch .month_indicator .arrow_next_month{
+    margin-left: 550px;
+}
+.calendarApril .month_indicator .arrow_next_month{
+    margin-left: 570px;
+}
+.calendarMay .month_indicator .arrow_next_month{
+    margin-left: 560px;
+}
+.calendarJune .month_indicator .arrow_next_month{
+    margin-left: 560px;
+}
+.calendarJuly .month_indicator .arrow_next_month{
+    margin-left: 570px;
+}
+.calendarAugust .month_indicator .arrow_next_month{
+    margin-left: 560px;
+}
+.calendarSeptember .month_indicator .arrow_next_month{
+    margin-left: 550px;
+}
+.calendarOctober .month_indicator .arrow_next_month{
+    margin-left: 550px;
+}
+.calendarNovember .month_indicator .arrow_next_month{
+    margin-left: 540px;
+}
+
+
+.day_of_week{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.day_of_week div{
+    border-right: 1px solid #EB4436;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.day_of_week .sunday_day_of_week{
+    border-right: none;
+}
+.day_of_week div span{
+    color: #EB4436;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.date_grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+}
+.date_grid .gridCalendarDay{
+    border: 1px solid #fff;
+    height: 110px;
+    position: relative;
+}
+.date_grid .numberOfDay{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.calendarDecember .first_day{
+    grid-column-start: 3;
+}
+.calendarJanuary .first_day{
+    grid-column-start: 6;
+}
+.calendarFebruary .first_day{
+    grid-column-start: 2;
+} 
+.calendarMarch .first_day{
+    grid-column-start: 2;
+}
+.calendarApril .first_day{
+    grid-column-start: 5;
+}
+.calendarMay .first_day{
+    grid-column-start: 7;
+}
+.calendarJune .first_day{
+    grid-column-start: 3;
+}
+.calendarJuly .first_day{
+    grid-column-start: 5;
+}
+.calendarAugust .first_day{
+    grid-column-start: 1;
+} 
+.calendarSeptember .first_day{
+    grid-column-start: 4;
+} 
+.calendarOctober .first_day{
+    grid-column-start: 6;
+}
+.calendarNovember .first_day{
+    grid-column-start: 2;
+}
+
+
+
+.weekendCalendar{
+    border-right: 1px solid #EDEDED !important;
+    border-top: 1px solid #EDEDED !important;
+    border-bottom: 1px solid #EDEDED !important;
+    background-color: #fff;
+}
+.currentDay{
+    background-color: #FFEFB7;
+    border: none !important;
+}
+.scheuleOfDay{
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.scheuleOfDay .scheuleOfDayPoints img{
+    width: 8px;
+    margin-right: 4px;
+}
+.scheuleOfDay .scheuleOfDayPoints span{
+    font-size: 12px;
+}
+
+
+.calendarDecember .first_day{
+    grid-column-start: 3;
+}
+
+
+
+
+
+
+
+.pointsForExplanation{
+    display: flex;
+}
+.pointsForExplanation .lesson_point_color, .pointsForExplanation .homework_point_color, .pointsForExplanation .additional_topics_point_color, .pointsForExplanation .other_hings_point_color{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 30px;
+} 
+
+
+.pointsForExplanation .lesson_point_color img, .pointsForExplanation .homework_point_color img, .pointsForExplanation .additional_topics_point_color img, .pointsForExplanation .other_hings_point_color img{
+    width: 15px;
+    margin-right: 7px;
+}
+
+.pointsForExplanation .lesson_point_color span, .pointsForExplanation .homework_point_color span, .pointsForExplanation .additional_topics_point_color span, .pointsForExplanation .other_hings_point_color span{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Calendar Of Day */
+.calendarOfDay{
+    width: 850px;
+}
+.calendarOfDay .scheuleOfCurrentDay .day_indicator{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.calendarOfDay .scheuleOfCurrentDay .day_indicator .calendar_day_indecator{
+    height: 40px;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+.calendarOfDay .scheuleOfCurrentDay .day_indicator .tomorrowTitle{
+    color: #989898;
+    margin-left: 560px;
+    margin-right: 15px;
+}
+
+
+.calendarOfDay .scheuleOfCurrentDay .lineScheuleTimeInDay{
+    height: 60px;
+    border: 1px solid #F6F6F6;
+    display: flex;
+    align-items: center;
+}
+.calendarOfDay .scheuleOfCurrentDay .lineScheuleTimeInDayPair{
+    height: 60px;
+    border: 1px solid #F6F6F6;
+    background-color: #F6F6F6;
+}
+.calendarOfDay .scheuleOfCurrentDay .lineScheuleTimeInDay h4{
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 19px;
+    margin-right: 40px;
+}
+
+
+
+.calendarOfDay .blockToAddNewTask{
+
+}
+.calendarOfDay .blockToAddNewTask h3{
+    margin-left: 10px;
+}
+.calendarOfDay .formToAddTask{
+    width: 850px;
+    height: 320px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+}
+.calendarOfDay .formToAddTask .headerFormAddToTask{
+    
+}
+.calendarOfDay .formToAddTask input{
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 463px;
+
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding-left: 25px;
+}
+.calendarOfDay .formToAddTask select{
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 213px;
+    background-color: #FFE5A3;
+    cursor: inherit;
+    line-height: inherit;
+
+    margin-left: 15px;
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 15px;
+}
+.calendarOfDay .formToAddTask .calendarAddNewTask{
+    overflow: hidden;
+    display: inline;
+    margin-left: 60px;
+    margin-top: 10px;
+    
+}
+.calendarOfDay .formToAddTask textarea{
+    margin-left: 15px;
+    margin-top: 20px;
+    padding-left: 25px;
+    padding-top: 20px;
+    width: 790px;
+    height: 140px;
+
+    border-radius: 15px;
+    border: none;
+}
+.calendarOfDay .formToAddTask .pointsForExplanation{
+    justify-content: center;
+}
+
+.deschuleTitle{
+    display: flex;
+    color: #EB4436;
+    opacity: 0.2;
+    font-size: 240px;
+    margin-top: 30px;
+    
+}
+.wrapperPage{
+    position: relative;
+}
+.stoneDownTitle{
+    position: absolute;
+    z-index: -90;
+    bottom: -50px;
+    left: -220px;
+}
