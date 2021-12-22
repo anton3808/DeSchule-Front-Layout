@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './Header.module.css';//підключення стилів як модуль (якобєкт з ключом назви класа і значенням нового класа)
 import {BrowserRouter, Route} from "react-router-dom";
 import dictionary from '../../assets/images/dictionary.png';
@@ -6,9 +6,17 @@ import bell from '../../assets/images/bell.svg';
 import photo_user from '../../assets/images/photo_user.png';
 
 import DayJS from 'react-dayjs';
+import { useSelector } from 'react-redux';
 //{ dateFormat(now, "N") }
 const Header = (props) => {
   //const now = new Date();
+
+  const {dataUser} = useSelector(state => state.auth)
+
+  const [userName, setUserName] = useState({
+    name: '',
+    surname: ''
+  })
 
 
   let today = new Date();
@@ -90,6 +98,17 @@ const Header = (props) => {
 
   var currentWeekDay = today.getDay();
 
+  useEffect(() => {
+    if(Object.keys(dataUser).length > 0) {
+      setUserName(prev => ({...prev, name: dataUser.user.name}))
+    }
+
+    if(Object.keys(dataUser).length > 0) {
+      setUserName(prev => ({...prev, surname: dataUser.user.surname}))
+    }
+
+  }, [dataUser])
+
 
   return (
     <header className={s.header}>
@@ -119,8 +138,8 @@ const Header = (props) => {
         <div className={s.user_data}>
           <img className={s.photo_user} src={ photo_user }  />
           <div className={s.user_info}>
-            <span className={s.name}>Андрій Андрієнко</span>
-            <span className={s.status}>Вчитель</span>
+            <span className={s.name}>{userName.name ? userName.name : ''} {userName.surname ? userName.surname : ''}</span>
+            {/* <span className={s.status}>Вчитель</span> */}
           </div>
         </div>
 

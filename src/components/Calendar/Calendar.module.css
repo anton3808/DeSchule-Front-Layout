@@ -580,6 +580,14 @@
     margin-left: 540px;
 }
 
+.arrow_next_month {
+cursor: pointer;
+}
+
+.arrow_back_month {
+    cursor: pointer;
+}
+
 
 .day_of_week{
     display: grid;
@@ -806,7 +814,7 @@
     display: inline;
     margin-left: 60px;
     margin-top: 10px;
-    
+cursor: pointer;
 }
 .calendarOfDay .formToAddTask textarea{
     margin-left: 15px;
@@ -829,7 +837,7 @@
     opacity: 0.2;
     font-size: 240px;
     margin-top: 30px;
-    
+    z-index: -1;
 }
 .wrapperPage{
     position: relative;
