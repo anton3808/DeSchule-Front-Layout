@@ -1,0 +1,36 @@
+.lineScheuleTimeInDay {
+    height: 60px;
+    border: 1px solid #F6F6F6;
+    display: flex;
+    align-items: center;
+
+    &.lineScheuleTimeInDayPair {
+        height: 60px;
+        border: 1px solid #F6F6F6;
+        background-color: #F6F6F6;
+    }
+
+    h4 {
+        margin-left: 25px;
+        font-weight: 500;
+        font-size: 19px;
+        margin-right: 40px;
+    }
+
+    &__taskBlock {
+        display: flex;
+        flex-direction: column;
+
+
+        span {
+            &:first-child {
+                font-weight: 500;
+            }
+        }
+    }
+
+
+}
+
+
+

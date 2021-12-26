@@ -48,6 +48,11 @@ import btnStartHeader from '../../assets/images/btnStartHeader.png';
 
 import './Calendar.scss'
 import TimePicker from '../TimePicker/TimePicker';
+import axios from 'axios';
+
+import { BASE_URL } from '../../constants/index'
+import { useSelector } from 'react-redux';
+import OneDay from './OneDay/OneDay';
 
 
 
@@ -74,23 +79,82 @@ const Calendar = (props) => {
 
   const [dayOrMonth, setDayOrMonth] = useState('day')
   const [currentMonth, setCurrentMonth] = useState('')
-  const [currentDay, setCurrentDay] = useState('')
+  const [currentDay, setCurrentDay] = useState({})
+  const [tomorrowDay, setTomorrowDayDay] = useState({})
+
+  const [tasksArr, setTasksArr] = useState([])
+
+  const [countDays, setCountDays] = useState(0)
+
+  const [lesson, setLesson] = useState('Урок 1')
 
   const [titleTask, setTitleTask] = useState('')
   const [descriptionTask, setDescriptionTask] = useState('')
-  const [dateAndTime, setDateAndTime] = useState('')
+  // const [dateAndTime, setDateAndTime] = useState('')
+
+  const [timeTask, setTimeTask] = useState('00:00')
+
+  const [token, setToken] = useState('')
+
+  const { dataUser } = useSelector(state => state.auth)
+
+  const day = new Date()
+  const tomorrow = new Date()
+
+
 
   useEffect(() => {
-    const day = new Date()
-    // console.log('daydayday', day.toString().split(' ').slice(0, 4).join(' '));
-    setCurrentDay(day.toString().split(' ').slice(0, 4).join(' '))
+    if (dataUser.access_token) {
+      setToken(dataUser.access_token)
+    }
+  }, [dataUser])
+
+
+  useEffect(() => {
+    getTasks()
+  }, [token])
+
+  useEffect(() => {
+    tasksArr.filter(el => el.date.split(' ')[0] === `${currentDay.day}.${currentDay.month}.${currentDay.year}`)
+  }, [tasksArr])
+
+  useEffect(() => {
+    // console.log('daydayday', day);
+    // tomorrow.setDate(tomorrow.getDate() + 1)
+    // // day.setDate(day.getDate() + 10)
+    // console.log('tomorrowtomorrow', tomorrow);
+    // setCurrentDay({
+    //   day: day.getDate(),
+    //   month: day.getMonth() + 1,
+    //   year: day.getFullYear()
+    // })
+    // setTomorrowDayDay({
+    //   day: tomorrow.getDate(),
+    //   month: tomorrow.getMonth() + 1,
+    //   year: tomorrow.getFullYear()
+    // })
     setCurrentMonth(day.getMonth())
     // console.log('day', day.getMonth());
   }, [])
-  useEffect(() => {
 
-    console.log('currentMonth', currentMonth);
-  }, [currentMonth])
+  useEffect(() => {
+    day.setDate(day.getDate() + countDays)
+    tomorrow.setDate(tomorrow.getDate() + 1 + countDays)
+    // day.setDate(day.getDate() + 10)
+    console.log('dayday', day);
+    console.log('tomorrowtomorrow', tomorrow);
+
+    setCurrentDay({
+      day: day.getDate(),
+      month: day.getMonth() + 1,
+      year: day.getFullYear()
+    })
+    setTomorrowDayDay({
+      day: tomorrow.getDate(),
+      month: tomorrow.getMonth() + 1,
+      year: tomorrow.getFullYear()
+    })
+  }, [countDays])
 
 
   const refHeightA1 = useRef()
@@ -192,15 +256,79 @@ const Calendar = (props) => {
     setToggleC1(!toggleC1)
   }
 
-  const createTask = () => {
-    console.log({
-      event_type_id: selectType,
-      title: titleTask,
-      description: descriptionTask,
-      date: dateAndTime
-    });
+  const getTasks = () => {
+    if (token) {
+      axios.get(`${BASE_URL}/schedule`, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      }).then(res => {
+        console.log('allTasks', res.data.data);
+        // res.data.data.forEach(el => {
+        //   console.log(el.date, +el.date.split(' ')[1].split(':')[0] * 60 + +el.date.split(' ')[1].split(':')[1]);
+        // })
 
-    
+        // console.log(res.data.data
+        //   .sort((a, b) => (+a.date.split(' ')[1].split(':')[0] * 60 + +a.date.split(' ')[1].split(':')[1]) - (+b.date.split(' ')[1].split(':')[0] * 60 + +b.date.split(' ')[1].split(':')[1])));
+
+        setTasksArr(res.data.data.sort((a, b) => (+a.date.split(' ')[1].split(':')[0] * 60 + +a.date.split(' ')[1].split(':')[1]) - (+b.date.split(' ')[1].split(':')[0] * 60 + +b.date.split(' ')[1].split(':')[1])))
+      }).catch(e => console.log(e))
+    }
+  }
+
+  const createTask = () => {
+    axios.post(`${BASE_URL}/schedule`, {
+      event_type_id: selectType,
+      title: selectType === 1 ? lesson : titleTask,
+      description: descriptionTask,
+      date: `${currentDay.day}.${currentDay.month}.${currentDay.year} ${timeTask}`,
+      link_id: selectType === 1 ? 1 : null,
+    }, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${dataUser.access_token}`
+      }
+    }).then(res => {
+      console.log('createTask', res);
+      setTitleTask('')
+      setDescriptionTask('')
+      getTasks()
+    }).catch(e => {
+      console.log(e.response)
+    })
+    // console.log({
+    //   event_type_id: selectType,
+    //   title: titleTask,
+    //   description: descriptionTask,
+    //   date: `${currentDay.day}.${currentDay.month}.${currentDay.year} ${timeTask}`
+    // });
+
+
+  }
+
+  const prevDay = () => {
+    // day.setDate(day.getDate() - 1)
+    // tomorrow.setDate(day.getDate() + 1)
+    // // day.setDate(day.getDate() + 10)
+    // console.log('tomorrowtomorrow', tomorrow);
+    // setCurrentDay({
+    //   day: day.getDate(),
+    //   month: day.getMonth() + 1,
+    //   year: day.getFullYear()
+    // })
+    // setTomorrowDayDay({
+    //   day: tomorrow.getDate(),
+    //   month: tomorrow.getMonth() + 1,
+    //   year: tomorrow.getFullYear()
+    // })
+    setCountDays(prev => prev - 1)
+  }
+
+  const nextDay = () => {
+    setCountDays(prev => prev + 1)
   }
 
 
@@ -741,20 +869,34 @@ const Calendar = (props) => {
               <div className={s.scheuleOfCurrentDay}>
                 <div className={s.day_indicator}>
                   <img className={s.calendar_day_indecator} src={calendar_day_indecator} />
-                  <h3 className={s.todayTitle}>СЬОГОДНІ:</h3>
-                  <span className={s.tomorrowTitle}>Завтра</span>
-                  <img className={s.arrow_next_day} src={arrow_next_day} />
+                  <h3 className={s.todayTitle}>{day.getDate() === currentDay.day && day.getMonth() + 1 === currentDay.month
+                    ? 'СЬОГОДНІ:'
+                    : `${currentDay.day < 10 ? `0${currentDay.day}` : currentDay.day}.${currentDay.month < 10 ? `0${currentDay.month}` : currentDay.month}.${currentDay.year}`}</h3>
+
+                  <div className="blockControl">
+                    <img onClick={() => prevDay()} className={day.getDate() === currentDay.day && day.getMonth() + 1 === currentDay.month
+                      ? 'arrow_next_day deg180 notVisible'
+                      : 'arrow_next_day deg180'} src={arrow_next_day} />
+                    <span className={s.tomorrowTitle}>{`${tomorrowDay.day < 10 ? `0${tomorrowDay.day}` : tomorrowDay.day}.${tomorrowDay.month < 10 ? `0${tomorrowDay.month}` : tomorrowDay.month}.${tomorrowDay.year}`}</span>
+                    <img onClick={() => nextDay()} className={'arrow_next_day'} src={arrow_next_day} />
+                  </div>
+
                 </div>
 
-                <div className={s.lineScheuleTimeInDay}>
-                  <h4>14:20</h4>
-                  <span>Онлайн конференція</span>
-                </div>
+                {
+                  tasksArr.filter(el => el.date.split(' ')[0] === `${currentDay.day}.${currentDay.month}.${currentDay.year}`).map((item, i) => {
+                    return (
+                      <OneDay key={i} item={item} pos={i} />
+                    )
+                  })
+                }
 
-                <div className={`${s.lineScheuleTimeInDay} ${s.lineScheuleTimeInDayPair}`}>
+
+
+                {/* <div className={`${s.lineScheuleTimeInDay} ${s.lineScheuleTimeInDayPair}`}>
                   <h4>18:45</h4>
                   <span>Спілкування</span>
-                </div>
+                </div> */}
               </div>
 
               <div className={s.blockToAddNewTask}>
@@ -763,7 +905,7 @@ const Calendar = (props) => {
                 <div className={s.formToAddTask}>
 
                   {selectType === 1
-                    ? <select>
+                    ? <select onChange={(e) => setLesson(e.target.value)}>
                       <option>Урок 1</option>
                       <option>Урок 2</option>
                       <option>Урок 3</option>
@@ -820,7 +962,7 @@ const Calendar = (props) => {
                     <span>Зберегти</span>
                   </div>
                 </div>
-                <TimePicker active={activePicker} setActive={setActivePicker} />
+                <TimePicker setTimeTask={setTimeTask} active={activePicker} setActive={setActivePicker} />
               </div>
 
             </div>}
@@ -930,25 +1072,46 @@ const Calendar = (props) => {
                   <div className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>24</span>
                   </div>
-                  <div className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
+                  <div onClick={() => {
+                      setCountDays(25 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
                     <span className={s.numberOfDay}>25</span>
                   </div>
-                  <div className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
+                  <div onClick={() => {
+                      setCountDays(26 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
                     <span className={s.numberOfDay}>26</span>
                   </div>
-                  <div className={s.gridCalendarDay}>
+                  <div onClick={() => {
+                      setCountDays(27 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>27</span>
                   </div>
-                  <div className={s.gridCalendarDay}>
+                  <div onClick={() => {
+                      setCountDays(28 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>28</span>
                   </div>
-                  <div className={s.gridCalendarDay}>
+                  <div onClick={() => {
+                      setCountDays(29 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>29</span>
                   </div>
-                  <div className={s.gridCalendarDay}>
+                  <div onClick={() => {
+                      setCountDays(30 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>30</span>
                   </div>
-                  <div className={s.gridCalendarDay}>
+                  <div onClick={() => {
+                      setCountDays(31 - currentDay.day)
+                      setDayOrMonth('day')
+                    }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>31</span>
                   </div>
                   <div className={`${s.gridCalendarDay} ${s.weekendCalendar}`}></div>

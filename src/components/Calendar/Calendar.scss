@@ -49,3 +49,23 @@
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.55);
 
 }
+
+.arrow_next_day {
+    cursor: pointer;
+}
+
+.deg180 {
+    transform: rotate(180deg);
+    margin-right: 15px;
+}
+
+.blockControl {
+    margin-left: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notVisible {
+    visibility: hidden;
+}

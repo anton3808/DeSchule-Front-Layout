@@ -83,7 +83,7 @@ const HeaderStartPage = () => {
       {
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         }
       }).then(function (res) {
         console.log('DATA LOGIN', res);
