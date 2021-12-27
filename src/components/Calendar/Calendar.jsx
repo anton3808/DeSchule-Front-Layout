@@ -87,6 +87,8 @@ const Calendar = (props) => {
   const [countDays, setCountDays] = useState(0)
 
   const [lesson, setLesson] = useState('Урок 1')
+  const [homework, setHomework] = useState('Домашнее задание 1')
+  const [dopTask, setDopTasks] = useState('Доп задание 1')
 
   const [titleTask, setTitleTask] = useState('')
   const [descriptionTask, setDescriptionTask] = useState('')
@@ -281,10 +283,10 @@ const Calendar = (props) => {
   const createTask = () => {
     axios.post(`${BASE_URL}/schedule`, {
       event_type_id: selectType,
-      title: selectType === 1 ? lesson : titleTask,
+      title: selectType === 1 ? lesson : selectType === 2 ? homework : selectType === 3 ? dopTask : titleTask,
       description: descriptionTask,
       date: `${currentDay.day}.${currentDay.month}.${currentDay.year} ${timeTask}`,
-      link_id: selectType === 1 ? 1 : null,
+      link_id: selectType === 1 ? 2 : null,
     }, {
       headers: {
         'Accept': 'application/json',
@@ -329,6 +331,35 @@ const Calendar = (props) => {
 
   const nextDay = () => {
     setCountDays(prev => prev + 1)
+  }
+
+  const whatInput = (type) => {
+    if (selectType === 1) {
+      return (<select onChange={(e) => setLesson(e.target.value)}>
+        <option>Урок 1</option>
+        <option>Урок 2</option>
+        <option>Урок 3</option>
+        <option>Урок 4</option>
+      </select>)
+    } else if(selectType === 2) {
+      return (<select onChange={(e) => setHomework(e.target.value)}>
+        <option>Домашнее задание 1</option>
+        <option>Домашнее задание 2</option>
+        <option>Домашнее задание 3</option>
+        <option>Домашнее задание 4</option>
+      </select>)
+    } else if(selectType === 3) {
+      return (<select onChange={(e) => setDopTasks(e.target.value)}>
+        <option>Доп задание 1</option>
+        <option>Доп задание 2</option>
+        <option>Доп задание 3</option>
+        <option>Доп задание 4</option>
+      </select>)
+    } else {
+      return <input type="text" placeholder="Назва теми" value={titleTask} onChange={(e) => setTitleTask(e.target.value)} />
+    }
+
+   
   }
 
 
@@ -904,15 +935,7 @@ const Calendar = (props) => {
 
                 <div className={s.formToAddTask}>
 
-                  {selectType === 1
-                    ? <select onChange={(e) => setLesson(e.target.value)}>
-                      <option>Урок 1</option>
-                      <option>Урок 2</option>
-                      <option>Урок 3</option>
-                      <option>Урок 4</option>
-                    </select>
-                    : <input type="text" placeholder="Назва теми" value={titleTask} onChange={(e) => setTitleTask(e.target.value)} />
-                  }
+                  {whatInput(selectType)}
 
 
                   <select
@@ -1073,45 +1096,45 @@ const Calendar = (props) => {
                     <span className={s.numberOfDay}>24</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(25 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
+                    setCountDays(25 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
                     <span className={s.numberOfDay}>25</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(26 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
+                    setCountDays(26 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={`${s.gridCalendarDay} ${s.weekendCalendar}`}>
                     <span className={s.numberOfDay}>26</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(27 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={s.gridCalendarDay}>
+                    setCountDays(27 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>27</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(28 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={s.gridCalendarDay}>
+                    setCountDays(28 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>28</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(29 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={s.gridCalendarDay}>
+                    setCountDays(29 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>29</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(30 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={s.gridCalendarDay}>
+                    setCountDays(30 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>30</span>
                   </div>
                   <div onClick={() => {
-                      setCountDays(31 - currentDay.day)
-                      setDayOrMonth('day')
-                    }} className={s.gridCalendarDay}>
+                    setCountDays(31 - currentDay.day)
+                    setDayOrMonth('day')
+                  }} className={s.gridCalendarDay}>
                     <span className={s.numberOfDay}>31</span>
                   </div>
                   <div className={`${s.gridCalendarDay} ${s.weekendCalendar}`}></div>

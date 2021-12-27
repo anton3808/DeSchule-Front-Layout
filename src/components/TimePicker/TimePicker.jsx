@@ -14,13 +14,13 @@ const TimePicker = ({ active, setActive, setTimeTask }) => {
 
     return (
         <div className={active ? `timePicker active` : `timePicker`} onClick={() => setActive(false)}>
-            {/* <div className={active ? 'timePicker__content active' : 'timePicker__content'} onClick={(e) => e.stopPropagation()}> */}
-            <TimeKeeper
-                onDoneClick={(e) => e.stopPropagation()}
-                time={time}
-                onChange={(newTime) => setTime(newTime.formatted24)}
-            />
-            {/* </div> */}
+            <div onClick={(e) => e.stopPropagation()}>
+                <TimeKeeper
+                    onDoneClick={() => setActive(false)}
+                    time={time}
+                    onChange={(newTime) => setTime(newTime.formatted24)}
+                />
+            </div>
         </div>
     )
 }
