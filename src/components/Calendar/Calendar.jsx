@@ -82,6 +82,8 @@ const Calendar = (props) => {
   const [currentDay, setCurrentDay] = useState({})
   const [tomorrowDay, setTomorrowDayDay] = useState({})
 
+  const [error, setError] = useState('')
+
   const [tasksArr, setTasksArr] = useState([])
 
   const [countDays, setCountDays] = useState(0)
@@ -281,6 +283,7 @@ const Calendar = (props) => {
   }
 
   const createTask = () => {
+    setError('')
     axios.post(`${BASE_URL}/schedule`, {
       event_type_id: selectType,
       title: selectType === 1 ? lesson : selectType === 2 ? homework : selectType === 3 ? dopTask : titleTask,
@@ -300,6 +303,7 @@ const Calendar = (props) => {
       getTasks()
     }).catch(e => {
       console.log(e.response)
+      setError(e.response.data.errors.date[0])
     })
     // console.log({
     //   event_type_id: selectType,
@@ -341,14 +345,14 @@ const Calendar = (props) => {
         <option>Урок 3</option>
         <option>Урок 4</option>
       </select>)
-    } else if(selectType === 2) {
+    } else if (selectType === 2) {
       return (<select onChange={(e) => setHomework(e.target.value)}>
         <option>Домашнее задание 1</option>
         <option>Домашнее задание 2</option>
         <option>Домашнее задание 3</option>
         <option>Домашнее задание 4</option>
       </select>)
-    } else if(selectType === 3) {
+    } else if (selectType === 3) {
       return (<select onChange={(e) => setDopTasks(e.target.value)}>
         <option>Доп задание 1</option>
         <option>Доп задание 2</option>
@@ -359,7 +363,7 @@ const Calendar = (props) => {
       return <input type="text" placeholder="Назва теми" value={titleTask} onChange={(e) => setTitleTask(e.target.value)} />
     }
 
-   
+
   }
 
 
@@ -961,6 +965,7 @@ const Calendar = (props) => {
 
                   <textarea value={descriptionTask} onChange={(e) => setDescriptionTask(e.target.value)} name="" id="" cols="30" rows="10" placeholder="Опис завдання"></textarea>
 
+                  
 
                   <div className={s.pointsForExplanation}>
                     <div className={s.lesson_point_color}>
@@ -987,7 +992,7 @@ const Calendar = (props) => {
                 </div>
                 <TimePicker setTimeTask={setTimeTask} active={activePicker} setActive={setActivePicker} />
               </div>
-
+              {error && <div className='errorMessage'>{error}</div>}
             </div>}
 
 
@@ -2633,7 +2638,7 @@ const Calendar = (props) => {
       <h1 className={s.deschuleTitle}>DESCHULE</h1>
       <img src={stoneDownTitle} className={s.stoneDownTitle} />
 
-    </div>
+    </div >
   )
 }
 
