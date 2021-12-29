@@ -17,6 +17,8 @@ const TimePicker = ({ active, setActive, setTimeTask }) => {
             <div onClick={(e) => e.stopPropagation()}>
                 <TimeKeeper
                     onDoneClick={() => setActive(false)}
+                    hour24Mode={true}
+                    switchToMinuteOnHourSelect={true}
                     time={time}
                     onChange={(newTime) => setTime(newTime.formatted24)}
                 />
