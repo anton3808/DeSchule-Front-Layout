@@ -3,6 +3,7 @@
     border: 1px solid #F6F6F6;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     &.lineScheuleTimeInDayPair {
         height: 60px;
@@ -17,6 +18,12 @@
         margin-right: 40px;
     }
 
+    &__leftBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__taskBlock {
         display: flex;
         flex-direction: column;
@@ -29,8 +36,18 @@
         }
     }
 
+    &__trash {
+        cursor: pointer;
+        margin-right: 15px;
+
+        &:hover {
+            svg {
+                path {
+                    fill: red;
+                }
+            }
+        }
+    }
+
 
 }
-
-
-

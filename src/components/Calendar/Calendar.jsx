@@ -119,7 +119,20 @@ const Calendar = (props) => {
   }, [token])
 
   useEffect(() => {
-    tasksArr.filter(el => el.date.split(' ')[0] === `${currentDay.day}.${currentDay.month}.${currentDay.year}`)
+    console.log(`${currentDay.day < 10
+      ? `0${currentDay.day}`
+      : currentDay.day
+      }.${currentDay.month < 10
+        ? `0${currentDay.month}`
+        : currentDay.month
+      }.${currentDay.year}`)
+    tasksArr.filter(el => el.date.split(' ')[0] === `${currentDay.day < 10
+      ? `0${currentDay.day}`
+      : currentDay.day
+      }.${currentDay.month < 10
+        ? `0${currentDay.month}`
+        : currentDay.month
+      }.${currentDay.year}`)
   }, [tasksArr])
 
   useEffect(() => {
@@ -919,11 +932,17 @@ const Calendar = (props) => {
                 </div>
 
                 {
-                  tasksArr.filter(el => el.date.split(' ')[0] === `${currentDay.day}.${currentDay.month}.${currentDay.year}`).map((item, i) => {
-                    return (
-                      <OneDay key={i} item={item} pos={i} />
-                    )
-                  })
+                  tasksArr.filter(el => el.date.split(' ')[0] === `${currentDay.day < 10
+                    ? `0${currentDay.day}`
+                    : currentDay.day
+                    }.${currentDay.month < 10
+                      ? `0${currentDay.month}`
+                      : currentDay.month
+                    }.${currentDay.year}`).map((item, i) => {
+                      return (
+                        <OneDay key={i} getTasks={getTasks} item={item} pos={i} />
+                      )
+                    })
                 }
 
 
@@ -965,7 +984,7 @@ const Calendar = (props) => {
 
                   <textarea value={descriptionTask} onChange={(e) => setDescriptionTask(e.target.value)} name="" id="" cols="30" rows="10" placeholder="Опис завдання"></textarea>
 
-                  
+
 
                   <div className={s.pointsForExplanation}>
                     <div className={s.lesson_point_color}>
