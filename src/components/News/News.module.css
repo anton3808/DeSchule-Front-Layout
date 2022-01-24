@@ -1,8 +1,436 @@
-.userPhoto{
-  width: 130px;
-  height: 100px;
+.pageNewsWrapper{
+  margin-left: 30px;
+  width: 1180px;
 }
 
-.selectedPage{
-  font-weight: bold;
+
+.searchNewsInput{
+  display: flex;
+  justify-content: center;
 }
+.searchNewsInput input{
+  height: 40px;
+  width: 700px;
+  padding-left: 20px;
+  background-color: #F3F3F3;
+  color: #6F6F6F;
+  font-size: 15px;
+
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+}
+.searchNewsInput .searchNewsButton{
+  height: 42px;
+  width: 70px;
+  background-color: #F3F3F3;
+  color: #6F6F6F;
+
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchNewsInput .searchNewsButton img{
+  height: 23px;
+}
+
+
+
+
+
+.blockNewsWrapper{
+  margin-top: 40px;
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+
+  grid-auto-rows: min-content;
+  grid-auto-rows: max-content;
+  grid-auto-rows: auto; */
+
+  columns: 3;
+  column-gap: 20px;
+}
+.blockNewsWrapper .newsPost{
+  width: 100%;
+  margin: 0 0 10px 10px;
+  padding: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+.blockNewsWrapper .newsPost img{
+  max-width: 100%;
+}
+.blockNewsWrapper .newsPost h3{
+  font-size: 17px;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 10px;
+}
+.blockNewsWrapper .newsPost p{
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
+
+
+/* .blockNewsWrapper .newsPost{
+  padding: 0;
+  margin: 15px 10px;
+  border-radius: var(--car_border_radius);
+
+  background-color: red;
+}
+.blockNewsWrapper .newsPost_small{
+  grid-row-end: span var(--newsPost_small);
+  height: auto;
+}
+.blockNewsWrapper .newsPost_medium{
+  grid-row-end: span var(--newsPost_medium);
+  height: auto;
+}
+.blockNewsWrapper .newsPost_large{
+  grid-row-end: span var(--newsPost_large);
+  height: auto;
+} */
+
+
+
+/* 
+.blockNewsWrapper{
+  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+
+  grid-template-rows: masonry;
+}
+.blockNewsWrapper .newsPost{
+  width: 100%;
+  margin: 0 0 10px 10px;
+  padding: 10px;
+  background: #fff;
+  overflow: hidden;
+
+  display: inline;
+}
+.blockNewsWrapper .newsPost img{
+  max-width: 100%;
+}
+.blockNewsWrapper .newsPost h3{
+  font-size: 17px;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 10px;
+}
+.blockNewsWrapper .newsPost p{
+  font-size: 14px;
+  margin: 10px 0 0 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------- Current News -------------------------------------------- */
+.pageCurrentNewsWrapper{
+  width: 1180px;
+  margin-left: 30px;
+}
+
+.currentNews{
+  display: flex;
+}
+.currentNews img{
+  width: 400px;
+}
+.currentNews .currentNewsContent{
+  margin-left: 30px;
+}
+.currentNews .currentNewsContent h1{
+  margin-top: 0;
+  font-size: 29px;
+}
+
+.currentNews .currentNewsContent .publishedTime .publishedTimeDate{
+  color: #8A8A8A;
+  font-size: 15px;
+  margin-right: 15px;
+}
+.currentNews .currentNewsContent .publishedTime .publishedTimeHours{
+  color: #8A8A8A;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+
+.blockCommentsWrappers{
+  /* margin-bottom: 30px; */
+}
+.blockCommentsWrappers .commentsTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.blockCommentsWrappers .commentsTitle img{
+  height: 60px;
+}
+.blockCommentsWrappers .commentsTitle h3{
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.myCommentWrapper{
+  display: flex;
+  margin-bottom: 50px;
+
+}
+.myCommentWrapper img{
+  height: 60px;
+  margin-right: 15px;
+}
+.myCommentContent .myCommentContentText{
+  background-color: #F6F6F6;
+  border-radius: 0 10px 10px 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+
+}
+.myCommentContent .myCommentContentText h5{
+  margin: 0;
+  font-size: 17px;
+}
+.myCommentContent .myCommentContentText textarea{
+  width: 1055px;
+  height: 100px;
+  margin-top: 15px;
+
+  border: none;
+  padding-top: 15px;
+  padding-left: 15px;
+
+  resize: none;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.myCommentContent .myCommentContentOptions{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+.myCommentContent .myCommentContentOptions .checkDialogButton{
+  position: relative;
+  cursor: pointer;
+}
+.myCommentContent .myCommentContentOptions .checkDialogButton span{
+  position: absolute;
+  color: #FFFFFF;
+  bottom: 12px;
+  left: 50px;
+  font-size: 16px;
+  font-weight: 600;
+
+  z-index: 3;
+}
+.myCommentContent .myCommentContentOptions .checkDialogButton img{
+  height: 37px;
+}
+
+
+
+
+
+
+
+
+
+.commentWrapper{
+  display: flex;
+  margin-bottom: 30px;
+}
+.commentWrapper img{
+  height: 60px;
+  margin-right: 15px;
+}
+.commentContent .commentContentText{
+  background-color: #F6F6F6;
+  border-radius: 0 10px 10px 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.commentContent .commentContentText h5{
+  margin: 0;
+  font-size: 17px;
+}
+.commentContent .commentContentText p{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.commentContent .commentContentOptions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commentContent .commentContentOptions .publishedTime .publishedTimeDate{
+  color: #8A8A8A;
+  font-size: 15px;
+  margin-right: 15px;
+}
+.commentContent .commentContentOptions .publishedTime .publishedTimeHours{
+  color: #8A8A8A;
+  font-size: 15px;
+  font-weight: 600;
+}
+.commentContent .commentContentOptions .commentButtons{
+  display: flex;
+}
+.commentContent .commentContentOptions .commentButtons .likeButtonIcon{
+  display: flex;
+  margin-right: 40px;
+  align-items: center;
+}
+.commentContent .commentContentOptions .commentButtons .likeButtonIcon img{
+  height: 16px;
+}
+.commentContent .commentContentOptions .commentButtons .likeButtonIcon span{
+  color: #EB4436;
+}
+.commentContent .commentContentOptions .commentButtons .commentButtonText{
+  color: #B0B0B0;
+}
+
+
+
+
+
+
+
+
+
+.commentForCommentWrapper{
+  display: flex;
+  margin-top: 30px;
+}
+.commentForCommentWrapper img{
+  height: 60px;
+  margin-right: 15px;
+}
+.commentForCommentContent{
+  width: 80%;
+}
+.commentForCommentContent .commentForCommentContentText{
+  background-color: #fff;
+  border: 2px solid #F6F6F6;
+  border-radius: 0 10px 10px 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.commentForCommentContent .commentForCommentContentText h5{
+  margin: 0;
+  font-size: 17px;
+}
+.commentForCommentContent .commentForCommentContentText p{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.commentForCommentContent .commentForCommentContentText p span{
+  color: #347E96;
+}
+
+.commentForCommentContent .commentForCommentContentOptions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commentForCommentContent .commentForCommentContentOptions .publishedTime .publishedTimeDate{
+  color: #8A8A8A;
+  font-size: 15px;
+  margin-right: 15px;
+}
+.commentForCommentContent .commentForCommentContentOptions .publishedTime .publishedTimeHours{
+  color: #8A8A8A;
+  font-size: 15px;
+  font-weight: 600;
+}
+.commentForCommentContent .commentForCommentContentOptions .commentForCommentButtons{
+  display: flex;
+}
+.commentForCommentContent .commentForCommentContentOptions .commentForCommentButtons .likeButtonIcon{
+  display: flex;
+  margin-right: 40px;
+  align-items: center;
+}
+.commentForCommentContent .commentForCommentContentOptions .commentForCommentButtons .likeButtonIcon img{
+  height: 16px;
+}
+.commentForCommentContent .commentForCommentContentOptions .commentForCommentButtons .likeButtonIcon span{
+  color: #8A8A8A;
+}
+.commentForCommentContent .commentForCommentContentOptions .commentForCommentButtons .commentForCommentButtonText{
+  color: #B0B0B0;
+}
+
+
+
+
+
+
+
+
+
+/* -------- Footer -------- */
+footer{
+  /* height: 300px; */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+footer .deschuleTitle{
+  text-align: center;
+  color: #EB4436;
+  opacity: 0.2;
+  font-size: 220px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  
+  z-index: 3;
+  
+}
+footer .stoneDownTitle{
+  position: absolute;
+  z-index: -90;
+  bottom: -200px;
+  left: -30px; 
+}
+
+
+

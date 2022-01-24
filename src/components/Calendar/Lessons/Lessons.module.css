@@ -1,0 +1,1799 @@
+@import "~react-line-progress-bar/dist/style/index.css";
+
+
+.wrapperLesson{
+    margin-left: 30px;
+    width: 1180px;
+}
+
+
+
+
+/* ----------------------------------------------- Progress Bar ------------------------------------------*/
+
+.progressBarWrapper {
+    display: flex;
+    align-items: center;
+}
+.progressBarWrapper .progressBarWrapperTitle{
+    margin-top: 40px;
+}
+.progressBarWrapper .progressBar{
+    width: 1050px;
+    margin-left: 20px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.progressBarWrapper .progressBar .wrapperProgressBar_block{
+    margin-left: 2px;
+}
+.progressBarWrapper .progressBar .wrapperProgressBar_block h5{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #A5A5A5;
+}
+.progressBarWrapper .progressBar .wrapperProgressBar_block .progressBar_block{
+    position: relative;
+}
+.progressBarWrapper .progressBar .wrapperProgressBar_block .progressBar_block .progressBar_block_line{
+    width: 100%;
+    height: 6px;
+    background-color: #E8E8E8;
+    display: block;
+
+    position: absolute;
+}
+.progressBarWrapper .progressBar .wrapperProgressBar_block .progressBar_block .progressBar_block_active{
+    width: 100%;
+    height: 6px;
+    background-color: #E5AAAA;
+    display: block;
+    position: absolute;
+}
+
+#first_progressBar_block_line, #first_progressBar_block_active{
+    border-radius: 10px 0 0 10px;
+}
+#last_progressBar_block_line, #last_progressBar_block_active{
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+
+/*  ------------------------------------------ Title Of Lesson  --------------------------------------------*/
+.titleOfLesson{
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* ------------------------------------------------- Block Intro -------------------------------------------*/
+.blockIntro{
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    margin-bottom: 70px;
+}
+.blockIntro .circleIntroPink{
+    position: absolute;
+    z-index: 0;
+    bottom: 30px;
+    right: 250px;
+
+    width: 500px;
+}
+.blockIntro .circleIntroSilver{
+    position: absolute;
+    z-index: 0;
+    bottom: -50px;
+    left: -40px;
+
+    width: 500px;
+}
+
+
+
+.blockIntro .titleHeader{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.blockIntro .titleHeader .titleIcon{
+    height: 55px;
+}
+.blockIntro .titleHeader h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.blockIntro  .titleHeaderText{
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.blockIntro .introContent{
+    display: flex;
+}
+.blockIntro .introContent .videoIntro{
+    height: 430px;
+    z-index: 3;
+}
+.blockIntro .introContent .introQuestions{
+    margin-left: 100px;
+}
+.blockIntro .introContent .introQuestions h2{
+    color: #EB4436;
+    opacity: 0.3;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    margin-top: 0;
+}
+.blockIntro .introContent .introQuestions h4{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    z-index: 3;
+    position: relative;
+}
+
+
+
+.blockIntro .introContent .introQuestions .giveAnswers{
+    margin-top: 60px;
+}
+.blockIntro .introContent .introQuestions .giveAnswers input{
+    display: block;
+    width: 230px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Параметры тени */
+    color: #A5A5A5;
+
+    margin-top: 30px;
+    z-index: 3;
+    position: relative;
+}
+
+
+
+.blockIntro .introContent .introQuestions .buttonIntro{
+    position: relative;
+}
+.blockIntro .introContent .introQuestions .buttonIntro span{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 13px;
+    left: 125px;
+    font-size: 18px;
+    font-weight: 600;
+
+    z-index: 3;
+}
+.blockIntro .introContent .introQuestions .buttonIntro img{
+    margin-top: 120px;
+    width: 280px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- Block Vocabulary ------------------------------------------*/
+
+.blockVocabulary{
+    margin-top: 100px;
+    position: relative;
+}
+.blockVocabulary h3{
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+}
+.blockVocabulary .vocabularyCurrentPhoto{
+    margin: 0 auto;
+    height: 270px;
+    width: 500px;
+    display: block;
+}
+.blockVocabulary .circleVocabulary{
+    position: absolute;
+    z-index: -2;
+
+    top: 100px;
+    margin-left: 200px;
+    height: 400px;
+}
+
+
+.blockVocabulary .contentVocabulary{
+    height: 600px;
+    display: block;
+    /* z-index: 3; */
+    margin: 0 auto;
+    width: 900px;
+}
+.blockVocabulary .contentVocabulary .currentWord{
+    display: flex;
+    align-items: center;
+    width: 900px;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    border-radius: 35px;
+    border: none;
+    box-shadow: 0 0 10px #DB8282; /* Параметры тени */
+    color: #A5A5A5;
+
+    margin-top: 50px;
+
+    background-color: #FFFFFF;
+    z-index: 3;
+}
+.blockVocabulary .contentVocabulary .currentWord .volumeCurrentWord{
+    height: 45px;
+}
+.blockVocabulary .contentVocabulary .currentWord .inGermanCurrentWord{
+    /* position: absolute; */
+    margin-left: 70px;
+    font-size: 24px;
+    color: black;
+}
+.blockVocabulary .contentVocabulary .currentWord .inUkraineCurrentWord{
+    /* position: absolute; */
+    margin-left: 120px;
+    font-size: 24px;
+    color: #E84747;
+}
+.blockVocabulary .contentVocabulary .currentWord .currentWordButtons{
+    /* position: absolute; */
+    margin-left: 530px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blockVocabulary .contentVocabulary .currentWord .currentWordButtons .minusCurrentWord{
+    width: 35px;
+    margin-bottom: 15px;
+}
+.blockVocabulary .contentVocabulary .currentWord .currentWordButtons .plusCurrentWord{
+    width: 45px;
+}
+
+
+.blockVocabulary .contentVocabulary .currentWordBackground{
+    position: relative;
+    top: -100px;
+    z-index: -2;
+    height: 115px;
+    width: 920px;
+    background-color: #F8F8F8;
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-radius: 40px 40px 0 0;
+}
+
+
+.blockVocabulary .contentVocabulary .listWords{
+    position: relative;
+    top: -100px;
+
+    width: 922px;
+
+    height: 365px;
+
+    /* height: 200px; */
+
+	overflow-y: scroll;
+    /* scroll-margin: 100px; */
+    overflow-clip-margin: 20px;
+}
+#scrollListWordsFrame::-webkit-scrollbar{
+	width: 6px;
+    right: -100px;
+	background-color: #E9E9E9;
+}
+#scrollListWordsFrame::-webkit-scrollbar-track{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	background-color: #E9E9E9;
+}
+#scrollListWordsFrame::-webkit-scrollbar-thumb{
+	background-color: #C4C4C4;
+    border-radius: 10px;
+}
+.blockVocabulary .contentVocabulary .listWords .wordInVocabulary{
+    position: relative;
+    /* width: 920px; */
+    height: 50px;
+    background-color: #F8F8F8;
+
+    border-top: 0.5px solid #E8E8E8;
+    border-bottom: 0.5px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    /* overflow: hidden; */
+}
+.blockVocabulary .contentVocabulary .listWords .wordInVocabulary .inGermanWord{
+    position: absolute;
+    top: 15px;
+    left: 130px;
+    color: #AAAEB7;
+}
+.blockVocabulary .contentVocabulary .listWords  .wordInVocabulary .inUkraineWord{
+    position: absolute;
+    top: 15px;
+    left: 280px;
+    color: #CDCDCD;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- Block Cards ---------------------------------------------*/
+
+.blockCards{
+    padding-bottom: 100px;
+    position: relative;
+}
+.blockCards .circleGreyCard{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: 500px;
+    z-index: -2;
+}
+.blockCards .circlePinkCard{
+    position: absolute;
+    right: -100px;
+    bottom: 130px;
+    height: 700px;
+    z-index: -2;
+}
+.blockCards .rowBack{
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 310px;
+}
+.blockCards .rowForwars{
+    position: absolute;
+    right: 260px;
+    margin-top: 310px;
+}
+.blockCards h1{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.blockCards .currentCard{
+    width: 450px;
+    
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Параметры тени */
+    background-color: #FFFFFF;
+
+    margin: 0 auto;
+}
+.blockCards .currentCard .photoCard{
+    width: 410px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.blockCards .currentCard .translateToUkraine{
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.blockCards .currentCard input{
+    display: block;
+    width: 340px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    border-radius: 10px;
+    border: none;
+    background-color: #F5F5F5;
+
+    color: #6A6A6A;
+
+    margin: 0 auto;
+    text-align: center;
+}
+.blockCards .currentCard .checkAnswear{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blockCards .currentCard .checkAnswear .hintCard{
+    text-decoration: underline;
+}
+.blockCards .currentCard .checkAnswear .buttonCard{
+    position: relative;
+    display: inline-block;
+}
+.blockCards .currentCard .checkAnswear .buttonCard span{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 14px;
+    left: 53px;
+    font-size: 17px;
+    font-weight: 600;
+
+    z-index: 3;
+}
+.blockCards .currentCard .checkAnswear .buttonCard img{
+    height: 40px;
+}
+
+.blockCards .currentCard .checkAnswear .volumeCard{
+    height: 80px;
+}
+
+
+
+.blockCards .currentCard .singleChoice{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0 0 20px 20px;
+
+    background-color: #EEEEEE;
+}
+.blockCards .currentCard .singleChoice .choiceWordFirst, .blockCards .currentCard .singleChoice .choiceWordSecond, .blockCards .currentCard .singleChoice .choiceWordThird{
+    width: 120px;
+    height: 40px;
+    
+    border-radius: 25px;
+
+    color: #000000;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFFFF;
+}
+.blockCards .currentCard .singleChoice .choiceWordFirst{
+    border: 1px solid #C18484;
+    box-shadow: 0 0 10px #C18484; /* Параметры тени */
+
+}
+.blockCards .currentCard .singleChoice .choiceWordSecond{
+    border: 1px solid #84C19E;
+    box-shadow: 0 0 10px #84C19E; /* Параметры тени */
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------- Dialog Blog -------------------------------------------- */
+.blockDialog{
+    position: relative;
+    margin-bottom: 70px;
+}
+.blockDialog h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.blockDialog .blockDialogManPhoto{
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    height: 250px;
+}
+.blockDialog .blockDialogWomanPhoto{
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    height: 220px;
+}
+.blockDialog .volumeDialohBlock{
+    width: 450px;
+    margin: 0 auto;
+
+    margin-bottom: 5px;
+}
+.blockDialog .volumeDialohBlock .volumeDialogIcon{
+    height: 75px;
+}
+.blockDialog .frameDialogContent{
+    width: 400px;
+
+    border: 1px solid #D9D9D9;
+    background-color: #FCFCFC;
+
+    border-radius: 20px;
+
+    margin: 0 auto;
+    padding: 20px 25px 25px 20px;
+}
+.blockDialog .frameDialogContent .wordsFirstSpeakerWrapper{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+.blockDialog .frameDialogContent .wordsFirstSpeakerWrapper .wordsFirstSpeaker{
+    background-color: #F0F0F0;
+    color: #515151;
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+.blockDialog .frameDialogContent .wordsSecondSpeakerWrapper{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.blockDialog .frameDialogContent .wordsSecondSpeakerWrapper .wordsSecondSpeaker{
+    background-color: #FFEFB7;
+    color: #23262D;
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+.blockDialog .frameDialogContent .continueWrapper{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.blockDialog .frameDialogContent .continueWrapper .continue{
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+
+
+
+.blockDialog .selectNextWords{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 35px;
+}
+.blockDialog .selectNextWords .nextWordFirst{
+    background-color: #FFE898;
+    color: #23262D;
+
+    padding: 15px 10px 15px 10px;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.blockDialog .selectNextWords .nextWordSecond{
+    background-color: #FFEDD1;
+    color: #23262D;
+
+    padding: 15px 10px 15px 10px;
+    border-radius: 12px;
+}
+.blockDialog .selectNextWords .nextWordThird{
+    background-color: #FFE2B7;
+    color: #23262D;
+
+    padding: 15px 10px 15px 10px;
+    border-radius: 15px;
+    margin-top: 12px;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------ Block Dialog Final View ---------------------------------- */
+
+.blockDialogFinalView{
+    margin-bottom: 60px;
+}
+.blockDialogFinalView h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.blockDialogFinalView .blockDialogMutedVolume{
+    height: 80px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent{
+    display: flex;
+}
+
+
+#scrollDialogFrame::-webkit-scrollbar{
+	width: 6px;
+    right: -100px;
+	background-color: #E9E9E9;
+}
+#scrollDialogFrame::-webkit-scrollbar-track{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	background-color: #E9E9E9;
+}
+#scrollDialogFrame::-webkit-scrollbar-thumb{
+	background-color: #C4C4C4;
+    border-radius: 10px;
+}
+
+
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewDeutsch{
+    width: 400px;
+
+    border: 1px solid #D9D9D9;
+    background-color: #FCFCFC;
+
+    border-radius: 20px;
+
+    margin: 0 auto;
+    padding: 20px 25px 25px 20px;
+
+    height: 420px;
+
+	overflow-y: scroll;
+    /* scroll-margin: 100px; */
+    overflow-clip-margin: 20px;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewDeutsch .forceOverflow{
+    
+
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewDeutsch .wordsFirstSpeakerWrapper{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewDeutsch .wordsFirstSpeakerWrapper .wordsFirstSpeaker{
+    background-color: #F0F0F0;
+    color: #515151;
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewDeutsch .wordsSecondSpeakerWrapper{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewDeutsch .wordsSecondSpeakerWrapper .wordsSecondSpeaker{
+    background-color: #FFEFB7;
+    color: #23262D;
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+
+
+
+
+
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewTranslate{
+    width: 400px;
+
+    border: 1px solid #D9D9D9;
+    background-color: #FCFCFC;
+
+    border-radius: 20px;
+
+    margin: 0 auto;
+    padding: 20px 25px 25px 20px;
+
+    height: 420px;
+
+	overflow-y: scroll;
+    /* scroll-margin: 100px; */
+    overflow-clip-margin: 20px;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewTranslate .wordsFirstSpeakerWrapper{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewTranslate .wordsFirstSpeakerWrapper .wordsFirstSpeaker{
+    background-color: #F0F0F0;
+    color: #515151;
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewTranslate .wordsSecondSpeakerWrapper{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.blockDialogFinalView .wrapperFrameDialogFinalViewContent .frameDialogFinalViewTranslate .wordsSecondSpeakerWrapper .wordsSecondSpeaker{
+    background-color: #FFEFB7;
+    color: #23262D;
+
+    padding: 7px 7px 10px 10px ;
+    border-radius: 10px;
+}
+
+
+.blockDialogFinalView .dialogFinalViewFooter{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+.blockDialogFinalView .dialogFinalViewFooter .dialogFinalViewFooterPagination{
+    display: flex;
+    align-items: center;
+}
+.blockDialogFinalView .dialogFinalViewFooter .dialogFinalViewFooterPagination img{
+    height: 30px;
+}
+.blockDialogFinalView .dialogFinalViewFooter .dialogFinalViewFooterPagination span{
+    margin-left: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.blockDialogFinalView .dialogFinalViewFooter .dialogFinalViewButton{
+    position: relative;
+}
+.blockDialogFinalView .dialogFinalViewFooter .dialogFinalViewButton span{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 15px;
+    left: 74px;
+    font-size: 16px;
+    font-weight: 600;
+
+    z-index: 3;
+}
+.blockDialogFinalView .dialogFinalViewFooter .dialogFinalViewButton .dialogFinalViewButtonPhoto{
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  ----------------------------------------------- Grammar Block ------------------------------------------ */
+.blockGrammar h1{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+.blockGrammar .grammarVideo{
+    width: 1200px;
+    margin-left: 20px;
+    margin-right: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.blockGrammar .grammarAttention{
+    display: flex;
+    align-items: center;
+}
+.blockGrammar .grammarAttention .grammarAttentionText{
+    border: 1px solid #F8C02E;
+    border-radius: 10px;
+    width: 600px;
+    height: 90px;
+
+    padding: 10px;
+    margin-left: 30px;
+}
+.blockGrammar .grammarAttentionText h4{
+    color: #F8C02E;
+    margin: 0;
+}
+.blockGrammar .grammarAttentionText p{
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* -------------- Personal Pronomen ----------------*/
+.personalPronomen h3{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+.personalPronomen h3 span{
+    color: #E84A47;
+}
+.textPersonalPronomen{
+    font-size: 15px;
+}
+.personalPronomen h4{
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.personalPronomen h4 span{
+    color: #E84A47;
+}
+
+
+
+.personalPronomenTables {
+    display: flex;
+    justify-content: space-between;
+}
+.personalPronomenTables h5{
+    font-size: 17px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.personalPronomenTables table{
+    border-spacing: 0px;
+    border-collapse: separate; 
+}
+.personalPronomenTables table td{
+    width: 270px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.personalPronomenTables table .firstColumn{
+    background-color: #F4F4F4;
+    color: #EB4436;
+    font-size: 17px;
+    font-weight: 600;
+    
+    border-bottom: 1px solid #fff;
+}
+.personalPronomenTables table .secondColumn{
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+
+    font-size: 17px;
+}
+.personalPronomenTables table #topCell{
+    border-top: 1px solid #EEEEEE;
+}
+
+
+
+
+
+
+/* -------------- Block Rules ------------- */
+
+.blockRulesTextWrapper{
+    display: flex;
+    margin-top: 60px;
+}
+.blockRulesTextWrapper .photoRules{
+    height: 320px;
+    margin-right: 100px;
+}
+.blockRulesTextWrapper .blockRulesIcon{
+    display: flex;
+    align-items: center;
+}
+.blockRulesTextWrapper .blockRulesIcon img{
+    height: 70px;
+}
+.blockRulesTextWrapper .blockRulesIcon h3{
+    margin-left: 10px;
+    font-size: 25px;
+}
+.blockRulesTextWrapper .blockRulesText{
+    border: 1px solid #F8C02E;
+    border-radius: 10px;
+    height: 160px;
+    margin-top: 10px;
+}
+.blockRulesText{
+    border: 1px solid #F8C02E;
+    border-radius: 10px;
+
+    margin-top: 30px;
+}
+.blockRulesText .blockRulesTextHeader{
+    background-color: #FFEFB7;
+    border-radius: 10px 10px 0 0 ;
+
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.blockRulesText .blockRulesTextHeader .exclamation_mark{
+    font-size: 41px;
+    font-weight: 800;
+    color: #EB4436;
+    margin-right: 10px;
+}
+.blockRulesText .blockRulesTextBody{
+    padding-left: 15px;
+}
+.blockRulesText .blockRulesTextBody .rulesStrontWord{
+    color: #EB4436;
+}
+
+
+
+
+
+
+
+/* --------------- Rules Of Use ------------- */
+.rulesOfUse{
+    display: flex;
+    margin-top: 70px;
+}
+
+.rulesOfUse .rulesOfUseHeader{
+    display: flex;
+    align-items: center;
+}
+.rulesOfUse .rulesOfUseHeader h2{
+    font-size: 21px;
+    margin-left: 10px;
+}
+.rulesOfUse h3{
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.rulesOfUse .rulesOfUseTitle{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.rulesOfUse .rulesOfUseTitle img{
+    height: 30px;
+    margin-right: 15px;
+}
+.rulesOfUse .rulesOfUseTitle span{
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+
+.rulesOfUse .rulesOfUseBody{
+    border: 1px solid #FEB9B9;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-bottom: 25px;
+}
+.rulesOfUse .rulesOfUseBody .rulesStrontWord{
+    color: #EB4436;
+}
+
+
+.rulesOfUse .rulesOfUsePhoto{
+    width: 350px;
+    height: 800px;
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+/* ---------- Block Translate ---------- */
+
+.blockTranslate{
+    margin-top: 30px;
+}
+.blockTranslate .blockTranslateHeader{
+    display: flex;
+    align-items: center;
+}
+.blockTranslate .blockTranslateHeader h2{
+    font-size: 21px;
+    margin-left: 10px;
+}
+.blockTranslate .blockTranslateBody{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* margin-left: 30px; */
+}
+
+.blockTranslate .blockTranslateBody .blockTranslateBodyLeftPart{
+    width: 300px;
+    margin-top: 10px;
+}
+.blockTranslate .blockTranslateBody .blockTranslateBodyLeftPart span{
+    font-size: 15px;
+    color: #6A6A6A;
+    position: relative;
+    top: 20px;
+    
+}
+.blockTranslate .blockTranslateBody .blockTranslateBodyLeftPart img{
+    width: 250px;
+}
+
+
+.blockTranslate .blockTranslateBody .blockTranslateMain{
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #8A8D8B;
+
+    position: relative;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMainCorrect{
+    box-shadow: 0 0 10px #A4D1B7 !important;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .photoTranslateWord{
+    width: 230px;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent{
+    margin-left: 20px;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent h4{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent input{
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #F5F5F5;
+    color: #6A6A6A;
+    font-size: 15px;
+
+
+    width: 470px;
+    height: 45px;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent .buttonTranslateSentences{
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent .buttonTranslateSentences span{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 14px;
+    left: 58px;
+    font-size: 17px;
+    font-weight: 600;
+
+    z-index: 3;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent .buttonTranslateSentences .buttonCardTranslate{
+    height: 40px;
+    width: 170px;
+}
+.blockTranslate .blockTranslateBody .blockTranslateMain .blockTranslateCardsContent .buttonTranslateSentences .arrowButtonTranslateSentences{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 14px;
+    right: 37px;
+    font-size: 17px;
+    font-weight: 600;
+
+    z-index: 3;
+}
+
+.blockTranslate .blockTranslateBody .blockTranslateMain .correctSentences{
+    position: absolute;
+    right: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+/* -------- Footer -------- */
+footer{
+    /* height: 300px; */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+footer .deschuleTitle{
+    text-align: center;
+    color: #EB4436;
+    opacity: 0.2;
+    font-size: 220px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    
+    z-index: 3;
+    
+}
+footer .stoneDownTitle{
+    position: absolute;
+    z-index: -90;
+    bottom: -200px;
+    left: -30px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- Lesson 2 --------------------------------------------*/
+
+
+
+/* ----------------------------------------- Block Check Dialog ----------------------------------------*/
+
+.blockCheckDialog{
+
+}
+.blockCheckDialog .wrapperCheckDialogContent{
+    display: flex;
+}
+.blockCheckDialog .titleHeader{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.blockCheckDialog .titleHeader .checkDialogIcon{
+    height: 55px;
+}
+.blockCheckDialog .titleHeader h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.blockCheckDialog  .titleHeaderText{
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.blockCheckDialog .checkDialogPhoto{
+    height: 400px;
+    position: relative;
+    top: -60px;
+}
+
+.blockCheckDialog .wrapperCheckDialogContent .checkDialogTitle{
+    display: flex;
+
+}
+.blockCheckDialog .wrapperCheckDialogContent .checkDialogTitle .volumeDialogIcon{
+    height: 70px;
+}
+
+
+
+.blockCheckDialog .wrapperFrameDialogContent .frameDialogContent{
+    width: 500px;
+
+    margin-left: 70px;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+    padding: 30px 15px 20px 15px;
+}
+.blockCheckDialog .wrapperFrameDialogContent .frameDialogContent .wordsDialogRightWrapper{
+    height: 70px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+.blockCheckDialog .wrapperFrameDialogContent .frameDialogContent .wordsDialogRightWrapper{
+    height: 80px;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+.blockCheckDialog .wrapperFrameDialogContent .frameDialogContent .wordsDialog{
+    background-color: #F0F0F0;
+    color: #23262D;
+
+    padding: 7px 10px 10px 7px ;
+    border-radius: 10px;
+}
+.blockCheckDialog .wrapperFrameDialogContent .frameDialogContent .currentWordsWrapper{
+    height: 80px;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+.blockCheckDialog .wrapperFrameDialogContent .frameDialogContent .currentWords{
+    background-color: #FFEFB7;
+    color: #23262D;
+
+    padding: 7px 10px 10px 7px ;
+    border-radius: 10px;
+}
+
+
+.blockCheckDialog .wrapperFrameDialogContent .checkDialogFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blockCheckDialog .wrapperFrameDialogContent .checkDialogFooter .checkDialogPagination{
+    margin-left: 90px;
+}
+.blockCheckDialog .wrapperFrameDialogContent .checkDialogFooter .checkDialogPagination span{
+    background-color: #FFEFB7;
+    color: #23262D;
+
+    padding: 7px 12px 7px 12px;
+    border-radius: 20px;
+}
+.blockCheckDialog .wrapperFrameDialogContent .checkDialogFooter .checkDialogButton{
+    position: relative;
+}
+.blockCheckDialog .wrapperFrameDialogContent .checkDialogFooter .checkDialogButton span{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 15px;
+    left: 44px;
+    font-size: 16px;
+    font-weight: 600;
+
+    z-index: 3;
+}
+.blockCheckDialog .wrapperFrameDialogContent .checkDialogFooter .checkDialogButton img{
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------ Block Read And Translate ---------------------------------------*/
+
+.blockReadAndTranslate .titleHeaderBlock{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.blockReadAndTranslate .titleHeaderBlock .titleIcon{
+    height: 55px;
+}
+.blockReadAndTranslate .titleHeaderBlock h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.blockReadAndTranslate .titleHeaderText{
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.blockReadAndTranslate .textVideo{
+    width: 100%;
+}
+.blockReadAndTranslate  .blockReadAndTranslateContent{
+    margin-top: 40px;
+    display: flex;
+}
+.blockReadAndTranslate  .blockReadAndTranslateContent .textPhoto{
+    height: 400px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+.blockReadAndTranslate  .blockReadAndTranslateContent p{
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.blockReadAndTranslate  .blockReadAndTranslateContent .firstQuotes{
+    font-size: 60px;
+    color: #D86F6F;
+    float: left;
+    height: 25px;
+    margin-right: 15px;
+    padding: 0;
+}
+.blockReadAndTranslate  .blockReadAndTranslateContent .lastQuotes{
+    float: right;
+    height: 25px;
+    font-size: 60px;
+    color: #D86F6F;
+}
+
+
+
+
+
+/* -------------------------------------- Block Grammar Tasks --------------------------------------- */
+
+.blockGrammarTasks .titleHeader{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.blockGrammarTasks .titleHeader .titleIcon{
+    height: 55px;
+}
+.blockGrammarTasks .titleHeader h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.blockGrammarTasks  .titleHeaderText{
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+.firstTask {
+
+}
+.firstTask .translateSentencesAndUseWords {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.firstTask .translateSentencesAndUseWords h5{
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+
+    color: #EB4436;
+}
+.firstTask .translateSentencesAndUseWords table{
+    border-spacing: 0px;
+    border-collapse: separate; 
+
+    width: 1100px;
+}
+.firstTask .translateSentencesAndUseWords table td{
+    text-align: center;
+}
+.firstTask .translateSentencesAndUseWords table td input{
+    width: 98%;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+}
+.firstTask .translateSentencesAndUseWords table .firstColumn{
+    background-color: #F4F4F4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    border-bottom: 1px solid #fff;
+}
+.firstTask .translateSentencesAndUseWords table .secondColumn{
+    border-left: 1px solid #EB4436;
+    border-right: 1px solid #EB4436;
+    border-bottom: 1px solid #EEEEEE;
+
+    font-size: 17px;
+}
+.firstTask .translateSentencesAndUseWords table #topCell{
+    border-top: 1px solid #EB4436;
+    border-radius: 20px 20px 0 0;
+}
+.firstTask .translateSentencesAndUseWords table #bottomCell{
+    border-bottom: 1px solid #EB4436;
+    border-radius: 0 0 20px 20px;
+}
+
+
+
+.firstTask .transformSentences{
+    background-color: #F4F4F4;
+    width: 850px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+
+    display: flex;
+}
+.firstTask .transformSentencesPhoto{
+    width: 250px;
+    margin-right: 30px;
+}
+.firstTask .transformSentencesWrapperContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.firstTask .transformSentencesContent{
+    display: flex;
+    align-items: center;
+}
+.firstTask .transformSentencesContent span{
+    color: #EB4436;
+    margin-right: 40px;
+}
+.firstTask .transformSentencesContent input{
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+
+    border-radius: 7px;
+    border: none;
+}
+.firstTask .transformSentencesContent .transformSentencesButton{
+    width: 50px;
+    height: 35px;
+    background-color: #EB4436;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+    margin-left: 20px;
+}
+.firstTask .transformSentencesContent .transformSentencesButton img{
+    height: 25px;
+}
+
+
+
+
+.firstTask .wrapperTransformSentences{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.firstTask .wrapperTransformSentences .transformSentences{
+    width: 630px;
+}
+.firstTask .wrapperTransformSentences .transformSentencesPhoto{
+    width: 170px;
+}
+.firstTask .wrapperTransformSentences .transformSentences .transformSentencesContent input{
+    width: 320px;
+}
+.firstTask .wrapperTransformSentences .transformSentencesPhotoBlock{
+    height: 280px;
+}
+
+
+
+
+
+
+
+
+
+.secondTask{
+    margin-bottom: 70px;
+}
+.secondTask .readAndAnswer{
+    margin-left: 50px;
+
+}
+.secondTask .readAndAnswer .firstQuotes{
+    font-size: 60px;
+    color: #D86F6F;
+    float: left;
+    height: 25px;
+    margin-right: 15px;
+    padding: 0;
+}
+.secondTask .readAndAnswer p{
+    line-height: 1.5;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+.secondTask .readAndAnswer .lastQuotes{
+    float: right;
+    height: 25px;
+    font-size: 60px;
+    color: #D86F6F;
+    margin-top: -25px;
+}
+.secondTask .answerTheQuestion{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.secondTask .answerTheQuestion strong{
+    display: block;
+}
+.secondTask .answerTheQuestion .answerTheQuestionInput{
+    display: flex;
+
+    align-items: center;
+}
+.secondTask .answerTheQuestion input{
+    height: 40px;
+    width: 90%;
+    padding-left: 20px;
+    display: inline-block;
+
+    border-radius: 20px;
+    border: none;
+
+    box-shadow:  0 0 10px rgba(0,0,0,0.2); /* Параметры тени */
+
+    margin-top: 20px;
+}
+.secondTask .answerTheQuestion .correctAnswerButton{
+    width: 55px;
+    height: 40px;
+    background-color: #EB4436;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+    margin-left: 20px;
+
+    margin-top: 20px;
+    
+}
+.secondTask .answerTheQuestion .correctAnswerButton img{
+    height: 28px;
+}
+
+
+
+
+
+
+
+
+.thirdTask{
+    margin-bottom: 60px;
+}
+.thirdTask .translateText{
+    margin-left: 40px;
+    line-height: 1.5;
+
+    margin-top: 40px;
+}
+.thirdTask .translateText input{
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+    height: 25px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2); /* Параметры тени */
+}
+
+
+
+
+
+
+
+.forthTask .translateWords{
+    display: flex;
+    justify-content: space-between;
+}
+.forthTask .translateWords .translateWordBlock{
+    width: 280px;
+    height: 235px;
+    border: 1px solid #EB4436;
+    border-radius: 17px;
+}
+.forthTask .translateWords .translateWordBlock img{
+    width: 280px;
+    margin-bottom: 0;
+}
+.forthTask .translateWords .translateWordBlock input{
+    margin-top: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 276px;
+    text-align: center;
+    border: none;
+    border-radius: 0 0 17px 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------ Block Media Task ---------------------------------------- */
+
+.blockMediaTask{
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    margin-bottom: 70px;
+}
+.blockMediaTask .circleIntroPink{
+    position: absolute;
+    z-index: 0;
+    bottom: 30px;
+    right: 250px;
+
+    width: 500px;
+}
+.blockMediaTask .circleIntroSilver{
+    position: absolute;
+    z-index: 0;
+    bottom: -50px;
+    left: -40px;
+
+    width: 500px;
+}
+
+
+
+.blockMediaTask .titleHeader{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.blockMediaTask .titleHeader .titleIcon{
+    height: 55px;
+}
+.blockMediaTask .titleHeader h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.blockMediaTask  .titleHeaderText{
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.blockMediaTask .blockMediaTaskContent{
+    display: flex;
+}
+.blockMediaTask .blockMediaTaskContent .videoMedia{
+    height: 430px;
+    z-index: 3;
+}
+.blockMediaTask .blockMediaTaskContent .mediaQuestions{
+    margin-left: 40px;
+}
+.blockMediaTask .blockMediaTaskContent .mediaQuestions h4{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    z-index: 3;
+    position: relative;
+}
+
+
+
+
+.blockMediaTask .blockMediaTaskContent .mediaQuestions .giveAnswersMedia{
+    margin-top: 10px;
+}
+.blockMediaTask .blockMediaTaskContent .mediaQuestions .giveAnswersMedia textarea{
+    display: block;
+    width: 320px;
+    height: 70px;
+    resize: none;
+
+    font-size: 14px;
+    
+    padding: 12px;
+    /* padding-bottom: 70px; */
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+    color: #A5A5A5;
+
+    /* margin-top: 20px;
+    margin-bottom: 25px; */
+    z-index: 3;
+    position: relative;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+

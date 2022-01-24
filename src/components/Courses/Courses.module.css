@@ -1,0 +1,136 @@
+.wrapperCoursesPage{
+    margin-left: 30px;
+    width: 1180px;
+}
+
+.coursesPaginations{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.coursesPaginations div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid #8E8E8E;
+    width: 360px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+.coursesPaginations a{
+    color: #8E8E8E;
+    text-decoration: none;
+    border: none;
+}
+.coursesPaginations .activeLink{
+    border-radius: 30px 30px 30px 30px;
+    background-color: #F8C02E;
+    color: #000000 !important;
+    border: none;
+    text-decoration: none;
+}
+
+
+
+
+.blockAdditionalTopicsWrapper h2{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.searchAdditionalTopicsInput{
+    display: flex;
+    justify-content: center;
+}
+.searchAdditionalTopicsInput input{
+    height: 40px;
+    width: 700px;
+    padding-left: 20px;
+    background-color: #F3F3F3;
+    color: #6F6F6F;
+    font-size: 15px;
+  
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+}
+.searchAdditionalTopicsInput .searchAdditionalTopicsButton{
+    height: 42px;
+    width: 70px;
+    background-color: #F3F3F3;
+    color: #6F6F6F;
+  
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchAdditionalTopicsInput .searchAdditionalTopicsButton img{
+    height: 23px;
+}
+
+
+
+
+
+
+.additionalTopicsWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.additionalTopicsWrapper .additionalTopics{
+    background-color: #F6F6F6;
+    width: 368px;
+    border-radius: 35px 35px 35px 35px;
+    margin-bottom: 30px;
+}
+.additionalTopicsWrapper .additionalTopics h3{
+    padding-left: 20px;
+}
+.additionalTopicsWrapper .additionalTopics p{
+    padding-left: 20px;
+}
+
+
+.blockDeschuleShopWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blockDeschuleShopWrapper .deschuleShopItem{
+    background-color: #F6F6F6;
+    width: 328px;
+    border-radius: 25px 25px 25px 25px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* -------- Footer -------- */
+footer{
+    /* height: 300px; */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+footer .deschuleTitle{
+    text-align: center;
+    color: #EB4436;
+    opacity: 0.2;
+    font-size: 220px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    
+    z-index: 3;
+    
+}
+footer .stoneDownTitle{
+    position: absolute;
+    z-index: -90;
+    bottom: -200px;
+    left: -30px; 
+}

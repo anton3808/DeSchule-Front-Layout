@@ -1,0 +1,50 @@
+.wrapperChallengePage{
+    margin-left: 30px;
+    width: 1180px;
+}
+.challengeHeader{
+    border: 1px solid #F8C02E;
+    border-radius: 10px;
+    padding: 15px 20px 15px 20px;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+
+    margin-top: 70px;
+}
+.challengeHeader .challengeHeaderItems{
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: right;
+    margin-right: 55px;
+}
+.challengeHeader .challengeHeaderItems .challengeHeaderItem{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.challengeHeader .challengeHeaderItems .challengeHeaderItem .circlePoint{
+    background-color: #F8C02E;
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.challengeHeader .challengeHeaderItems .challengeHeaderItem h5{
+    margin: 0;
+    font-size: 17px;
+}
+.challengeHeader p{
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.challengePhotoMan{
+    position: absolute;
+    width: 300px;
+    top: -100px;
+    left: -50px;
+}
