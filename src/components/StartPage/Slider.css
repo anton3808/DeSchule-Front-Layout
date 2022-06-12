@@ -1,0 +1,90 @@
+
+ .swiper-container{
+  /* overflow: visible !important; */
+  
+}
+
+
+.swiper-wrapper{
+  /* overflow: visible !important; */
+
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+
+}
+
+.swiper-button-prev{
+  
+  background: url("../../assets/images/StartPage/leftArrowSlider.svg");
+
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  top: 96% !important;
+  left: 89% !important;
+  width: 40px !important;
+
+  z-index: 20;
+
+  
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next{
+  background: url("../../assets/images/StartPage/rightArrowSlider.svg");
+
+  cursor: pointer;
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  
+  top: 96% !important;
+  right: 0% !important;
+  width: 70px !important;
+
+}
+.swiper-button-next::after{
+  display: none;
+} 
+
+
+
+
+
+
+.swiper-pagination-bullets{
+  width: 20% !important;
+  position: absolute !important;
+  left: 50% !important;
+  margin-left: -10% !important;
+
+  bottom: 20px !important;
+}
+.swiper-pagination-bullet{
+  background-color:#212121 !important;
+}
+
+.swiper-pagination-bullet-active{
+  -webkit-transition: width 0.5s ease-in-out ;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+
+  width: 90px !important;
+  height: 7px !important;
+  background-color:#EB3F32 !important;
+  border-radius: 20px !important;
+}
+
+
+
+.swiper-slide{
+
+}

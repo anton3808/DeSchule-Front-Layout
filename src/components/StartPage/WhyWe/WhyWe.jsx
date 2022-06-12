@@ -3,16 +3,16 @@ import s from '../StartPage.module.css';
 import {NavLink, Route} from "react-router-dom";
 
 import trainCircle from '../../../assets/images/trainCircle.png';
-import trainPhoto from '../../../assets/images/trainPhoto.png';
+import trainIcon from '../../../assets/images/StartPage/whyWe-TrainIcon.svg';
 
 import readCircle from '../../../assets/images/readCircle.png';
-import readPhoto from '../../../assets/images/readPhoto.png';
+import readIcon from '../../../assets/images/StartPage/whyWe-ReadIcon.svg';
 
 import developCircle from '../../../assets/images/developCircle.png';
-import developPhoto from '../../../assets/images/developPhoto.png';
+import developIcon from '../../../assets/images/StartPage/whyWe-DevelopIcon.svg';
 
 import travelCircle from '../../../assets/images/travelCircle.png';
-import travelPhoto from '../../../assets/images/travelPhoto.png';
+import travelIcon from '../../../assets/images/StartPage/whyWe-TravelIcon.svg';
 
 
 
@@ -27,25 +27,25 @@ const WhyWe = () => {
 
       <div className={s.trainBlock}>
         <img className={s.trainCircle} src={ trainCircle }  />
-        <img className={s.trainPhoto} src={ trainPhoto }  />
+        <img className={s.trainPhoto} src={ trainIcon }  />
         <div> <span>ТРЕНУЙ</span> ПАМ’ЯТЬ</div>
       </div>
 
       <div className={s.readBlock}>
         <img className={s.readCircle} src={ readCircle }  />
-        <img className={s.readPhoto} src={ readPhoto }  />
+        <img className={s.readPhoto} src={ readIcon }  />
         <div> <span>ЧИТАЙ</span> ЛІТЕРАТУРУ</div>
       </div>
 
       <div className={s.developBlock}>
         <img className={s.developCircle} src={ developCircle }  />
-        <img className={s.developPhoto} src={ developPhoto }  />
+        <img className={s.developPhoto} src={ developIcon }  />
         <div> <span>РОЗВИВАЙ</span> ВПЕВНЕНІСТЬ</div>
       </div>
 
       <div className={s.travelBlock}>
         <img className={s.travelCircle} src={ travelCircle }  />
-        <img className={s.travelPhoto} src={ travelPhoto }  />
+        <img className={s.travelPhoto} src={ travelIcon }  />
         <div> <span>ПОДОРОЖУЙ</span> </div>
       </div>
     </div>

@@ -2654,9 +2654,6 @@ const Calendar = (props) => {
         </div>
       </div>
 
-      <h1 className={s.deschuleTitle}>DESCHULE</h1>
-      <img src={stoneDownTitle} className={s.stoneDownTitle} />
-
     </div >
   )
 }

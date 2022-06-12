@@ -1,12 +1,939 @@
 .errorMessage {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 13px;
     color: red;
-    margin-top: 15px;
+    margin-top: -13px;
+    margin-bottom: 15px;
 }
+.errorMessageModalCabinet {
+  width: 100%;
+  display: flex;
+  font-size: 13px;
+  color: red;
+  margin-top: -13px;
+  // margin-bottom: 5px;
+}
+.errorMessageFastRegis {
+  width: 100%;
+  display: flex;
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.errorMessageFastRegis_Page{
+  width: 100%;
+  display: flex;
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+.errorMessageFastRegis_PageSecond{
+  width: 100%;
+  display: flex;
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+}
+.errorMessage_CodeReset{
+  text-align: center;
+  font-size: 15px;
+  color: red;
+  margin-top: -15px;
+  margin-bottom: 8px;
+}
+.errorMessagePayment{
+  width: 100%;
+    display: flex;
+    font-size: 13px;
+
+    color: red;
+    margin-top: 6px;
+    margin-bottom: -22px;
+}
+.errorMessageLogin{
+  width: 100%;
+    display: flex;
+    font-size: 13px;
+
+    color: red;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
 
 .errorInput {
     border: 1px solid red !important;
 }
+.errorInputPayment{
+  border-bottom: 1px solid red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /* ------------- Modal ------------- */
+
+// .modal_wrapper{
+//     display: flex;
+//     flex-direction: column;
+//     max-height: calc(100vh - 150px);
+//     font-family: 'Montserrat', sans-serif;
+  
+//     overflow-y: auto;
+//   }
+//   .modal_wrapper h2{
+//     text-align: center;
+//     font-size: 38px;
+//     margin: 0;
+//   }
+//   .modal_wrapper .close_icon{
+//     width: 25px;
+//     height: 25px;
+  
+//     position: absolute;
+//     top: 15px;
+//     right: 15px;
+  
+//     cursor: pointer;
+//   }
+  
+  
+  
+//   .packagesOfCourse{
+//     display: flex;
+//   }
+  
+//   .modal_wrapper .freeCoupleOfLessons{
+//     display: inline-block;
+//     width: 400px;
+//     height: 150px;
+//     border-radius: 20px;
+//     background-color: #d8d7d7;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .modal_wrapper .freeCoupleOfLessons h3{
+//     text-align: center;
+//     margin-top: 20px;
+//   }
+//   .modal_wrapper .freeCoupleOfLessons span{
+//     background-color: #E84A47;
+//     color: #fff;
+//     padding: 10px;
+//     border-radius: 10px;
+//     margin-bottom: 10px;
+//   }
+  
+  
+  
+//   .modal_wrapper .wholeCourse{
+//     display: inline-block;
+//     width: 400px;
+//     height: 150px;
+//     border-radius: 20px;
+//     background-color: #d8d7d7;
+//     margin-left: 30px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .modal_wrapper .wholeCourse h3{
+//     text-align: center;
+//     margin-top: 20px;
+//   }
+//   .modal_wrapper .wholeCourse span{
+//     background-color: #E84A47;
+//     color: #fff;
+//     padding: 10px;
+//     border-radius: 10px;
+//     margin-bottom: 5px;
+  
+//   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+//   .resetPasswordForm{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     justify-content: start;
+  
+//     width: 430px;
+  
+//     margin: 0 auto;
+//     margin-top: 0px;
+//   }
+//   .resetPasswordForm h3{
+//     text-align: center;
+//     font-size: 28px;
+//     margin: 0;
+//   }
+  
+  
+//   .resetPasswordForm input{
+//     width: 390px;
+//     height: 43px;
+//     border-radius: 40px;
+//     background-color: #ECECEC;
+//     border: none;
+//     text-align: center;
+//     color: #6A6A6A;
+//     font-size: 15px;
+//     margin: 0 auto;
+//     margin-top: 35px;
+//   }
+//   .resetPasswordForm input::placeholder{
+//     font-size: 15px;
+//   }
+  
+  
+  
+  
+  
+//   .resetPasswordForm .regisButton{
+//     position: relative;
+//     margin-top: 10px;
+//     cursor: pointer;
+  
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .resetPasswordForm .btnResetPassword_Modal{
+//     width: 390px;
+//   }
+//   .resetPasswordForm .sendToResertPassword{
+//     position: absolute;
+//     left: 105px;
+//     top: 11px;
+//     color: #fff;
+//     font-size: 17px;
+//     font-weight: 600;
+//   }
+  
+  
+  
+  
+  
+  
+  
+//   .modal_demo_form, .modal_full_form{
+//     position: fixed;
+//     top: -800px;
+  
+//     transition: 0.7s all ease;
+  
+//     /* display: none; */
+    
+    
+   
+//     /* height: 400px;
+//     width: 200px; */
+    
+//   }
+  
+//   .modal_demo_form.open, .modal_full_form.open{
+//     position: relative;
+//     top: 0;
+//     /* height: 400px; */
+//   }
+  
+  
+  
+//   .modal_demo_form{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     justify-content: start;
+  
+//     margin: 0 auto;
+//     margin-top: 10px;
+//   }
+//   .modal_demo_form input{
+//     width: 350px;
+//     height: 45px;
+//     border-radius: 40px;
+//     background-color: #ECECEC;
+//     border: none;
+//     text-align: center;
+//     color: #6A6A6A;
+//     margin-top: 15px;
+  
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 500;
+//     font-size: 15px;
+//   }
+//   .modal_demo_form input::placeholder{
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 500;
+//     font-size: 15px;
+//   }
+  
+//   .passwordInput{
+//     margin-bottom: 15px;
+//   }
+//   .modal_demo_form .resetPasswordText{
+//     cursor: pointer;
+//     color: #E84747;
+//     font-weight: 700;
+//     font-size: 13px;
+    
+//     text-align: right;
+//   }
+//   .modal_demo_form .btnLogin_Modal{
+//     width: 350px;
+//     /* height: 40px; */
+//   }
+  
+  
+//   .modal_demo_form .loginButton{
+//     position: relative;
+//     margin-top: 25px;
+//     cursor: pointer;
+//   }
+//   .modal_demo_form .login_button_text{
+//     position: absolute;
+//     top: 10px;
+//     left: 150px;
+//     color: #fff;
+//     font-size: 16px;
+//     font-weight: 600;
+//   }
+//   .modal_demo_form .regisButton .reg_button_text{
+//     position: absolute;
+//     left: 80px;
+//     color: #fff;
+//     font-size: 16px;
+//   }
+  
+//   .modal_demo_form .lineToDivide{
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+  
+//     justify-content: space-between;
+//   }
+//   .modal_demo_form .lineToDivide h5{
+//     font-size: 15px;
+//     font-weight: 500;
+//   }
+//   .modal_demo_form .lineToDivide div{
+//     width: 40%;
+//     height: 1px;
+//     background-color: #b8b7b7;
+//   }
+  
+//   .modal_demo_form .singUpWithGoogle, .modal_demo_form .singUpWithFacebook{
+//     width: 85%;
+//     margin: 0 auto;
+//     margin-bottom: 15px;
+  
+//     cursor: pointer;
+//   }
+  
+//   .modal_demo_form .textUnderLogFormToReg{
+//     font-size: 13px;
+//     text-align: center;
+//     font-weight: 500;
+  
+//     margin-top: 30px;
+  
+//   }
+//   .modal_demo_form .textUnderLogFormToReg .regisTextUnderLogForm{
+//     color: #E84747;
+//     font-weight: 700;
+  
+//     cursor: pointer;
+//   }
+  
+  
+  
+  
+  
+  
+  
+//   .modal_full_form{
+//     margin: 0 auto;
+//   }
+//   .modal_full_form span{
+//     width: 300px;
+//     margin-top: 10px;
+//     margin-bottom: 20px;
+//   }
+//   .modal_full_form{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     margin-top: 50px;
+//     justify-content: start;
+//   }
+//   .modal_full_form input{
+//     width: 350px;
+//     height: 40px;
+//     border-radius: 40px;
+//     background-color: #ECECEC;
+//     border: none;
+//     text-align: center;
+//     color: #6A6A6A;
+//     margin-top: 15px;
+//   }
+//   .modal_full_form .btnStartStudy{
+//     width: 300px;
+//     height: 40px;
+//   }
+//   .modal_full_form .regisButton{
+//     position: relative;
+//     margin-top: 25px;
+//     cursor: pointer;
+//   }
+//   .modal_full_form .regisButton span{
+//     position: absolute;
+//     left: 80px;
+//     color: #fff;
+//     font-size: 16px;
+//   } 
+  
+  
+  
+  
+//   /* 
+//   .resetPasswordText {
+//     cursor: pointer;
+//     color: #E84747;
+//     font-weight: 700;
+//     font-size: 12px;
+    
+//     text-align: right;
+//   } */
+  
+  
+  
+  
+  
+  
+//   .packagesOfCourseModalWrapper{
+//     width: 950px;
+//   /* 
+//     position: fixed;
+//     top: -800px; */
+  
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper{
+//     margin-bottom: 0;
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .mainPackagesOfCourse{
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 30px;
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .packageHomeAlone{
+//     width: 400px;
+//     margin-right: 40px;
+//     margin-left: 20px;
+  
+//     border-radius: 32px 32px 32px 32px;
+//     box-shadow: 0px 0px 22px rgb(0 0 0 / 35%);
+//   }
+  
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .packageGuardiansOfTheGalaxy{
+//     /* width: 35%; */
+//     width: 400px;
+//     margin-right: 20px;
+//     border-radius: 32px 32px 32px 32px;
+//     box-shadow: 0px 0px 22px rgb(0 0 0 / 35%);
+//   }
+  
+//   .packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText {
+//     height: 90px;
+//   }
+//   .packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText h3, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText h3{
+//     font-size: 21px;
+//   }
+//   .packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText .priceForPackage, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText .priceForPackage{
+//     font-size: 24px;
+//   }
+//   .packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText .perMonthOfPackage, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText .perMonthOfPackage{
+//     font-size: 15px;
+//   }
+  
+  
+  
+  
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage{
+//     border: 1px solid #DBDBDB;
+//     border-radius: 20px;
+//     /* width: 80%; */
+//     width: 840px;
+//     /* height: 300px; */
+//     margin: 0 auto;
+//     margin-top: 50px;
+  
+//     display: flex;
+  
+//     overflow: hidden;
+    
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage .sherlokGetFreePhoto{
+//     width: 97%;
+//     margin-top: 60px;
+//     margin-left: 7%;
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage .stoneBackgroundGetFree{
+//     width: 390px;
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .cloudsOfFreePackage{
+//     position: absolute;
+//     top: 12px;
+//     right: 19%;
+//     width: 430px;
+//     z-index: -5;
+//   }
+//   .packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .textInCloud{
+//     width: 190px;
+  
+//     font-size: 18px;
+  
+//   }
+  
+//   .packagesOfCourseModalWrapper .loginBlock h5{
+//     text-align: center;
+//     font-size: 15px;
+//     font-weight: 400;
+//     margin-top: 40px;
+//   }
+//   .packagesOfCourseModalWrapper .loginBlock span{
+//     text-align: center;
+//     font-size: 15px;
+//     font-weight: 700;
+//     cursor: pointer;
+  
+//     color: #E84747;
+//   }
+  
+  
+  
+  
+  
+  
+//   /* 
+//   .modal_fast_regis_form{
+  
+//   } */
+  
+  
+//   .modal_fast_regis_form{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     justify-content: start;
+  
+//     margin: 0 auto;
+//     margin-top: 10px;
+//   }
+//   .modal_fast_regis_form .fastRegInfo{
+    
+//     width: 500px;
+//     text-align: center;
+  
+//     margin: 0 auto;
+  
+//     margin-top: 20px;
+//     margin-bottom: 20px;
+//   }
+//   .modal_fast_regis_form form{
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+  
+//     width: 730px;
+//   }
+//   .modal_fast_regis_form input{
+//     width: 350px;
+//     height: 45px;
+//     border-radius: 40px;
+//     background-color: #ECECEC;
+//     border: none;
+//     text-align: center;
+//     color: #6A6A6A;
+//     margin-top: 15px;
+  
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 500;
+//     font-size: 15px;
+//   }
+//   .modal_fast_regis_form input::placeholder{
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 500;
+//     font-size: 15px;
+//   }
+//   .modal_fast_regis_form .resetPasswordText{
+//     cursor: pointer;
+//     color: #E84747;
+//     font-weight: 700;
+//     font-size: 13px;
+//     margin-top: 20px;
+    
+//     text-align: right;
+//   }
+//   .modal_fast_regis_form .btnRegis_Modal{
+//     width: 350px;
+//     /* height: 40px; */
+//   }
+  
+  
+//   .modal_fast_regis_form .regisButton{
+//     position: relative;
+//     margin-top: 15px;
+//     cursor: pointer;
+//   }
+//   .modal_fast_regis_form .reg_button_text{
+//     position: absolute;
+//     top: 14px;
+//     left: 100px;
+//     color: #fff;
+//     font-size: 17px;
+//     font-weight: 600;
+//   }
+//   /* .modal_fast_regis_form .regisButton .reg_button_text{
+//     position: absolute;
+//     left: 80px;
+//     color: #fff;
+//     font-size: 16px;
+//   } */
+  
+//   .modal_fast_regis_form .lineToDivide{
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+  
+//     justify-content: space-between;
+//   }
+//   .modal_fast_regis_form .lineToDivide h5{
+//     font-size: 17px;
+//     font-weight: 500;
+//   }
+//   .modal_fast_regis_form .lineToDivide div{
+//     width: 45%;
+//     height: 1px;
+//     background-color: #b8b7b7;
+//   }
+  
+//   .modal_fast_regis_form .singUpWithSocialNetworks{
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .modal_fast_regis_form .singUpWithGoogle, .modal_fast_regis_form .singUpWithFacebook{
+//     width: 43%;
+//     /* margin: 0 auto;
+//     margin-bottom: 15px; */
+  
+//     cursor: pointer;
+//   }
+//   .modal_fast_regis_form .singUpWithFacebook{
+//     margin-right: 30px;
+//   }
+  
+  
+  
+//   .modal_fast_regis_form .textUnderRegisFormToReg{
+//     font-size: 13px;
+//     text-align: center;
+//     font-weight: 500;
+  
+//     margin-top: 30px;
+//   }
+//   .modal_fast_regis_form .textUnderRegisFormToReg .regisTextUnderLogForm{
+//     color: #E84747;
+//     font-weight: 700;
+  
+//     cursor: pointer;
+//   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+//   .modal_additional_course h3{
+//     text-align: center;
+//     font-size: 22px;
+//     margin-bottom: 30px;
+//     margin-top: 0;
+//   }
+  
+  
+  
+//   .modal_additional_course .startFinishProgressBlock_Modal{
+//     position: relative;
+//   }
+  
+//   .modal_additional_course .startFinishProgressBlock_Modal .startIcon_AdditionalCourse{
+//     position: absolute;
+//     top: 24px;
+//     left: 36px;
+//   }
+//   .modal_additional_course .startFinishProgressBlock_Modal .finishIcon_AdditionalCourse{
+//     position: absolute;
+//     top: 24px;
+//     right: 35px;
+//   }
+//   .modal_additional_course .startFinishProgressBlock_Modal .finishFlag_AdditionalCourse{
+//     position: absolute;
+//     width: 60px;
+//     top: -23px;
+//     right: -5px;
+  
+//     z-index: -10;
+//   }
+  
+//   .modal_additional_course .startFinishProgressBlock_Modal .startFinishProgressText{
+//     display: flex;
+//     justify-content: space-between;
+  
+    
+//     width: 980px;
+//     margin: 0 auto;
+//     margin-bottom: 20px;
+//   }
+//   .modal_additional_course .startFinishProgressBlock_Modal .startFinishProgressText div{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+//   .modal_additional_course .startFinishProgressBlock_Modal .startFinishProgressText h4{
+//     margin: 0;
+//     font-size: 15px;
+//   }
+//   .modal_additional_course .startFinishProgressBlock_Modal .startFinishProgressText span{
+//     margin: 0;
+//     font-size: 13px;
+//     color: #515151;
+//   }
+//   .modal_additional_course .startFinishProgressBlock_Modal .startFinishLinePhoto{
+//     width: 1000px;
+  
+//     display: flex;
+//     justify-content: center;
+//     margin: 0 auto;
+//   }
+  
+  
+  
+  
+  
+//   .modal_additional_course .additionalCourseModalInfo{
+//     display: flex;
+  
+//     /* width: 850px; */
+//   }
+//   .modal_additional_course  .additionalCourseModalInfoText{
+//     width: 500px;
+//   }
+//   .modal_additional_course .additionalCourseModalInfo p{
+//     font-size: 14px;
+//     line-height: 1.5;
+  
+//     margin-bottom: 30px;
+//   }
+//   .modal_additional_course .additionalCourseModalInfo .pointsOfPackage{
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 15px;
+  
+//     font-size: 14px;
+//   }
+//   .modal_additional_course .additionalCourseModalInfo .pointsOfPackage img{
+//     margin-right: 7px;
+//     width: 17px;
+//   }
+//   .modal_additional_course .additionalCourseModalInfo .additionalCourseModalPhoto{
+//     width: 500px;
+//     border-radius: 20px;
+  
+//     margin-left: 30px;
+//   }
+  
+  
+  
+  
+  
+//   .modal_additional_course .priceAndButtonOfCourse{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+  
+//     margin-top: 50px;
+//   }
+//   .modal_additional_course .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal{
+//     margin-right: 30px;
+//   }
+//   .modal_additional_course .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal h4{
+//     font-size: 20px;
+//     font-weight: 600;
+//     margin: 0;
+//   }
+//   .modal_additional_course .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal div{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+  
+//     margin-top: 3px;
+//   }
+//   .modal_additional_course .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal img{
+//     width: 15px;
+//     margin-right: 7px;
+//   }
+//   .modal_additional_course .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal span{
+//     color: #777A86;
+//     font-size: 13px;
+//     font-weight: 500;
+//   }
+  
+  
+  
+  
+  
+//   .modal_additional_course .resultOfTestButton{
+//     position: relative;
+//     cursor: pointer;
+  
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .modal_additional_course .resultOfTestButton .btnBuyAdditionalCourse_Modal{
+//     width: 290px;
+//   }
+//   .modal_additional_course .resultOfTestButton .returnToPackages{
+//     position: absolute;
+//     left: 122px;
+//     top: 11px;
+//     color: #fff;
+//     font-size: 19px;
+//     font-weight: 600;
+//   }
+//   .modal_additional_course .resultOfTestButton .returnToRegis{
+//     position: absolute;
+//     /* left: 122px; */
+//     top: 12px;
+//     color: #fff;
+//     font-size: 18px;
+//     font-weight: 600;
+//   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+//   /* ----------- Modal Result Of Test ----------- */
+//   .modal_result_of_test h3{
+//     text-align: center;
+//     font-size: 24px;
+//     margin-bottom: -15px;
+//   }
+//   .modal_result_of_test .recommendedLevel{
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//   }
+  
+//   .modal_result_of_test .recommendedLevel img{
+//     width: 220px;
+//   }
+//   .modal_result_of_test .recommendedLevel h2{
+//     position: absolute;
+//     top: 90px;
+//     font-size: 35px;
+//     color: #fff;
+//   }
+//   .modal_result_of_test .recommendedLevel span{
+//     position: absolute;
+//     top: 135px;
+//     font-size: 12px;
+//     color: #fff;
+//     opacity: 0.7;
+//   }
+//   .modal_result_of_test .proposalToImproveText{
+//     display: flex;
+//     justify-content: center;
+  
+//     margin-top: -15px;
+  
+//     position: relative;
+//   }
+//   .modal_result_of_test .proposalToImproveText p{
+//     width: 500px;
+//     text-align: center;
+  
+//     font-size: 18px;
+//     font-weight: 500;
+//   }
+//   .modal_result_of_test .proposalToImproveText img{
+//     position: absolute;
+//     bottom: 15px;
+//     right: 75px;
+//   }
+  
+  
+  
+//   .modal_result_of_test .resultOfTestButton{
+//     position: relative;
+//     margin-top: 25px;
+//     cursor: pointer;
+  
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .modal_result_of_test .btnResultOfTest_Modal{
+//     width: 500px;
+//   }
+//   .modal_result_of_test .returnToPackages{
+//     position: absolute;
+//     left: 122px;
+//     top: 12px;
+//     color: #fff;
+//     font-size: 19px;
+//     font-weight: 600;
+//   }
+//   .modal_result_of_test .returnToRegis{
+//     position: absolute;
+//     left: 122px;
+//     top: 12px;
+//     color: #fff;
+//     font-size: 18px;
+//     font-weight: 600;
+//   }
+  

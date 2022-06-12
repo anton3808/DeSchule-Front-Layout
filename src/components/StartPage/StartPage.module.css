@@ -1,16 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
-
-
 .wrapperStartPage{
   width: 90%;
   margin: 0 auto;
 }
 
-/* Header */
+/* ----------------- Header --------------- */
+.header{
+  display: flex;
+  height: 130px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navLink{
+  text-decoration: none;
+}
 
 .header .logo{
   margin-top: 0;
   display: flex;
+
+  cursor: pointer;
 }
 .header .logo img{
   height: 90px;
@@ -21,19 +29,18 @@
   font-size: 27px;
   font-weight: 800;
   margin-top: 43px;
-  
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
 
 
-.header{
-  display: flex;
-  height: 130px;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .header nav{
-  width: 22%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  width: 35%;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -42,6 +49,17 @@
 .linkMenu{
   text-decoration: none;
   color: #000000;
+
+  cursor: pointer;
+}
+.linkMenu:hover{
+  text-decoration: none;
+  color: #EB4436;
+
+  cursor: pointer;
+}
+.activeLink{
+  color: #EB4436;
 }
 
 
@@ -52,11 +70,37 @@
 }
 
 
+
+.header .loginButton{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 60px;
+
+  cursor: pointer;
+}
+.header .loginButton span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+
+
+
+
 .header .regisButton{
   position: relative;
   margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 40px;
+  margin-right: 50px;
+  cursor: pointer;
+ 
 }
 .header .regisButton img{
   width: 188px;
@@ -64,291 +108,30 @@
   
 }
 .header .regisButton span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
   color: #fff;
   position: absolute;
-  top: 8px;
-  left: 30px;
-
-}
-
-
-
-
-.header .loginButton{
-  position: relative;
-  margin-top: 20px;
-}
-.header .loginButton img{
-  width: 148px;
-  height: 40px;
-  
-}
-.header .loginButton span{
-  color: #fff;
-  position: absolute;
-  top: 8px;
+  top: 11px;
   left: 30px;
 }
-
-
-.modal_wrapper{
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 110px);
-  /* overflow-y: auto; */
-}
-.modal_wrapper h2{
-  text-align: center;
-  font-size: 40px;
-}
-.modal_wrapper .close_icon{
-  width: 25px;
-  height: 25px;
-
-  position: absolute;
-  top: 10px;
-  right: 10px;
-
-  cursor: pointer;
-}
-
-.packagesOfCourse{
-  display: flex;
-}
-
-.modal_wrapper .freeCoupleOfLessons{
-  display: inline-block;
-  width: 400px;
-  height: 150px;
-  border-radius: 20px;
-  background-color: #d8d7d7;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.modal_wrapper .freeCoupleOfLessons h3{
-  text-align: center;
-  margin-top: 20px;
-}
-.modal_wrapper .freeCoupleOfLessons span{
-  background-color: #E84A47;
-  color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-
-
-.modal_wrapper .wholeCourse{
-  display: inline-block;
-  width: 400px;
-  height: 150px;
-  border-radius: 20px;
-  background-color: #d8d7d7;
-  margin-left: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.modal_wrapper .wholeCourse h3{
-  text-align: center;
-  margin-top: 20px;
-}
-.modal_wrapper .wholeCourse span{
-  background-color: #E84A47;
-  color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 5px;
-
-}
-
-
-
-
-
-
-
-
- 
-.resetPasswordForm span{
-  width: 300px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.resetPasswordForm{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-content: start;
-
-  margin: 0 auto;
-  margin-top: 20px;
-}
-.resetPasswordForm input{
-  width: 300px;
-  height: 40px;
-  border-radius: 40px;
-  background-color: #ECECEC;
-  border: none;
-  text-align: center;
-  color: #6A6A6A;
-  margin-top: 15px;
-}
-.resetPasswordForm .btnStartStudy{
-  width: 300px;
-  height: 40px;
-}
-
-
-.resetPasswordForm .regisButton{
-  position: relative;
-  margin-top: 25px;
-  cursor: pointer;
-}
-.resetPasswordForm .sendToResertPassword{
-  position: absolute;
-  left: 120px;
-  color: #fff;
-  font-size: 16px;
-}
-
-
-
-
-.modal_demo_form, .modal_full_form{
-  position: fixed;
-  top: -800px;
-
-  transition: 0.7s all ease;
-
-  /* display: none; */
-  
-  
- 
-  /* height: 400px;
-  width: 200px; */
-  
-}
-
-.modal_demo_form.open, .modal_full_form.open{
-  position: relative;
-  top: 0;
-  /* height: 400px; */
-  
-}
-
-
-.modal_demo_form span{
-  width: 300px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.modal_demo_form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-content: start;
-
-  margin: 0 auto;
-  margin-top: 10px;
-}
-.modal_demo_form input{
-  width: 300px;
-  height: 40px;
-  border-radius: 40px;
-  background-color: #ECECEC;
-  border: none;
-  text-align: center;
-  color: #6A6A6A;
-  margin-top: 15px;
-}
-.modal_demo_form .btnStartStudy{
-  width: 300px;
-  height: 40px;
-}
-
-
-.modal_demo_form .regisButton{
-  position: relative;
-  margin-top: 25px;
-  cursor: pointer;
-}
-.modal_demo_form .login_button_text{
-  position: absolute;
-  left: 130px;
-  color: #fff;
-  font-size: 16px;
-}
-.modal_demo_form .regisButton .reg_button_text{
-  position: absolute;
-  left: 80px;
-  color: #fff;
-  font-size: 16px;
-}
-
-
-
-
-
-.modal_full_form{
-  margin: 0 auto;
-}
-.modal_full_form span{
-  width: 300px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-.modal_full_form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 50px;
-  justify-content: start;
-}
-.modal_full_form input{
-  width: 300px;
-  height: 40px;
-  border-radius: 40px;
-  background-color: #ECECEC;
-  border: none;
-  text-align: center;
-  color: #6A6A6A;
-  margin-top: 15px;
-}
-.modal_full_form .btnStartStudy{
-  width: 300px;
-  height: 40px;
-}
-.modal_full_form .regisButton{
-  position: relative;
-  margin-top: 25px;
-  cursor: pointer;
-}
-.modal_full_form .regisButton span{
-  position: absolute;
-  left: 80px;
-  color: #fff;
-  font-size: 16px;
-}
-
 
 
 
 .changeLanguage{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   margin-top: 15px;
   display: flex;
   align-items: center;
+
+  cursor: pointer;
 }
 .changeLanguage img{
-  margin-left: 3px;
-  width: 13px;
-  height: 10px;
+  margin-left: 2px;
+  width: 17px;
+  height: 13px;
 }
 
 
@@ -356,8 +139,30 @@
 
 
 
-/* Banner */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- Banner ----------------- */
 .bannerWrapper{
+  font-family: 'Montserrat', sans-serif;
+
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -370,32 +175,37 @@
   width: 50%;
 }
 .bannerWrapper h2{
-  color: #E14545;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 120px;
+  color: #E14545;
+
   margin: 0;
   padding: 0;
 }
 .bannerWrapper h1{
-  color: #ADADAD;
   font-weight: 800;
   font-size: 120px;
+
+  color: #ADADAD;
   margin: 0;
   margin-top: -20px;
   margin-bottom: 20px;
 }
 .bannerWrapper h4{
-  font-size: 31px;
+  font-weight: 700;
+  font-size: 30px;
+
   margin: 0;
 }
-.bannerWrapper .smallBtn{
-  height: 8px;
-  width: 70px;
+.bannerWrapper .bannerUnderline{
+  height: 6px;
+  width: 90px;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .bannerWrapper span{
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -404,75 +214,26 @@
 
 .bannerWrapper .regisButton{
   position: relative;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 40px;
+  /* margin-left: 20px; */
   margin-right: 40px;
+  cursor: pointer;
 }
 .bannerWrapper .regisButton img{
-  width: 280px;
-  height: 43px;
-  margin-top: 25px;
+  width: 320px;
+  /* height: 63px; */
+  /* margin-top: 25px; */
   
 }
 .bannerWrapper .regisButton span{
+  font-weight: 700;
+  font-size: 17px;
   color: #fff;
   position: absolute;
-  top: 35px;
-  left: 30px;
+  top: 15px;
+  left: 37px;
 
 }
-
-
-
-
-
-
-
-
-/* Footer */
-
-.footer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer .logo{
-  margin-top: 0;
-  display: flex;
-}
-.footer .logo img{
-  height: 90px;
-  margin-right: 6px;
-  margin-bottom: 20px;
-}
-.footer .logo h3{
-  font-size: 27px;
-  font-weight: 800;
-  margin: 0;
-  margin-top: 33px;
-  
-}
-.footer .logo span{
-  font-size: 16px;
-}
-
-
-.footer .infoFooter span{
-  margin-left: 40px;
-}
-
-
-.footer .socialNetworks{
-  display: flex;
-  align-items: center;
-}
-.footer .socialNetworks img{
-  margin-left: 8px;
-}
-
-
-
 
 .bannerPhoto{
   height: 540px;
@@ -484,105 +245,6 @@
 
 
 
-/* FirstForm */
-.firstForm{
-  margin-top: 50px;
-}
-.infoForm{
-  display: flex;
-  justify-content: space-between;
-}
-
-.photoForm{
-  position: relative;
-}
-
-
-.photoForm .flagForm{
-  position: absolute;
-  top: 35px;
-  left: 135px;
-}
-
-
-.firstForm .photoForm h2{
-  font-size: 250px;
-  color: #E04545;
-  font-weight: 800;
-  margin: 0;
-
-  position: absolute;
-  left: 20px;
-  top: -10px;
-}
-.firstForm .photoForm h3{
-  font-size: 40px;
-  color: #EB4436;
-  font-weight: 800;
-  margin: 0;
-
-  position: absolute;
-  left: 180px;
-  top: 190px;
-}
-.firstForm .photoForm h4{
-  font-size: 30px;
-  color: #000000;
-  font-weight: 500;
-  margin: 0;
-
-  position: absolute;
-  left: 180px;
-  top: 158px;
-}
-
-
-
-
-.textForm{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-top: 100px;
-}
-.btnStartStudy{
-  height: 8px;
-  width: 70px;
-  margin-bottom: 15px;
-}
-
-
-
-.form{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.form input{
-  width: 400px;
-  height: 50px;
-  border-radius: 40px;
-  background-color: #ECECEC;
-  border: none;
-  text-align: center;
-  color: #6A6A6A;
-}
-.firstForm .form .btnStartStudy{
-  width: 400px;
-  height: 50px;
-}
-
-
-.form .regisButton{
-  position: relative;
-}
-.form .regisButton span{
-  position: absolute;
-  top: 12px;
-  left: 110px;
-  color: #fff;
-  font-size: 20px;
-}
 
 
 
@@ -592,11 +254,11 @@
 
 
 
-
-
-/* WhyWe */
+/* ------------------- WhyWe ------------------- */
 
 .WhyWe{
+  font-family: 'Montserrat', sans-serif;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -620,11 +282,15 @@
   height: 150px;
 }
 .WhyWe .trainBlock div{
+  font-weight: 500;
+
   position: absolute;
   left: 90px;
   bottom: 50px;
 }
 .WhyWe .trainBlock div span{
+  font-weight: 700;
+
   color: #EB3A2D;
 }
 
@@ -647,15 +313,17 @@
   height: 120px;
 }
 .WhyWe .readBlock div{
+  font-weight: 500;
+
   position: absolute;
   left: 80px;
   bottom: 50px;
 }
 .WhyWe .readBlock div span{
+  font-weight: 700;
+
   color: #EB3A2D;
 }
-
-
 
 
 
@@ -675,14 +343,17 @@
   height: 130px;
 }
 .WhyWe .developBlock div{
+  font-weight: 500;
+
   position: absolute;
   left: 70px;
   bottom: 30px;
 }
 .WhyWe .developBlock div span{
+  font-weight: 700;
+
   color: #EB3A2D;
 }
-
 
 
 
@@ -703,11 +374,15 @@
   height: 120px;
 }
 .WhyWe .travelBlock div{
+  font-weight: 500; 
+
   position: absolute;
   left: 70px;
   bottom: 60px;
 }
 .WhyWe .travelBlock div span{
+  font-weight: 700;
+
   color: #EB3A2D;
 }
 
@@ -716,28 +391,48 @@
 
 
 
-/* UniqueTechnique */
+
+
+
+
+
+
+/* ------------------- UniqueTechnique -------------------*/
 
 .uniqueTechnique{
+  font-family: 'Montserrat', sans-serif;
+
   display: flex;
   justify-content: space-between;
 }
 
+
 .uniqueTechnique .uniqueVideo{
-  width: 45%;
+  width: 48%;
 }
 
+
 .uniqueTechnique .uniqueTechniqueText{
-  width: 45%;
+  width: 48%;
+}
+.uniqueTechnique .uniqueTechniqueText h3{
+  font-weight: 700; 
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 0;
+
 }
 .uniqueTechnique .uniqueTechniqueText .btnStartStudy{
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 100px;
   display: block;
 }
 
-.uniqueTechniqueWrapper h1{
-  font-size: 250px;
+
+.uniqueTechniqueWrapper h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 230px;
   margin: 0 auto;
   color: #EB4436;
   opacity: 0.1;
@@ -745,20 +440,179 @@
 
 
 
-/* SecondFormStartPage */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------- First Form Start Page ------------------- */
+.firstForm{
+  font-family: 'Montserrat', sans-serif;
+
+  margin-top: 50px;
+}
+.firstForm .infoForm{
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstForm .infoForm .photoForm{
+  position: relative;
+}
+
+
+.firstForm .infoForm .photoForm .flagForm{
+  position: absolute;
+
+  width: 140px;
+  top: 44px;
+  left: 130px;
+}
+
+
+.firstForm .infoForm .photoForm h2{
+  font-size: 250px;
+  color: #E04545;
+  font-weight: 800;
+  margin: 0;
+
+  position: absolute;
+  left: 20px;
+  top: -10px;
+}
+.firstForm .infoForm .photoForm h3{
+  font-size: 37px;
+  color: #EB4436;
+  font-weight: 700;
+  margin: 0;
+
+  position: absolute;
+  left: 180px;
+  top: 190px;
+}
+.firstForm .infoForm .photoForm h4{
+  font-size: 28px;
+  color: #000000;
+  font-weight: 400;
+  margin: 0;
+
+  position: absolute;
+  left: 180px;
+  top: 158px;
+}
+
+
+
+
+
+.firstForm .infoForm .textForm{
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin-top: 20px;
+}
+.firstForm .infoForm .textForm h2{
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.firstForm .infoForm .textForm .formUnderline{
+  height: 8px;
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+
+
+.firstForm .infoForm .textForm .form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.firstForm .infoForm .textForm .form .inputFormWrapper{
+  width: 47%;
+}
+.firstForm .infoForm .textForm .form input{
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 40px;
+  
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.firstForm .infoForm .textForm .form .regisButton{
+  width: 47%;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.firstForm .infoForm .textForm .form .regisButton_DeActive{
+  width: 47%;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+}
+
+.firstForm .infoForm .textForm .form .btnStartStudy{
+  width: 100%;
+  /* height: 50px; */
+}
+
+
+.firstForm .infoForm .textForm .form .regisButton span, .firstForm .infoForm .textForm .form .regisButton_DeActive span{
+  position: absolute;
+  top: 12px;
+  left: 86px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------- Second Form Start Page ------------------- */
 .secondFormWrapper{
+  font-family: 'Montserrat', sans-serif;
+
   display: flex;
   margin-top: 30px;
 }
 
 
-.leftVoice {
+.secondFormWrapper .leftVoice {
   position: relative;
 }
-.leftVoice .photoSecondForm{
+.secondFormWrapper .leftVoice .photoSecondForm{
   width: 70%;
 }
-.leftVoice h1{
+.secondFormWrapper .leftVoice h1{
   font-size: 200px;
   color: #E04545;
   font-weight: 800;
@@ -768,7 +622,7 @@
   right: 170px;
   top: -30px;
 }
-.leftVoice .flagForm{
+.secondFormWrapper .leftVoice .flagForm{
   position: absolute;
   top: 35px;
   right: 90px;
@@ -776,7 +630,7 @@
 }
 
 
-.leftVoice h3{
+.secondFormWrapper .leftVoice h3{
   font-size: 27px;
   color: #EB4436;
   font-weight: 800;
@@ -786,7 +640,7 @@
   right: 20px;
   top: 165px;
 }
-.leftVoice h4{
+.secondFormWrapper .leftVoice h4{
   font-size: 20px;
   color: #000000;
   font-weight: 500;
@@ -800,25 +654,26 @@
 
 
 
-.rightForm h2{
+.secondFormWrapper .rightForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  justify-content: start;
+  margin-left: 180px;
+}
+.secondFormWrapper .rightForm h2{
   margin: 0;
 }
-.rightForm span{
-  width: 300px;
+.secondFormWrapper .rightForm p{
+  width: 350px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.rightForm{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 50px;
-  justify-content: start;
-  margin-left: 200px;
-}
-.rightForm input{
-  width: 300px;
+
+.secondFormWrapper .rightForm input{
+  width: 350px;
   height: 40px;
   border-radius: 40px;
   background-color: #ECECEC;
@@ -826,32 +681,56 @@
   text-align: center;
   color: #6A6A6A;
   margin-top: 15px;
-}
-.rightForm .btnStartStudy{
-  width: 300px;
-  height: 40px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 
-.rightForm .regisButton{
+
+.secondFormWrapper .rightForm .regisButton{
   position: relative;
   margin-top: 25px;
+  cursor: pointer;
 }
-.rightForm .regisButton span{
+.secondFormWrapper .rightForm .regisButton img, .secondFormWrapper .rightForm .regisButton_DeActive img{
+  width: 350px;
+}
+.secondFormWrapper .rightForm .regisButton_DeActive{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+
+  opacity: 0.7;
+}
+.secondFormWrapper .rightForm .regisButton span, .secondFormWrapper .rightForm .regisButton_DeActive span{
   position: absolute;
-  left: 80px;
+  
+  /* display: flex;
+  justify-content: center; */
+  left: 93px;
   color: #fff;
   font-size: 16px;
+  font-weight: 700;
+  margin-top: 12px;
 }
 
 
 
 
 
-/* StudyByTravelling */
 
+
+
+
+
+
+
+/* ------------ StudyByTravelling ------------ */
 
 .studyAndTravelWrapper{
+  font-family: 'Montserrat', sans-serif;
+
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
@@ -861,64 +740,95 @@
   width: 45%;
 }
 
-.studyAndTravelWrapper .leftPartText .amount{
-  color: #E04545;
-  font-size: 50px;
-  font-weight: 900;
+.studyAndTravelWrapper .leftPartText h2{
+  font-size: 700;
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+.studyAndTravelWrapper .leftPartText .studyByTravellingUnderline{
+  height: 4px;
+  margin-bottom: 20px;
 }
 
+.studyAndTravelWrapper .leftPartText .amount{
+  color: #E04545;
+  font-size: 49px;
+  font-weight: 900;
+}
 .studyAndTravelWrapper .leftPartText h3{
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 600;
   margin: 0;
   margin-bottom: 10px;
   margin-right: 40px;
 }
-
 .studyAndTravelWrapper .leftPartText .informationAboutCountry{
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
-
 .studyAndTravelWrapper .leftPartText .informationAboutCountry .aboutCountry{
   font-size: 15px;
 }
 
+
+
+
 .studyAndTravelWrapper .leftPartText .levelsCircle{
   display: flex;
   flex-wrap: wrap;
-  
 }
 
-.levelsCircle .A1_circle, .levelsCircle .A2_circle, .levelsCircle .B1_circle, .levelsCircle .B2_circle, .levelsCircle .C1_circle{
+.levelsCircle .A1_circle, .levelsCircle .A2_circle, .levelsCircle .B1_circle, .levelsCircle .B2_circle, .levelsCircle .C1_circle, .levelsCircle .C2_circle{
   position: relative;
   cursor: pointer;
 }
-.levelsCircle .A1_circle img, .levelsCircle .A2_circle img, .levelsCircle .B1_circle img, .levelsCircle .B2_circle img, .levelsCircle .C1_circle img{
-  height: 75px;
-  width: 85px;
-  margin-right: 20px;
-  margin-bottom: 15px;
+.levelsCircle .A1_circle img, .levelsCircle .A2_circle img, .levelsCircle .B1_circle img, .levelsCircle .B2_circle img, .levelsCircle .C1_circle img, .levelsCircle .C2_circle img{
+  height: 65px;
+  width: 75px;
+  margin-right: 24px;
+  margin-bottom: 18px;
 }
 
 .levelsCircle .A1_circle .A1_circle_NO_active span, .levelsCircle .A2_circle .A2_circle_NO_active span, .levelsCircle .B1_circle .B1_circle_NO_active span, .levelsCircle .B2_circle .B2_circle_NO_active span, .levelsCircle .C1_circle .C1_circle_NO_active span{
   position: absolute;
-  top: 20px;
-  left: 25px;
+  top: 17px;
+  left: 22px;
 
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 600;
   color: #000;
 }
 
-.levelsCircle .A1_circle .A1_circle_active span{
+.levelsCircle .C2_circle .C2_circle_NO_active span{
   position: absolute;
-  top: 20px;
-  left: 25px;
+  top: 17px;
+  left: 30px;
 
-  font-size: 25px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #000;
+}
+
+.levelsCircle .A1_circle .A1_circle_active span, .levelsCircle .A2_circle .A2_circle_active span, .levelsCircle .B1_circle .B1_circle_active span, .levelsCircle .B2_circle .B2_circle_active span, .levelsCircle .C1_circle .C1_circle_active span{
+  position: absolute;
+  top: 17px;
+  left: 22px;
+
+  font-size: 23px;
   font-weight: 600;
   color: #ffffff;
 }
+
+.levelsCircle .C2_circle .C2_circle_active span{
+  position: absolute;
+  top: 17px;
+  left: 30px;
+
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
+}
+
 
 
 
@@ -927,60 +837,97 @@
 
 .studyAndTravelWrapper .rightPartCountries{
   width: 40%;
-  height: 700px;
+  height: 500px;
 
   position: relative;
 }
+.studyAndTravelWrapper .rightPartCountries .german_country{
+  width: 320px;
+  margin-left: 100px;
 
-.liechtenstein_country{
+  cursor: pointer;
+}
+.studyAndTravelWrapper .rightPartCountries .austria_country{
   position: absolute;
+  width: 265px;
 
-  left: 137px;
-  bottom: 102px;
-}
-.luxembourg_country{
-  position: absolute;
-  top: 336px;
-  left: -17px;
-}
-.switzerland_country{
-  position: absolute;
+  bottom: 39px;
+  left: 212px;
 
-  bottom: 30px;
-  left: -60px;
+  cursor: pointer;
 }
-.austria_country{
-  position: absolute;
 
-  bottom: 40px;
-  left: 158px;
+.studyAndTravelWrapper .rightPartCountries .liechtenstein_country{
+  position: absolute;
+  width: 15px;
+
+  left: 200px;
+  bottom: 81px;
+
+  cursor: pointer;
 }
+.studyAndTravelWrapper .rightPartCountries .switzerland_country{
+  position: absolute;
+  width: 190px;
+
+  bottom: 20px;
+  left: 47px;
+
+  cursor: pointer;
+}
+
+.studyAndTravelWrapper .rightPartCountries .luxembourg_country{
+  position: absolute;
+  width: 23px;
+
+  top: 238px;
+  left: 85px;
+
+  cursor: pointer;
+}
+.studyAndTravelWrapper .rightPartCountries .belgium_country{
+  position: absolute;
+  width: 120px;
+
+  top: 150px;
+  left: -15px;
+
+  cursor: pointer;
+}
+
+
 
 .rightPartCountries .A1_map_circle{
   position: absolute;
 
-  bottom: -23px;
-  left: 170px;
+  bottom: -50px;
+  left: 225px;
 }
 .rightPartCountries .A2_map_circle{
   position: absolute;
 
-  bottom: 212px;
-  left: -97px;
+  bottom: 122px;
+  left: 3px;
 }
 .rightPartCountries .B1_map_circle{
   position: absolute;
 
-  bottom: -25px;
-  left: -150px;
+  bottom: -35px;
+  left: -50px;
 }
 .rightPartCountries .B2_map_circle{
   position: absolute;
 
-  bottom: 232px;
-  left: 454px;
+  bottom: 180px;
+  left: 404px;
 }
 .rightPartCountries .C1_map_circle{
+  position: absolute;
+
+  top: 33px;
+  left: 80px;
+}
+.rightPartCountries .C2_map_circle{
   position: absolute;
 
   top: 65px;
@@ -991,14 +938,14 @@
   position: relative;
   cursor: pointer;
 }
-.rightPartCountries .A1_map_circle .A1_map_circle_NO_active, .rightPartCountries .A2_map_circle .A2_map_circle_NO_active, .rightPartCountries .B1_map_circle .B1_map_circle_NO_active, .rightPartCountries .B2_map_circle .B2_map_circle_NO_active, .rightPartCountries .C1_map_circle .C1_map_circle_NO_active{
+.rightPartCountries .A1_map_circle .A1_map_circle_NO_active, .rightPartCountries .A2_map_circle .A2_map_circle_NO_active, .rightPartCountries .B1_map_circle .B1_map_circle_NO_active, .rightPartCountries .B2_map_circle .B2_map_circle_NO_active, .rightPartCountries .C1_map_circle .C1_map_circle_NO_active, .rightPartCountries .C2_map_circle .C2_map_circle_NO_active{
   position: relative;
   cursor: pointer;
 }
 
 
 
-.rightPartCountries .A1_map_circle img, .rightPartCountries .A2_map_circle img, .rightPartCountries .B1_map_circle img, .rightPartCountries .B2_map_circle img, .rightPartCountries .C1_map_circle img{
+.rightPartCountries .A1_map_circle img, .rightPartCountries .A2_map_circle img, .rightPartCountries .B1_map_circle img, .rightPartCountries .B2_map_circle img, .rightPartCountries .C1_map_circle img, .rightPartCountries .C2_map_circle img{
   height: 55px;
   width: 65px;
   margin-right: 20px;
@@ -1015,10 +962,30 @@
   color: #000;
 }
 
-.rightPartCountries .A1_map_circle .A1_map_circle_active span{
+.rightPartCountries .C2_map_circle .C2_map_circle_NO_active span{
+  position: absolute;
+  top: 15px;
+  left: 27px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.rightPartCountries .A1_map_circle .A1_map_circle_active span, .rightPartCountries .A2_map_circle .A2_map_circle_active span, .rightPartCountries .B1_map_circle .B1_map_circle_active span, .rightPartCountries .B2_map_circle .B2_map_circle_active span, .rightPartCountries .C1_map_circle .C1_map_circle_active span{
   position: absolute;
   top: 15px;
   left: 20px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rightPartCountries .C2_map_circle .C2_map_circle_active span{
+  position: absolute;
+  top: 15px;
+  left: 27px;
 
   font-size: 20px;
   font-weight: 600;
@@ -1029,40 +996,48 @@
 .rightPartCountries .a1_line{
   position: absolute;
 
-  bottom: 40px;
-  left: 147px;
+  bottom: 15px;
+  left: 205px;
 
   z-index: 2;
 }
 .rightPartCountries .a2_line{
   position: absolute;
 
-  bottom: 275px;
-  left: -46px;
+  bottom: 183px;
+  left: 53px;
 
   z-index: 2;
 }
 .rightPartCountries .b1_line{
   position: absolute;
 
-  bottom: 25px;
-  left: -95px;
+  bottom: 15px;
+  left: 2px;
 
   z-index: 2;
 }
 .rightPartCountries .b2_line{
   position: absolute;
 
-  bottom: 180px;
-  left: 466px;
+  bottom: 125px;
+  left: 420px;
 
   z-index: 2;
 }
 .rightPartCountries .c1_line{
   position: absolute;
 
-  top: 90px;
-  left: 50px;
+  top: 70px;
+  left: 120px;
+
+  z-index: 2;
+}
+.rightPartCountries .c2_line{
+  position: absolute;
+
+  top: 110px;
+  left: 30px;
 
   z-index: 2;
 }
@@ -1073,43 +1048,133 @@
 
 
 
-/* Country Block */
+/* ----------------- Single Country Block ----------------- */
 
-.liechtenstein_block{
-  width: 90%;
-  height: 800px;
+.singleCountryBlock{
+  font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
-
+  padding-bottom: 20px;
   border-radius: 30px;
 
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
 }
 
-.liechtenstein_block h1{
+
+.singleCountryBlock .liechtenshteinTitle{
   font-size: 150px;
   text-align: center;
   margin: 0 auto;
   color: #EB4436;
   opacity: 0.1;
 }
+.singleCountryBlock .luxembourgTitle{
+  font-size: 150px;
+  text-align: center;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
 
-.liechtenstein_block_about{
-  display: flex;
+  letter-spacing: 25px; 
 }
-.liechtenstein_block_about .part_photo_country{
-  width: 40%;
+.singleCountryBlock .switzerlandTitle{
+  font-size: 150px;
+  text-align: center;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
+
+  letter-spacing: 19px; 
+}
+.singleCountryBlock .austriaTitle{
+  font-size: 150px;
+  text-align: center;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
+
+  letter-spacing: 22px; 
+}
+.singleCountryBlock .germanyTitle{
+  font-size: 150px;
+  text-align: center;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
+  letter-spacing: 2px; 
+}
+.singleCountryBlock .belgiumTitle{
+  font-size: 150px;
+  text-align: center;
+  margin: 0 auto;
+  color: #EB4436;
+  opacity: 0.1;
+  letter-spacing: 75px; 
+}
+
+
+
+
+
+
+.singleCountryAbout{
+  display: flex;
+  justify-content: space-between;
+}
+.singleCountryAbout .part_photo_country{
+  width: 38%;
   margin-left: 30px;
   margin-top: 10px;
+  /* padding-bottom: 50px; */
 }
-.liechtenstein_block_about .part_photo_country img{
+.singleCountryAbout .part_photo_country .liechtenshtein_country{
   display: block;
   margin: 0 auto;
+  /* vertical-align: middle; */
+  width: 46%;
 }
-.liechtenstein_block_about .part_photo_country .line_under_country{
+.singleCountryAbout .part_photo_country .luxembourg_country{
+  display: block;
+  margin: 0 auto;
+  /* vertical-align: middle; */
+  width: 64%;
+}
+.singleCountryAbout .part_photo_country .switzerland_country{
+  display: block;
+  margin: 0 auto;
+  height: 90%;
+  vertical-align: middle;
   width: 90%;
-  margin-top: 25px;
+}
+.singleCountryAbout .part_photo_country .austria_country{
+  display: block;
+  margin: 0 auto;
+  height: 90%;
+  vertical-align: middle;
+  width: 90%;
+}
+.singleCountryAbout .part_photo_country .germany_country{
+  display: block;
+  margin: 0 auto;
+  height: 90%;
+  vertical-align: middle;
+  width: 73%;
+}
+.singleCountryAbout .part_photo_country .belgium_country{
+  display: block;
+  margin: 0 auto;
+  height: 90%;
+  vertical-align: middle;
+  width: 90%;
+}
+
+
+
+.singleCountryAbout .part_photo_country .line_under_country{
+  height: 10%;
+  width: 100%;
+  /* margin-top: 25px; */
 }
 
 
@@ -1117,27 +1182,30 @@
 
 
 
-.liechtenstein_block_about .part_about_country{
-  width: 50%;
+.singleCountryAbout .part_about_country{
+  width: 55%;
+  margin-right: 30px;
+
+  padding-bottom: 30px;
 }
-.part_about_country .title_about_country{
+.singleCountryAbout .part_about_country .title_about_country{
   display: flex;
   align-items: center;
 }
-.part_about_country .A1_circle_active {
+.singleCountryAbout .part_about_country .A1_circle_active, .part_about_country .A2_circle_active, .part_about_country .B1_circle_active, .part_about_country .B2_circle_active, .part_about_country .C1_circle_active, .part_about_country .C2_circle_active {
   position: relative;
   cursor: pointer;
 
   display: inline-block;
   margin: 0;
 }
-.part_about_country .A1_circle_active img{
+.singleCountryAbout .part_about_country .A1_circle_active img, .part_about_country .A2_circle_active img, .part_about_country .B1_circle_active img, .part_about_country .B2_circle_active img, .part_about_country .C1_circle_active img, .part_about_country .C2_circle_active img{
   height: 65px;
   width: 75px;
   margin-right: 10px;
-  
 }
-.part_about_country .A1_circle_active span{
+
+.singleCountryAbout .part_about_country .A1_circle_active span, .part_about_country .A2_circle_active span, .part_about_country .B1_circle_active span, .part_about_country .B2_circle_active span, .part_about_country .C1_circle_active span{
   position: absolute;
   top: 17px;
   left: 22px;
@@ -1145,39 +1213,1823 @@
   font-size: 25px;
   font-weight: 600;
   color: #fff;
+
+}
+
+.singleCountryAbout .part_about_country .C2_circle_active span{
+  position: absolute;
+  top: 17px;
+  left: 32px;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+
 }
 
 
-.part_about_country h2{
+.singleCountryAbout .part_about_country h2{
   margin: 0;
   display: inline-block;
 }
 
-.part_about_country p{
-  margin-top: 20px;
-  margin-bottom: 50px;
-  line-height: 1.3;
+.singleCountryAbout .part_about_country p{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+
+  font-size: 15px;
 }
 
-.part_about_country .point_list{
+.singleCountryAbout .part_about_country .point_list{
   display: flex;
   margin-bottom: 20px;
 }
 
-.part_about_country .point_list img{
-  width: 29px;
-  height: 29px;
+.singleCountryAbout .part_about_country .point_list img{
+  width: 25px;
+  height: 25px;
 
   margin-right: 10px;
 }
 
-.part_about_country .point_list span{
-  margin-top: 6px;
+.singleCountryAbout .part_about_country .point_list span{
+  margin-top: 2px;
   line-height: 1.5;
 
   font-weight: 600;
+  font-size: 15px;
 }
 
-.resetPasswordText {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- BlockAboutTest ----------------- */
+.blockAboutTest{
+  font-family: 'Montserrat', sans-serif;
+
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 100px;
+}
+
+.blockAboutTest .blockAboutTestText{
+  width: 40%;
+}
+.blockAboutTest .blockAboutTestText h3{
+  font-weight: 700;
+  font-size: 25px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.blockAboutTest .blockAboutTestText .uderlineStartTest{
+  width: 90px;
+
+  margin-bottom: 10px;
+}
+
+.blockAboutTest .blockAboutTestText p{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.blockAboutTest .blockAboutTestText .line{
+  height: 1px;
+  background-color: #ECECEC;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.blockAboutTest .blockAboutTestText .btnStartTest{
+  position: relative;
+  margin-top: 50px;
+  margin-right: 50px;
   cursor: pointer;
+}
+.blockAboutTest .blockAboutTestText .btnStartTest img{
+  width: 370px;
+}
+.blockAboutTest .blockAboutTestText .btnStartTest span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 11px;
+  left: 95px;
+}
+
+
+.blockAboutTest .blockAboutTestPhoto{
+  width: 45%;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------- PackagesOfCourse ------------- */
+.packagesOfCourseWrapper{
+  font-family: 'Montserrat', sans-serif;
+  /* width: 800px; */
+
+  margin-bottom: 100px;
+}
+.packagesOfCourseWrapper h3{
+  font-size: 25px;
+  font-weight: 700;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.packagesOfCourseWrapper .uderlinePackages{
+  width: 90px;
+
+  margin-bottom: 10px;
+}
+
+
+
+.packagesOfCourseWrapper .mainPackagesOfCourse{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.packagesOfCourseWrapper .packageHomeAlone{
+  width: 35%; 
+  
+  margin-right: 8%;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 35%);
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto{
+  position: relative;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto img{
+  width: 100%;
+}
+
+
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText{
+  position: absolute;
+  height: 97px;
+  width: 100%;
+  bottom: 4px;  
+
+  color: #fff;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText h3{
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 30px;
+
+  margin-bottom: 0px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText h4{
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText .priceForPackage{
+  color: #F8C02E;
+  font-size: 26px;
+  font-weight: 700;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText .perMonthOfPackage{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+
+
+
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText{
+  position: relative;
+
+  width: 87%;
+  margin: 0 auto;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText h4{
+  font-weight: 600;
+  font-size: 16px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText .pointsOfPackage{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText .pointsOfPackage img{
+  margin-right: 7px;
+  width: 17px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText .disablePointsOfPackage{
+  filter: blur(1.5px);
+  font-weight: 100;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText .lockForDisablePoints{
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  color: #E84747;
+  font-size: 14px;
+  font-weight: 600;
+
+  bottom: 60px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .packageHomeAloneMainText .lockForDisablePoints img{
+  margin-right: 7px;
+  margin-left: 13px;
+}
+
+
+
+.packagesOfCourseWrapper .packageHomeAlone .btnPackagesBuy{
+  position: relative;
+  margin-top: 50px;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.packagesOfCourseWrapper .packageHomeAlone .btnPackagesBuy img{
+  width: 240px;
+}
+.packagesOfCourseWrapper .packageHomeAlone .btnPackagesBuy span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 11px;
+  align-items: center;
+}
+
+
+
+
+
+
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy{
+  width: 35%;
+  margin-right: 20px;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 35%);
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto{
+  position: relative;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto img{
+  width: 100%;
+}
+
+
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText{
+  position: absolute;
+  
+  height: 97px;
+  width: 100%;
+  bottom: 4px;  
+
+  color: #fff;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText h3{
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 30px;
+
+  margin-bottom: 0px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText h4{
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText .priceForPackage{
+  color: #F8C02E;
+  font-size: 26px;
+  font-weight: 700;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText .perMonthOfPackage{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+
+
+
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyMainText{
+  width: 87%;
+  margin: 0 auto;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyMainText h4{
+  font-weight: 600;
+  font-size: 16px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyMainText .pointsOfPackage{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyMainText .pointsOfPackage img{
+  margin-right: 7px;
+  width: 17px;
+}
+
+
+
+
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .btnPackagesBuy{
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 35px;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .btnPackagesBuy img{
+  width: 240px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .btnPackagesBuy span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 11px;
+  align-items: center;
+}
+
+
+
+
+
+
+.packagesOfCourseWrapper .getFreePackage{
+  border: 1px solid #DBDBDB;
+  border-radius: 20px;
+  width: 80%;
+  /* width: 800px; */
+  /* height: 300px; */
+  margin: 0 auto;
+  margin-top: 50px;
+
+  display: flex;
+
+  overflow: hidden;
+  
+}
+
+
+.packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage{
+  position: relative;
+  width: 55%;
+}
+.packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage .sherlokGetFreePhoto{
+  width: 88%;
+  margin-top: 35px;
+  margin-left: 10%;
+}
+.packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage .stoneBackgroundGetFree{
+  position: absolute;
+
+  width: 400px;
+  left: 0;
+  bottom: 0;
+  z-index: -5;
+}
+
+
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage{
+  position: relative;
+
+  width: 45%;
+}
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .cloudsOfFreePackage{
+  position: absolute;
+  top: 12px;
+  right: 24%;
+  width: 430px;
+  z-index: -5;
+}
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .textInCloud{
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  font-size: 19px;
+  margin-bottom: 70px;
+  margin-top: 70px;
+
+  position: relative;
+}
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .textInCloud img{
+  position: absolute;
+  top: 27px;
+  left: 8px;
+
+  width: 125px;
+}
+
+
+
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage h5{
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  margin: 0 auto;
+
+  width: 80%;
+}
+
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .btnPackagesBuy{
+  position: relative;
+  margin-top: 20px;
+
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .btnPackagesBuy img{
+  width: 240px;
+}
+.packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .btnPackagesBuy span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 11px;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ AdditionalCourses ------------ */
+
+.additionalCourses{
+  margin-bottom: 50px;
+}
+.additionalCourses h3{
+  font-weight: 700;
+  font-size: 25px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.additionalCourses .uderlineAdditionalCourses{
+  width: 90px;
+
+  margin-bottom: 10px;
+}
+
+
+
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock{
+  border: 1px solid #E4E4E4;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 10%);
+  padding: 20px;
+}
+
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock h4{
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock .photoAdditionalCourse{
+  width: 100%;
+  border-radius: 10px;
+}
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock p{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock p span{
+  color: #7A7A7A;
+  text-decoration: underline;
+  padding-bottom: 2px;
+  margin-left: 3px;
+}
+
+
+
+
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock .buyAdditionalCourse{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+.additionalCourses .additionalCoursesSlider .additionalCourseBlock .buyAdditionalCourse .priceAdditionalCourse{
+  font-weight: 600;
+  font-size: 23px;
+}
+
+
+
+
+.additionalCoursesSlider .additionalCourseBlock .btnAdditionalCourse{
+  position: relative;
+  margin-top: 7px;
+  cursor: pointer;
+}
+.additionalCoursesSlider .additionalCourseBlock .btnAdditionalCourse img{
+  width: 200px;
+}
+.additionalCoursesSlider .additionalCourseBlock .btnAdditionalCourse span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 11px;
+  left: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ ReviewsBlock ------------ */
+.reviewsBlock{
+  margin-bottom: 100px;
+}
+.reviewsBlock h3{
+  font-weight: 700;
+  font-size: 25px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reviewsBlock .uderlineReviewsBlock{
+  width: 90px;
+
+  margin-bottom: 10px;
+}
+
+
+.reviewsBlock h2{
+  color: #EFEFEF;
+  font-weight: 800;
+  font-size: 172px;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+.reviewsBlock .reviewsBlockSlider{
+
+}
+.reviewsBlock .reviewsBlockSlider .reviewLeftSlide{
+  /* width: calc( 31.8% - 40px); */
+  border: 1px solid #E4E4E4;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 10%);
+  padding: 10px 20px 20px 20px;
+
+  margin-top: 80px;
+
+  background-color: #fff;
+}
+.reviewsBlock .reviewsBlockSlider .reviewCenterSlide{
+  /* width: calc( 31.8% - 40px); */
+  border: 1px solid #E4E4E4;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 10%);
+  padding: 10px 20px 20px 20px;
+
+  background-color: #fff;
+}
+.reviewsBlock .reviewsBlockSlider .reviewRightSlide{
+  /* width: calc( 31.8% - 40px); */
+  border: 1px solid #E4E4E4;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 10%);
+  padding: 10px 20px 20px 20px; 
+
+  margin-top: 80px;
+
+  background-color: #fff;
+}
+
+
+.reviewsBlock .reviewsBlockSlider .reviewLeftSlide .reviewUserData, .reviewsBlock .reviewsBlockSlider .reviewCenterSlide .reviewUserData, .reviewsBlock .reviewsBlockSlider .reviewRightSlide .reviewUserData{
+  display: flex;
+  align-items: center;
+}
+.reviewsBlock .reviewsBlockSlider .reviewLeftSlide .reviewUserData img, .reviewsBlock .reviewsBlockSlider .reviewCenterSlide .reviewUserData img, .reviewsBlock .reviewsBlockSlider .reviewRightSlide .reviewUserData img{
+  width: 40px;
+  height: 40px;
+
+  margin-right: 15px;
+}
+
+
+.reviewsBlock .reviewsBlockSlider .reviewLeftSlide p{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+
+  margin-top: 5px;
+}
+.reviewsBlock .reviewsBlockSlider .reviewCenterSlide p{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+
+  margin-top: 5px;
+}
+.reviewsBlock .reviewsBlockSlider .reviewRightSlide p{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+
+  margin-top: 5px;
+}
+
+
+.reviewsBlock .reviewsBlockSlider .reviewLeftSlide .reviewDateOfPublishing{
+  color: #8A8A8A;
+  font-weight: 400;
+  font-size: 14px;
+}
+.reviewsBlock .reviewsBlockSlider .reviewCenterSlide .reviewDateOfPublishing{
+  color: #8A8A8A;
+  font-weight: 400;
+  font-size: 14px;
+}
+.reviewsBlock .reviewsBlockSlider .reviewRightSlide .reviewDateOfPublishing{
+  color: #8A8A8A;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+
+.reviewsBlock .reviewsCircleGrey{
+  position: absolute;
+  left: 0;
+  width: 35%;
+
+  z-index: -10;
+}
+.reviewsBlock .reviewsCircleRed{
+  position: absolute;
+  right: 0;
+  width: 35%;
+
+  z-index: -10;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------ Footer ------------ */
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  /* box-sizing: border-box; */
+  width: 100%; 
+  position: absolute;
+  left: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  background-color:rgb(251,218,215);
+}
+.footer .footerTopPart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90%;
+  margin: 0 auto;
+
+  padding-bottom: 40px;
+
+}
+.footer .footerTopPart .footerLogoWrapper{
+  width: 50%;
+}
+.footer .footerTopPart .footerLogoWrapper nav{
+  margin-top: 15px;
+}
+.footer .footerTopPart .footerLogoWrapper nav .footerLinkMenu{
+  margin-right: 3%;
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer .footerTopPart .footerLogoWrapper nav .footerLinkMenu:hover{
+  color: #EB4436;
+}
+
+.footer .footerTopPart .footerContactWrapper{
+  width: 50%;
+}
+.footer .footerTopPart .footerContactWrapper h2{
+  font-weight: 400;
+  font-size: 33px;
+}
+
+
+
+.footer .footerBottomPart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+  background-color: #EB4436;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+
+}
+
+.footer .logo{
+  margin-top: 0;
+  display: flex;
+}
+.footer .logo img{
+  height: 90px;
+  margin-right: 6px;
+  margin-bottom: 20px;
+}
+.footer .logo h3{
+  font-size: 27px;
+  font-weight: 800;
+  margin: 0;
+  margin-top: 33px;
+  
+}
+.footer .logo span{
+  font-size: 16px;
+}
+
+
+
+
+
+.footerContactWrapper .infoFooterWrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerContactWrapper .infoFooterWrapper .contactIntoFooter div{
+  display: flex;
+  align-items: center;
+
+  margin-top: 8px;
+}
+.footerContactWrapper .infoFooterWrapper .contactIntoFooter .footerPhone{
+  margin-bottom: 8px;
+}
+.footerContactWrapper .infoFooterWrapper .contactIntoFooter div span{
+  font-size: 14px;
+  color: rgb(122,122,122);
+  margin-left: 10px;
+}
+
+
+
+
+.footer .infoFooter span{
+  margin-left: 40px;
+}
+
+
+.footer .socialNetworksFooter{
+  display: flex;
+  align-items: center;
+}
+.footer .socialNetworksFooter div{
+  background-color: #EB4436;
+  margin-right: 25px;
+  padding: 8px 8px 3px 8px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Modal ------------- */
+
+.modal_wrapper{
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 150px);
+  font-family: 'Montserrat', sans-serif;
+
+  overflow-y: auto;
+}
+.modal_wrapper h2{
+  text-align: center;
+  font-size: 38px;
+  margin: 0;
+}
+.modal_wrapper .close_icon{
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- Modal Auth Form -------- */
+
+.modalAuthForm{
+  position: fixed;
+  top: -800px;
+  transition: 0.7s all ease;
+}
+
+.modalAuthForm.open{
+  position: relative;
+  top: 0;
+}
+
+
+
+
+.modalAuthForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: start;
+
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.modalAuthForm input{
+  width: 350px;
+  height: 45px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.modalAuthForm input::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.modalAuthForm .passwordInput{
+  margin-bottom: 15px;
+}
+.modalAuthForm .resetPasswordTextWrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.modalAuthForm .resetPasswordText{
+  cursor: pointer;
+  color: #E84747;
+  font-weight: 700;
+  font-size: 13px;
+  
+  /* text-align: right; */
+}
+
+
+
+.modalAuthForm .loginButton{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.modalAuthForm .loginButton_DeActive{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.modalAuthForm .btnLogin_Modal{
+  width: 350px;
+}
+.modalAuthForm .login_button_text{
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.modalAuthForm .regisButton .reg_button_text{
+  position: absolute;
+  left: 80px;
+  color: #fff;
+  font-size: 16px;
+}
+.modalAuthForm .lineToDivide{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.modalAuthForm .lineToDivide h5{
+  font-size: 15px;
+  font-weight: 500;
+}
+.modalAuthForm .lineToDivide div{
+  width: 40%;
+  height: 1px;
+  background-color: #b8b7b7;
+}
+.modalAuthForm .singUpWithGoogle, .modalAuthForm .singUpWithFacebook{
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.modalAuthForm .textUnderLogFormToReg{
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.modalAuthForm .textUnderLogFormToReg .regisTextUnderLogForm{
+  color: #E84747;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* ---------- Packages Of Course Modal ---------- */
+
+.packagesOfCourseModalWrapper{
+  width: 950px;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper{
+  margin-bottom: 0;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .mainPackagesOfCourse{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .packageHomeAlone{
+  width: 400px;
+  margin-right: 40px;
+  margin-left: 20px;
+
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 35%);
+}
+
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .packageGuardiansOfTheGalaxy{
+  /* width: 35%; */
+  width: 400px;
+  margin-right: 20px;
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 35%);
+}
+
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText {
+  height: 90px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText h3, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText h3{
+  font-size: 21px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText .priceForPackage, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText .priceForPackage{
+  font-size: 24px;
+}
+.packagesOfCourseWrapper .packageGuardiansOfTheGalaxy .packageGuardiansOfTheGalaxyPhoto .packageGuardiansOfTheGalaxyPhotoText .perMonthOfPackage, .packagesOfCourseWrapper .packageHomeAlone .packageHomeAlonePhoto .packageHomeAlonePhotoText .perMonthOfPackage{
+  font-size: 15px;
+}
+
+
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage{
+  border: 1px solid #DBDBDB;
+  border-radius: 20px;
+  width: 840px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  overflow: hidden;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage .sherlokGetFreePhoto{
+  width: 97%;
+  margin-top: 60px;
+  margin-left: 7%;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partLeft_FreePackage .stoneBackgroundGetFree{
+  width: 390px;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .cloudsOfFreePackage{
+  position: absolute;
+  top: 12px;
+  right: 19%;
+  width: 430px;
+  z-index: -5;
+}
+.packagesOfCourseModalWrapper .packagesOfCourseWrapper .getFreePackage .partRight_FreePackage .textInCloud{
+  width: 190px;
+
+  font-size: 18px;
+
+}
+
+.packagesOfCourseModalWrapper .loginBlock h5{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+.packagesOfCourseModalWrapper .loginBlock span{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  color: #E84747;
+}
+
+
+
+
+
+
+
+
+/* ---------- Modal Fast Regis Form ---------- */
+
+.modalFastRegisForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: start;
+
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.modalFastRegisForm .fastRegInfo{
+  width: 500px;
+  text-align: center;
+
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.modalFastRegisForm form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 730px;
+}
+.modalFastRegisForm input{
+  width: 350px;
+  height: 45px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 15px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.modalFastRegisForm input::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.modalFastRegisForm .resetPasswordText{
+  cursor: pointer;
+  color: #E84747;
+  font-weight: 700;
+  font-size: 13px;
+  
+  text-align: right;
+}
+.modalFastRegisForm .btnRegis_Modal{
+  width: 350px;
+}
+
+.modalFastRegisForm .regisButton{
+  position: relative;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.modalFastRegisForm .regisButton_DeActive{
+  position: relative;
+  margin-top: 15px;
+  cursor: pointer;
+
+  opacity: 0.7;
+}
+.modalFastRegisForm .reg_button_text{
+  position: absolute;
+  top: 14px;
+  left: 100px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+.modalFastRegisForm .lineToDivide{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.modalFastRegisForm .lineToDivide h5{
+  font-size: 17px;
+  font-weight: 500;
+}
+.modalFastRegisForm .lineToDivide div{
+  width: 45%;
+  height: 1px;
+  background-color: #b8b7b7;
+}
+
+.modalFastRegisForm .singUpWithSocialNetworks{
+  display: flex;
+  justify-content: center;
+}
+.modalFastRegisForm .singUpWithGoogle, .modalFastRegisForm .singUpWithFacebook{
+  width: 43%;
+  cursor: pointer;
+}
+.modalFastRegisForm .singUpWithFacebook{
+  margin-right: 30px;
+}
+.modalFastRegisForm .textUnderRegisFormToReg{
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+
+  margin-top: 30px;
+}
+.modalFastRegisForm .textUnderRegisFormToReg .regisTextUnderLogForm{
+  color: #E84747;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Modal Additional Course ---------- */
+
+.modalAdditionalCourse h3{
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.modalAdditionalCourse .startFinishProgressBlock_Modal{
+  position: relative;
+}
+
+.modalAdditionalCourse .startFinishProgressBlock_Modal .startIcon_AdditionalCourse{
+  position: absolute;
+  top: 24px;
+  left: 36px;
+}
+.modalAdditionalCourse .startFinishProgressBlock_Modal .finishIcon_AdditionalCourse{
+  position: absolute;
+  top: 24px;
+  right: 35px;
+}
+.modalAdditionalCourse .startFinishProgressBlock_Modal .finishFlag_AdditionalCourse{
+  position: absolute;
+  width: 60px;
+  top: -23px;
+  right: -5px;
+
+  z-index: -10;
+}
+
+.modalAdditionalCourse .startFinishProgressBlock_Modal .startFinishProgressText{
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.modalAdditionalCourse .startFinishProgressBlock_Modal .startFinishProgressText div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modalAdditionalCourse .startFinishProgressBlock_Modal .startFinishProgressText h4{
+  margin: 0;
+  font-size: 15px;
+}
+.modalAdditionalCourse .startFinishProgressBlock_Modal .startFinishProgressText span{
+  margin: 0;
+  font-size: 13px;
+  color: #515151;
+}
+.modalAdditionalCourse .startFinishProgressBlock_Modal .startFinishLinePhoto{
+  width: 1000px;
+
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+
+
+.modalAdditionalCourse .additionalCourseModalInfo{
+  display: flex;
+}
+.modalAdditionalCourse  .additionalCourseModalInfoText{
+  width: 500px;
+}
+.modalAdditionalCourse .additionalCourseModalInfo p{
+  font-size: 14px;
+  line-height: 1.5;
+
+  margin-bottom: 30px;
+}
+.modalAdditionalCourse .additionalCourseModalInfo .pointsOfPackage{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+.modalAdditionalCourse .additionalCourseModalInfo .pointsOfPackage img{
+  margin-right: 7px;
+  width: 17px;
+}
+.modalAdditionalCourse .additionalCourseModalInfo .additionalCourseModalPhoto{
+  width: 500px;
+  border-radius: 20px;
+
+  margin-left: 30px;
+}
+
+
+
+
+.modalAdditionalCourse .priceAndButtonOfCourse{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 50px;
+}
+.modalAdditionalCourse .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal{
+  margin-right: 30px;
+}
+.modalAdditionalCourse .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal h4{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.modalAdditionalCourse .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 3px;
+}
+.modalAdditionalCourse .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal img{
+  width: 15px;
+  margin-right: 7px;
+}
+.modalAdditionalCourse .priceAndButtonOfCourse .priceOfAdditionalCourse_Modal span{
+  color: #777A86;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+
+.modalAdditionalCourse .resultOfTestButton{
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.modalAdditionalCourse .resultOfTestButton .btnBuyAdditionalCourse_Modal{
+  width: 290px;
+}
+.modalAdditionalCourse .resultOfTestButton .returnToPackages{
+  position: absolute;
+  left: 122px;
+  top: 11px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+}
+.modalAdditionalCourse .resultOfTestButton .returnToRegis{
+  position: absolute;
+  top: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- Modal Result Of Test ----------- */
+.modalResultOfTest h3{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: -15px;
+}
+.modalResultOfTest .recommendedLevel{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.modalResultOfTest .recommendedLevel img{
+  width: 220px;
+}
+.modalResultOfTest .recommendedLevel h2{
+  position: absolute;
+  top: 90px;
+  font-size: 35px;
+  color: #fff;
+}
+.modalResultOfTest .recommendedLevel span{
+  position: absolute;
+  top: 135px;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.7;
+}
+.modalResultOfTest .proposalToImproveText{
+  display: flex;
+  justify-content: center;
+
+  margin-top: -15px;
+
+  position: relative;
+}
+.modalResultOfTest .proposalToImproveText p{
+  width: 500px;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+.modalResultOfTest .proposalToImproveText img{
+  position: absolute;
+  bottom: 15px;
+  right: 75px;
+}
+
+
+
+.modalResultOfTest .resultOfTestButton{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+}
+.modalResultOfTest .btnResultOfTest_Modal{
+  width: 500px;
+}
+.modalResultOfTest .returnToPackages{
+  position: absolute;
+  left: 122px;
+  top: 12px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+}
+.modalResultOfTest .returnToRegis{
+  position: absolute;
+  left: 122px;
+  top: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- Modal Reset Password Form -------- */
+
+.modalResetPasswordForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: start;
+
+  width: 430px;
+
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.modalResetPasswordForm h3{
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+}
+.modalResetPasswordForm .inputFormWrapper{
+  margin: 0 auto;
+}
+.modalResetPasswordForm input{
+  width: 390px;
+  height: 43px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.modalResetPasswordForm input::placeholder{
+  font-size: 15px;
+}
+.modalResetPasswordForm .regisButton{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+}
+.modalResetPasswordForm .regisButton_DeActive{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0.7;
+}
+
+
+
+.modalResetPasswordForm .btnResetPassword_Modal{
+  width: 390px;
+}
+.modalResetPasswordForm .sendToResertPassword{
+  display: flex;
+  justify-self: center;
+
+  position: absolute;
+  top: 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+.modalConfirmCodeResetForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: start;
+
+  width: 430px;
+
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.modalConfirmCodeResetForm h3{
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+}
+/* .modalResetPasswordForm input{
+  width: 390px;
+  height: 43px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-top: 35px;
+} */
+.modalConfirmCodeResetForm .inputFormWrapper{
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  width: 280px;
+
+  margin-bottom: 25px;
+}
+.modalConfirmCodeResetForm input{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  font-size: 21px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.modalConfirmCodeResetForm input::placeholder{
+  font-size: 15px;
+}
+.modalConfirmCodeResetForm .regisButton{
+  position: relative;
+  margin-top: 15px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+}
+.modalConfirmCodeResetForm .regisButton_DeActive{
+  position: relative;
+  margin-top: 10px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0.7;
+}
+
+
+
+.modalConfirmCodeResetForm .btnResetPassword_Modal{
+  width: 390px;
+}
+.modalConfirmCodeResetForm .sendToResertPassword{
+  display: flex;
+  justify-self: center;
+
+  position: absolute;
+  top: 14px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.modalConfirmCodeResetForm .sendCodeAgainText{
+  color: #E84747;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+
+  margin-top: 20px;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.modalNewPasswordForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: start;
+
+  width: 430px;
+
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.modalNewPasswordForm h3{
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.modalNewPasswordForm .inputFormWrapper{
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.modalNewPasswordForm input{
+  width: 390px;
+  height: 43px;
+  border-radius: 40px;
+  background-color: #ECECEC;
+  border: none;
+  text-align: center;
+  color: #6A6A6A;
+  font-size: 15px;
+}
+.modalNewPasswordForm input::placeholder{
+  font-size: 15px;
+}
+.modalNewPasswordForm .regisButton{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+}
+.modalNewPasswordForm .regisButton_DeActive{
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0.7;
+}
+
+
+
+.modalNewPasswordForm .btnResetPassword_Modal{
+  width: 390px;
+}
+.modalNewPasswordForm .sendToResertPassword{
+  display: flex;
+  justify-self: center;
+
+  position: absolute;
+  top: 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
 }

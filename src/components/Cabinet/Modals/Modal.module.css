@@ -1,0 +1,248 @@
+.firstDt_Modal{
+  width: 500px;
+}
+
+
+.firstDt_Modal h3{
+  font-size: 20px;
+  font-weight: 700;
+  color: #EB4436;
+
+  text-align: center;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.firstDt_Modal h4{
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+
+  text-align: center;
+
+  margin-top: 10px;
+}
+
+
+.firstDt_Modal .countsOfDT{
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.firstDt_Modal .countsOfDT img{
+  width: 80px;
+
+  margin-right: 16px;
+}
+.firstDt_Modal .countsOfDT h2{
+  font-size: 43px;
+}
+
+
+.firstDt_Modal p{
+  text-align: center;
+
+  width: 73%;
+  font-size: 19px;
+  line-height: 1.5;
+
+  margin: 0 auto;
+}
+
+
+
+
+
+.firstDt_Modal .btnModal_Confirm, .cancelSubscription_Modal .btnModal_Confirm{
+  position: relative;
+  margin-top: 40px;
+
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.firstDt_Modal .btnModal_Confirm img, .cancelSubscription_Modal .btnModal_Confirm img{
+  width: 260px;
+}
+.firstDt_Modal .btnModal_Confirm span, .cancelSubscription_Modal .btnModal_Confirm span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  color: #fff;
+  position: absolute;
+  top: 14px;
+  align-items: center;
+}
+
+
+
+
+
+.cancelSubscription_Modal{
+  width: 500px;
+}
+.cancelSubscription_Modal h4{
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+
+  text-align: center;
+
+  margin: 0;
+  margin-top: 10px;
+}
+
+
+
+
+
+.editPersonalData_Modal .btnModal_Confirm{
+  position: relative;
+  margin-top: 30px;
+
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.editPersonalData_Modal .btnModal_Confirm img{
+  width: 250px;
+}
+.editPersonalData_Modal .btnModal_Confirm span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  top: 14px;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.editPersonalData_Modal{
+  width: 1000px;
+
+  font-family: 'Montserrat', sans-serif;  
+}
+.editPersonalData_Modal h4{
+  margin-top: 0;
+  font-size: 19px;
+  font-weight: 500;
+}
+.editPersonalData_Modal .formEditPersonalData{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper{
+  position: relative;
+  width: 47%;
+
+  margin-bottom: 25px;
+}
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper label{
+  display: block;
+
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper input{
+  width: 92%;
+  padding: 15px;
+  padding-left: 15px;
+
+  border-radius: 10px;
+  border: 1px solid #DBDBDB;
+
+
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper input::placeholder{
+  font-family: 'Montserrat', sans-serif;  
+
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper img{
+  position: absolute;
+
+  right: 20px;
+  top: 40px;
+  /* top: 10px; */
+}
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper p{
+  font-weight: 400;
+  color: #8A8A8A;
+
+  font-size: 13px;
+  margin-bottom: -5px;
+  margin-top: 9px;
+  margin-left: 2px;
+}
+.editPersonalData_Modal .formEditPersonalData .inputFormWrapper p span{
+  color: #EB4436;
+  border-bottom: 1px solid #EB4436;
+
+  cursor: pointer;
+}
+
+.editPersonalData_Modal .socailNetworksTie{
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 15px;
+}
+.editPersonalData_Modal .socailNetworksTie .tieUpFacebook_Cabinet{
+  margin-right: 20px;
+
+  height: 50px;
+
+  cursor: pointer;
+}
+.editPersonalData_Modal .socailNetworksTie .tieUpGoogle_Cabinet{
+  height: 55px;
+  margin-right: 15px;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.errorMessage{
+  margin-bottom: 5px;
+}

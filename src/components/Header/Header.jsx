@@ -20,6 +20,9 @@ import photoVocabularyWord_2 from '../../assets/images/photoVocabularyWord_2.png
 import photoVocabularyWord_3 from '../../assets/images/photoVocabularyWord_3.png';
 import photoVocabularyWord_4 from '../../assets/images/photoVocabularyWord_4.png';
 
+import DT_Icon from '../../assets/images/StartPage/DT_Icon.svg';
+
+
 
 const customStyles = {
   content: {
@@ -156,7 +159,8 @@ const Header = (props) => {
         <Route path="/cabinet" render={ () => <span className={s.currentPage}>Особистий кабінет</span> } /> {/* :userId - параметр з урл адреса, ? - етот знак сообщает что етот параметр не обязательний*/}
         <Route exact path="/calendar" render={ () => <span className={s.currentPage}>Календар</span> } />
         <Route path="/news" render={ () => <span className={s.currentPage}>Новини</span> } />
-        <Route path="/challenge" render={ () => <span className={s.currentPage}>Daily challenge</span> } />
+        <Route exact path="/challenge" render={ () => <span className={s.currentPage}>Daily challenge</span> } />
+        <Route path="/challenge/example" render={ () => <span className={s.currentPage}>Challenge Example</span> } />
         <Route path="/teacher" render={ () => <span className={s.currentPage}>Вчитель</span> } />
         <Route path="/courses" render={ () => <span className={s.currentPage}>Курси</span> } />
         <Route path="/aboutUs" render={ () => <span className={s.currentPage}>Про нас</span> } />
@@ -165,8 +169,14 @@ const Header = (props) => {
         <div className={s.header_menu}>
 
           <div className={s.time}>
-            <span>{dayOfWeek}, {today.getDate()} {month} {today.getFullYear()}</span>
+            <span>{dayOfWeek}, <span className={s.dateToday}>{today.getDate()} {month} {today.getFullYear()}</span></span>
           </div>
+
+          <div className={s.countsOfDT}>
+            <img src={DT_Icon} alt="" />
+            <span>100 DT</span>
+          </div>
+        
 
           <img onClick={openVocabularyModalWindow} className={s.dictionary_img} src={ dictionary }  />
 
@@ -192,8 +202,6 @@ const Header = (props) => {
             onRequestClose={closeVocabularyModalWindow}
             style={customStyles}
             contentLabel="Example Modal"
-
-            
           >
              <div className={s.modal_wrapper}>
                 <h2 ref={(_subtitle) => (subtitle = _subtitle)}><span> Словник /</span> Wörterbuch</h2>

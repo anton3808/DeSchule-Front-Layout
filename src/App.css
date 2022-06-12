@@ -8,7 +8,8 @@
 
   grid-template-areas: 
   "n h"
-  "n c";
+  "n c"
+  "f f";
   grid-template-rows: 100px 1fr;
   grid-template-columns: auto 9.5fr;
   /* grid-gap: 10px; */
@@ -17,8 +18,6 @@
 .app-wrapper-content{
   grid-area: c;
   background-color: #fff;
-  border-left: 2px solid #F4F4F4;
-  height: 700px;
 }
 
 .ReactModal__Content.ReactModal__Content--after-open {

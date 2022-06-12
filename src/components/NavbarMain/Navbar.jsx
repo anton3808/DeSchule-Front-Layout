@@ -12,6 +12,14 @@ import aboutUs from '../../assets/images/aboutUs.svg';
 import dragon from '../../assets/images/Dragon.png';
 
 
+import flagUkraineLanguage from '../../assets/images/flagUkraineLanguage.svg';
+import flagUSALanguage_Deactive from '../../assets/images/flagUSALanguage_Deactive.svg';
+import flagGermanyLanguage_Deactive from '../../assets/images/flagGermanyLanguage_Deactive.svg';
+
+import logoutIcon from '../../assets/images/logoutIcon.svg';
+
+
+
 import { ReactComponent as Cabinet } from '../../assets/images/cabinet.svg';
 
 
@@ -20,6 +28,10 @@ import { ReactComponent as Cabinet } from '../../assets/images/cabinet.svg';
 const Navbar = (props) => {
   
   return (
+
+    <div className={s.navbarWrapper}>
+
+    
     
     <nav className={s.nav}>
       <div className={s.logo}>
@@ -62,7 +74,7 @@ const Navbar = (props) => {
       <div className={s.item}>
         <NavLink to="/teacher" activeClassName={s.activeLink} >
         <img src={ teacher }  />
-        <span>Вчитель</span>
+        <span>Мій Mentor</span>
         </NavLink>
       </div>
 
@@ -78,7 +90,43 @@ const Navbar = (props) => {
         <span>Про нас</span>
         </NavLink>
       </div>
+
+
+      
+
+
     </nav>
+
+
+
+      <div className={s.languageSelectWrapper}>
+        <div className={s.languageSelect}>
+          <img src={flagUkraineLanguage} alt="" />
+          <span>UA</span>
+        </div>
+
+        <div className={s.verticalLine}></div>
+
+        <div className={s.languageSelect}>
+          <img src={flagUSALanguage_Deactive} alt="" />
+          <span>ENG</span>
+        </div>
+
+        <div className={s.verticalLine}></div>
+
+        <div className={s.languageSelect}>
+          <img src={flagGermanyLanguage_Deactive} alt="" />
+          <span>DEU</span>
+        </div>
+      </div>
+
+
+      <div className={s.logout}>
+        <img src={ logoutIcon }  />
+        <span>Вийти</span>
+      </div>
+
+    </div>
   );
 
 }

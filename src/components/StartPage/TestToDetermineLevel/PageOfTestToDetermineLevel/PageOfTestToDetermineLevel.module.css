@@ -1,0 +1,199 @@
+.PageOfTestToDetermineLevel{
+  width: 90%;
+  margin: 0 auto;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+.PageOfTestToDetermineLevel .blockAboutTest{
+  margin-bottom: 50px;
+}
+
+.PageOfTestToDetermineLevel .blockAboutTest h3{
+  font-weight: 700;
+  font-size: 25px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.PageOfTestToDetermineLevel .blockAboutTest .uderlineStartTest{
+  width: 90px;
+
+  margin-bottom: 10px;
+}
+
+
+
+.PageOfTestToDetermineLevel .blockAboutTest .blockAboutTestText{
+ margin-top: 20px;
+
+}
+
+.PageOfTestToDetermineLevel .blockAboutTest .blockAboutTestText div{
+  display: flex;
+}
+.PageOfTestToDetermineLevel .blockAboutTest .blockAboutTestText p{
+  width: 40%;
+
+  margin-top: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 10%;
+}
+
+
+
+
+
+
+
+
+
+.PageOfTestToDetermineLevel .taskOfTestWrapper{
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+}
+.PageOfTestToDetermineLevel .taskOfTestWrapper .taskOfTest{
+  width: 40%;
+}
+.PageOfTestToDetermineLevel .taskOfTestWrapper .taskOfTest div{
+  display: flex;
+  margin-bottom: 10px;
+}
+.PageOfTestToDetermineLevel .taskOfTestWrapper .taskOfTest h3{
+  font-weight: 700;
+  font-size: 20px;
+
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.PageOfTestToDetermineLevel .taskOfTestWrapper img{
+  width: 45%;
+}
+
+
+
+
+
+.PageOfTestToDetermineLevel .btnTestFinish{
+  position: relative;
+  margin-top: 70px;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.PageOfTestToDetermineLevel .btnTestFinish img{
+  width: 250px;
+}
+.PageOfTestToDetermineLevel .btnTestFinish span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom_radio_btn{
+  --size: 15px;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* changes from the video   */
+  
+  margin: 0 0px;
+  position: relative;
+  margin-right: 13px;
+  /* padding-left: var(--size); */
+}
+
+.custom_radio_btn input {
+  display: none;
+}
+
+/* handle if you want label on the left of the checkmark instead */
+
+.custom_radio_btn.left {
+  padding-left: 0;
+  padding-right: var(--size);
+}
+
+/* label  */
+
+.custom_radio_btn .label {
+  margin-left: 5px;
+}
+
+.custom_radio_btn.left .label {
+  margin: 0 5px;
+}
+
+.custom_radio_btn[aria-label]::after {
+  content: attr(aria-label);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* checkmark */
+
+.custom_radio_btn .checkmark {
+  --gap: 0px;
+  --border: 1.5px;
+  --check-color: #F8C02E;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  /* changes from the video  */
+  
+  border: var(--border) solid #F8C02E;
+  padding: var(--gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom_radio_btn.left .checkmark {
+  left: auto;
+  right: 0;
+}
+
+.custom_radio_btn input:checked ~ .checkmark {
+  /* changes from the video  */
+
+  /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle at center, 
+    var(--check-color) 
+     /* the size of the check mark is determined by subtracting from the size of the circle
+     the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+       calc((var(--size) - (var(--border) * 3) - (var(--gap) * 2)) / 2), 
+    rgba(255, 255, 255, 0) 0);
+}

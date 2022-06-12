@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { ProgressBar } from 'react-line-progress-bar';
+// import { ProgressBar } from 'react-line-progress-bar';
 import s from '../Lessons.module.css';
 
 import videoIntro from '../../../../assets/images/videoIntro.png';

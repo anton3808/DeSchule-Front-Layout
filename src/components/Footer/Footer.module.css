@@ -1,0 +1,44 @@
+.footer{
+  grid-area: f;
+  /* background-color: #fff; */
+
+  font-family: 'Montserrat', sans-serif;
+
+  margin-top: 50px;
+
+  position: relative;
+
+  height: 250px;
+  /* display: flex; */
+  /* border-left: 2px solid #F4F4F4;   */
+}
+
+
+
+.deschuleTitle{
+  /* display: flex; */
+  color: #EB4436;
+  opacity: 0.2;
+  font-size: 220px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  /* margin-top: 30px; */
+  z-index: -1;
+
+  /* left: -200px;
+  position: absolute; */
+}
+.stoneBottomPartPage{
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  /* z-index: -90; */
+  /* bottom: -50px;
+  left: -350px; */
+  /* left: -350px;
+  bottom: -100px; */
+  
+
+  width: 550px;
+}

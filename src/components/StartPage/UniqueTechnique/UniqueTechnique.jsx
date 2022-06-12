@@ -4,7 +4,7 @@ import {NavLink, Route} from "react-router-dom";
 import Modal from 'react-modal';
 
 import uniqueVideo from '../../../assets/images/uniqueVideo.png';
-import btnBanner from '../../../assets/images/btnBanner.png';
+import uniqueTechniqueUnderline from '../../../assets/images/StartPage/uniqueTechnique-Underline.svg';
 
 const customStyles = {
   content: {
@@ -22,7 +22,7 @@ const UniqueTechnique = () => {
         
   return (
     
-    <div className={s.uniqueTechniqueWrapper}>
+    <div id={'about'} className={s.uniqueTechniqueWrapper}>
       
       <div className={s.uniqueTechnique}>
         <img className={s.uniqueVideo} src={uniqueVideo}  />
@@ -30,7 +30,7 @@ const UniqueTechnique = () => {
         <div className={s.uniqueTechniqueText}>
           <h3>Унікальна методика</h3>
 
-          <img className={s.btnStartStudy} src={btnBanner} />
+          <img className={s.btnStartStudy} src={uniqueTechniqueUnderline} />
 
           <span>Техніки мнемоніки – звучить страшно, а на практиці все набагато цікавіше. 
             Це така штука, за допомогою якої можна вчити німецьку мову набагато цікавіше, 
@@ -45,7 +45,7 @@ const UniqueTechnique = () => {
       
 
 
-      <h1>DESCHULE</h1>
+      <h2>DESCHULE</h2>
     </div>
   );
 

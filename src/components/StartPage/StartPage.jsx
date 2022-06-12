@@ -21,6 +21,10 @@ import FooterStartPage from './FooterStartPage/FooterStartPage';
 import WhyWe from './WhyWe/WhyWe';
 import UniqueTechnique from './UniqueTechnique/UniqueTechnique';
 import StudyByTravelling from './StudyByTravelling/StudyByTravelling';
+import BlockAboutTest from './TestToDetermineLevel/BlockAboutTest';
+import PackagesOfCourse from './PackagesOfCourse/PackagesOfCourse';
+import AdditionalCourses from './AdditionalCourses/AdditionalCourses';
+import ReviewsBlock from './ReviewsBlock/ReviewsBlock';
 
 
 
@@ -42,6 +46,14 @@ const StartPage = (props) => {
       <FirstFormStartPage />
 
       <StudyByTravelling />
+
+      <BlockAboutTest />
+
+      <PackagesOfCourse />
+
+      <AdditionalCourses />
+
+      <ReviewsBlock />
 
       <SecondFormStartPage />
 

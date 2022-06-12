@@ -1,27 +1,32 @@
 .wrapperChallengePage{
     margin-left: 30px;
-    width: 1180px;
+
+    position: relative;
+
 }
 .challengeHeader{
     border: 1px solid #F8C02E;
     border-radius: 10px;
     padding: 15px 20px 15px 20px;
     position: relative;
-    margin: 0 auto;
-    width: 90%;
+    /* margin: 0 auto; */
+    width: 85%;
 
-    margin-top: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
+
+    margin-bottom: 70px;
 }
 .challengeHeader .challengeHeaderItems{
     display: flex;
     margin-bottom: 12px;
     justify-content: right;
-    margin-right: 55px;
+    margin-right: 25px;
 }
 .challengeHeader .challengeHeaderItems .challengeHeaderItem{
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 28px;
 }
 .challengeHeader .challengeHeaderItems .challengeHeaderItem .circlePoint{
     background-color: #F8C02E;
@@ -32,19 +37,638 @@
 }
 .challengeHeader .challengeHeaderItems .challengeHeaderItem h5{
     margin: 0;
-    font-size: 17px;
+    font-size: 16px;
 }
 .challengeHeader p{
     display: flex;
     justify-content: right;
     margin: 0;
-    font-size: 15px;
-    margin-right: 20px;
+    font-size: 14px;
+    margin-right: 50px;
 }
 
 .challengePhotoMan{
     position: absolute;
-    width: 300px;
-    top: -100px;
+    width: 220px;
+    top: -70px;
     left: -50px;
 }
+
+
+
+
+
+
+
+
+
+.challengeContentWrapper{
+    display: flex;
+
+
+}
+
+
+
+
+.challengeListWrapper{
+    width: 38%;
+    margin-right: 3%;
+
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    padding: 25px;
+
+    margin-bottom: 100px;
+}
+.challengeListWrapper .challengeList{
+    height: 570px;
+    overflow: auto;
+}
+.challengeListWrapper h3{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.challengeListWrapper .challengeBlock{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    cursor: pointer;
+}
+.challengeListWrapper .challengeBlock h4{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.challengeListWrapper p{
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+
+
+
+.challengeProgressPoints{
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.challengeProgressPoints div{
+    display: flex;
+    align-items: center;
+}
+
+.challengeProgressPoints img{
+    width: 24px;
+    margin-right: 7px;
+}
+.challengeProgressPoints .countsOfDT{
+    font-size: 18px;
+    font-weight: 500;
+}
+.challengeProgressPoints .stepsOfChallenge{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.progressBar_challenge{
+    position: relative;
+
+    width: 70%;
+}
+.progressBar_challenge .progressBar_challenge_line{
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+
+    position: absolute;
+
+    border: 1px solid #F8C02E;
+
+    border-radius: 10px 10px 10px 10px;
+
+}
+.progressBar_challenge .progressBar_challenge_active{
+    width: 100%;
+    height: 4px;
+    background-color: #F8C02E;
+    display: block;
+    position: absolute;
+
+    border-radius: 10px 10px 10px 10px;
+}
+
+/* #first_progressBar_challenge_line, #first_progressBar_challenge_active{
+    border-radius: 10px 0 0 10px;
+}
+#last_progressBar_block_line, #last_progressBar_block_active{
+    border-radius: 0px 10px 10px 0px;
+} */
+
+
+
+
+
+
+.selectedChallengeWrapper{
+    width: 49%;
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 40px;
+}
+.selectedChallengeWrapper .circleChallenge{
+    position: absolute;
+
+    left: -5px; 
+    width: 520px;
+    z-index: -10;
+}
+.selectedChallengeWrapper h2{
+    color: #E0E0E0;
+    font-size: 75px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+
+    
+}
+
+.selectedChallengeWrapper .selectedChallenge{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #D0D0D0;
+    border-radius: 0 0 20px 20px;
+
+    padding: 20px;
+
+    background-color: #fff;
+}
+
+.selectedChallengeWrapper .selectedChallenge p{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+
+    font-weight: 300;
+
+    margin-top: 20px;
+}
+
+.selectedChallengeWrapper .selectedChallenge .countsOfDT_challenge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;   
+}
+.selectedChallengeWrapper .selectedChallenge .countsOfDT_challenge img{
+    width: 50px;
+    margin-right: 10px;
+}
+.selectedChallengeWrapper .selectedChallenge .countsOfDT_challenge span{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+.selectedChallengeWrapper .selectedChallenge .btnChallenge_Start{
+    position: relative;
+    margin-top: 40px;
+  
+  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+  }
+.selectedChallengeWrapper .selectedChallenge .btnChallenge_Start img{
+    width: 230px;
+  }
+.selectedChallengeWrapper .selectedChallenge .btnChallenge_Start span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 13px;
+    align-items: center;
+  }
+  
+
+
+
+
+
+
+
+
+.wrapperChallengeExercises .progressOfExercisesWrapper{
+    display: flex;
+
+    justify-content: space-between;
+}
+.wrapperChallengeExercises{
+    width: 90%;
+
+    margin-left: 35px;
+}
+.dialogExerciseWrapper .dialogExercise{
+    padding: 20px;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+}
+.dialogExerciseWrapper .dialogExercise div{
+    margin-bottom: 10px;
+}
+.dialogExerciseWrapper .dialogExercise .volumeIconChallenge{
+    width: 25px;
+}
+.dialogExerciseWrapper .dialogExercise .phrasesOfCharacters{
+    display: flex;
+    justify-content: left;
+
+    align-items: center;
+}
+.dialogExerciseWrapper .dialogExercise .phrasesOfCharacters .characterPhoto{
+    width: 40px;
+
+    margin-right: 8px;
+}
+.dialogExerciseWrapper .dialogExercise .phrasesOfCharacters span{
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: #F0F0F0;
+
+    margin-right: 7px;
+}
+.dialogExerciseWrapper .dialogExercise .myPhrase span{
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: #FFEFB7;
+
+    margin-left: 7px;
+}
+
+
+
+.dialogExerciseWrapper .dialogExercise .myPhrase{
+    display: flex;
+    justify-content: right;
+
+    align-items: center;
+}
+  
+
+
+
+
+
+
+
+
+
+.dialogVariantsOfAnswersWrapper h4{
+    text-align: center;
+    font-size: 19px;
+}
+.dialogVariantsOfAnswersWrapper .dialogVariantsOfAnswers{
+  display: flex;
+
+  justify-content: space-between;
+}
+.dialogVariantsOfAnswersWrapper .dialogVariantsOfAnswers .dialogVariantsOfAnswerItem{
+    display: flex;
+    align-items: center;
+}
+.dialogVariantsOfAnswersWrapper .dialogVariantsOfAnswers .dialogVariantsOfAnswerItem span{
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: #FFEFB7;
+
+    margin-left: 7px;
+    margin-right: 5px;
+
+}
+.dialogVariantsOfAnswersWrapper .dialogVariantsOfAnswers .dialogVariantsOfAnswerItem img{
+    width: 25px;
+}
+
+
+
+
+
+
+.testsWrapper .answerOfTest h3{
+    margin-bottom: 20px;
+    margin-top: 40px;
+
+    font-size: 17px;
+}
+.testsWrapper .answerOfTest div{
+    display: flex;
+
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.testsWrapper .custom_radio_btn{
+    --size: 15px;
+    min-width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* changes from the video   */
+    
+    margin: 0 0px;
+    position: relative;
+    margin-right: 13px;
+    /* padding-left: var(--size); */
+  }
+  
+  .testsWrapper .custom_radio_btn input {
+    display: none;
+  }
+  
+  /* handle if you want label on the left of the checkmark instead */
+  
+  .testsWrapper .custom_radio_btn.left {
+    padding-left: 0;
+    padding-right: var(--size);
+  }
+  
+  /* label  */
+  
+  .testsWrapper .custom_radio_btn .label {
+    margin-left: 5px;
+  }
+  
+  .testsWrapper .custom_radio_btn.left .label {
+    margin: 0 5px;
+  }
+  
+  .testsWrapper .custom_radio_btn[aria-label]::after {
+    content: attr(aria-label);
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  /* checkmark */
+  
+  .testsWrapper .custom_radio_btn .checkmark {
+    --gap: 0px;
+    --border: 1.5px;
+    --check-color: #F8C02E;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    /* changes from the video  */
+    
+    border: var(--border) solid #F8C02E;
+    padding: var(--gap);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .testsWrapper .custom_radio_btn.left .checkmark {
+    left: auto;
+    right: 0;
+  }
+  
+  .testsWrapper .custom_radio_btn input:checked ~ .checkmark {
+    /* changes from the video  */
+  
+    /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(
+      circle at center, 
+      var(--check-color) 
+       /* the size of the check mark is determined by subtracting from the size of the circle
+       the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+         calc((var(--size) - (var(--border) * 3) - (var(--gap) * 2)) / 2), 
+      rgba(255, 255, 255, 0) 0);
+  }
+
+
+
+
+  .testsWrapper .btnFinishTestOfChallenge{
+    position: relative;
+    margin-top: 40px;
+  
+  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+  }
+.testsWrapper .btnFinishTestOfChallenge img{
+    width: 230px;
+  }
+.testsWrapper .btnFinishTestOfChallenge span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 13px;
+    align-items: center;
+  }
+  
+
+
+
+
+
+
+
+
+.archiveResultOfChallenge{
+    margin-top: 60px;
+}
+.archiveResultOfChallenge h4{
+    font-size: 17px;
+
+    font-weight: 600;
+}
+.archiveResultOfChallenge .finalArchiveDialogs{
+    display: flex;
+
+    justify-content: space-between;
+}
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 20px;
+    border: 1px solid #D9D9D9;
+
+    margin-bottom: 20px;
+
+    width: 48%;
+
+    overflow: auto;
+
+
+    height: 300px;
+}
+/* 
+.dialogExerciseWrapper .dialogExercise{
+    padding: 20px;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+} */
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog div{
+    margin-bottom: 10px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog .volumeIconChallenge{
+    width: 25px;
+}
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog .phrasesOfCharacters{
+    display: flex;
+    justify-content: left;
+
+    align-items: center;
+}
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog .phrasesOfCharacters .characterPhoto{
+    width: 40px;
+
+    margin-right: 8px;
+}
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog .phrasesOfCharacters span{
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: #F0F0F0;
+
+    margin-right: 7px;
+}
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog .myPhrase span{
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: #FFEFB7;
+
+    margin-left: 7px;
+}
+
+
+
+.archiveResultOfChallenge .finalArchiveDialogs .finalArchiveDialog .myPhrase{
+    display: flex;
+    justify-content: right;
+
+    align-items: center;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .archiveResultOfChallenge .resultsOfExersice{
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .archiveResultOfChallenge .resultsOfExersice .resultInInterestRate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 48%;
+
+
+    border: 1px solid #DBDBDB;
+    border-radius: 20px;
+
+  }
+  .archiveResultOfChallenge .resultsOfExersice .resultInInterestRate h5{
+    font-size: 15px;
+
+    margin-left: 17px;
+  }
+  .archiveResultOfChallenge .resultsOfExersice .resultInInterestRate span{
+    margin-right: 17px;
+
+    font-size: 20px;
+    color: #27AE60;
+    font-weight: 700;
+  }
+
+  .archiveResultOfChallenge .resultsOfExersice .resultInDT{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 48%;
+    border: 1px solid #DBDBDB;
+    border-radius: 20px;
+  }
+  .archiveResultOfChallenge .resultsOfExersice .resultInDT h5{
+    font-size: 15px;
+
+    margin-left: 17px;
+  }
+  .archiveResultOfChallenge .resultsOfExersice .resultInDT .countsOfDT{
+    display: flex;
+    align-items: center;
+
+    margin-right: 17px;
+  }
+  .archiveResultOfChallenge .resultsOfExersice .resultInDT .countsOfDT img{
+      width: 28px;
+      margin-right: 7px;
+  }
+  .archiveResultOfChallenge .resultsOfExersice .resultInDT .countsOfDT span{
+      font-size: 20px;
+      font-weight: 700;
+  }
+

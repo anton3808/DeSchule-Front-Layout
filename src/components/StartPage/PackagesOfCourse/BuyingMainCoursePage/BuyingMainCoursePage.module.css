@@ -1,0 +1,855 @@
+
+
+
+
+
+/* ------------- PageOfBuyingMainCourse -------------- */
+.PageOfBuyingMainCourse{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .navLink{
+    text-decoration: none;
+  }
+  
+  
+  .PageOfBuyingMainCourse .backToPrevPage{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+    margin-top: 50px;
+  }
+  .PageOfBuyingMainCourse .backToPrevPage img{
+    width: 30px;
+  }
+  .PageOfBuyingMainCourse .backToPrevPage span{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  
+  
+  
+  
+  
+  .PageOfBuyingMainCourse  .dragonMainLogoWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 10px;
+  }
+  .PageOfBuyingMainCourse  .dragonMainLogoWrapper span{
+    margin-top: 25px;
+    font-size: 23px;
+    font-weight: 900;
+  
+    margin-left: 5px;
+  }
+  
+  
+  
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer {
+   width: 55%;
+   margin: 0 auto;
+  }
+  
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+  
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer .chooseYourCourse{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer  .chooseYourCourse .activeCourse{
+    width: 45%;
+    border-radius: 25px;
+    cursor: pointer;
+  
+    box-shadow: 0px 0px 22px #EB4436;
+  }
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer  .chooseYourCourse .deactiveCourse{
+    width: 45%;
+    border-radius: 25px;
+    cursor: pointer;
+  
+    opacity: 0.3;
+  }
+  
+  
+  
+  
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer .chooseYourCourseInformation{
+    display: flex;
+    justify-content: space-between;
+  }
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer .chooseYourCourseInformation span{
+    font-size: 13px;
+  }
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer .chooseYourCourseInformation .titleOfActiveCourse h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  
+    
+  }
+  .PageOfBuyingMainCourse .chooseYourCourseWrapprer .chooseYourCourseInformation .priceOfActiveCourse h3{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: right;
+  
+    color: #E04545;
+  }
+  
+  
+  
+  
+  .PageOfBuyingMainCourse .stepsToBuyWrapper{
+    font-family: 'Montserrat', sans-serif;
+    /* margin: 0 auto; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    border-radius: 30px;
+  
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+  
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .PageOfBuyingMainCourse .stepsToBuyWrapper_Short{
+    font-family: 'Montserrat', sans-serif;
+    width: 55%;
+    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    border-radius: 30px;
+  
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+  
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  
+  
+  .stepsToBuyWrapper .tabsOfSteps, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps {
+    display: flex;
+    justify-content: center;
+  
+    margin-bottom: 20px;
+  }
+  .stepsToBuyWrapper .tabsOfSteps .activeTabOfSteps h5, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps .activeTabOfSteps h5{
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #EB4436;
+  }
+  .stepsToBuyWrapper .tabsOfSteps .deactiveTabOfSteps h5, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps .deactiveTabOfSteps h5{
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #b8b7b7;
+  }
+  .stepsToBuyWrapper .tabsOfSteps .passedTabOfSteps h5, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps .passedTabOfSteps h5{
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #e37f76;
+  }
+  .stepsToBuyWrapper .tabsOfSteps .activeTabOfSteps, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps .activeTabOfSteps{
+    border-bottom: 1.9px solid #EB4436;
+    padding-left: 18px;
+    padding-right: 18px;
+  
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper .tabsOfSteps .deactiveTabOfSteps, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps .deactiveTabOfSteps{
+    border-bottom: 2px solid #dbdbdb;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper .tabsOfSteps .passedTabOfSteps, .PageOfBuyingMainCourse .stepsToBuyWrapper_Short .tabsOfSteps .passedTabOfSteps{
+    border-bottom: 2px solid #dbdbdb;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    cursor: pointer;
+  }
+  
+  
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper{
+    margin-top: 0;
+  }
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText{
+    width: 55%;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .rightPartCountries{
+    margin-top: 40px;
+  }
+  
+  
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .title_about_country{
+    display: flex;
+    align-items: center;
+  
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .A1_circle_active, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .A2_circle_active, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .B1_circle_active, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .B2_circle_active, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .C1_circle_active{
+    position: relative;
+    cursor: pointer;
+  
+    display: inline-block;
+    margin: 0;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .A1_circle_active img, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .A2_circle_active img, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .B1_circle_active img, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .B2_circle_active img, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .C1_circle_active img{
+    height: 65px;
+    width: 75px;
+    margin-right: 10px;
+  }
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .A1_circle_active span, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .A2_circle_active span, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .B1_circle_active span, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .B2_circle_active span, .PageOfBuyingMainCourse .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .C1_circle_active span{
+    position: absolute;
+    top: 17px;
+    left: 22px;
+  
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  
+  
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .informationAboutCountry{
+    margin-bottom: 30px;
+  }
+  
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .btn_stepsToBuyCourseWrapper{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .btn_stepsToBuyCourseWrapper .btn_stepsToBuyCourse{
+    width: 360px;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .btn_stepsToBuyCourseWrapper .arrow_stepsToBuyCourse{
+    position: absolute;
+    width: 35px;
+    top: 17px;
+    left: 190px;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .btn_stepsToBuyCourseWrapper span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 13px;
+    left: 140px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .lineToDivide{
+    margin-top: 15px;
+    height: 2px;
+    width: 95%;
+    background-color: #ECECEC;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText h4{
+    width: 80%;
+    font-weight: 600;
+    font-size: 16px;
+  
+    margin-top: 30px;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .startTestToDetermineLevel{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .startTestToDetermineLevel span{
+    font-weight: 700;
+    color: #E84747;
+    font-size: 18px;
+  
+    margin-right: 15px;
+  }
+  .stepsToBuyWrapper .studyAndTravelWrapper .leftPartText .startTestToDetermineLevel img{
+    margin-top: 3px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  .stepsToBuyWrapper_Short .regisInformation{
+    width: 75%;
+    margin: 0 auto;
+  
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .stepsToBuyWrapper_Short .regisInformation h2{
+    font-size: 24px;
+    font-weight: 700;
+  
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+  .stepsToBuyWrapper_Short .regisInformation span{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  
+  
+  
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper  .formRegisStepsToBuy{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }  
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .formRegisStepsToBuy .inputFormWrapper{
+    width: 47%;
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .formRegisStepsToBuy input{
+    width: 100%;
+    height: 44px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background-color: #ECECEC;
+    border: none;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .formRegisStepsToBuy input::placeholder{
+    color: #7e7e7e;
+    font-size: 15px;
+  }
+  
+  
+
+  
+  
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper{
+  
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper_Active{
+  
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    opacity: 0.7;
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper .btnRegis_StepsToBuy, .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper_Active .btnRegis_StepsToBuy{
+    width: 290px;
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper div, .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper_Active div{
+    position: absolute;
+  
+    top: 7px;
+    align-items: center;
+  
+    display: flex;
+    align-items: center;
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper .arrowRegis_StepsToBuy, .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper_Active .arrowRegis_StepsToBuy{
+    margin-top: 6px;
+    margin-left: 5px;
+    width: 35px;
+  }
+  .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper span, .stepsToBuyWrapper_Short .stepsToRegisWrapper .btnRegis_StepsToBuyWrapper_Active span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  
+  
+  
+  
+  
+  .stepsToBuyWrapper_Short .lineToDivide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  
+    justify-content: space-between;
+  }
+  .stepsToBuyWrapper_Short .lineToDivide h5{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .stepsToBuyWrapper_Short .lineToDivide div{
+    width: 45%;
+    height: 1px;
+    background-color: #b8b7b7;
+  }
+
+
+
+  .stepsToBuyWrapper_Short .singUpWithSocailNetworks, .stepsToBuyWrapper_Short .paymentServices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .stepsToBuyWrapper_Short .singUpWithSocailNetworks img, .stepsToBuyWrapper_Short .paymentServices img{
+    width: 44%;
+  }
+  .stepsToBuyWrapper_Short .singUpWithSocailNetworks .singUpWithFacebook, .stepsToBuyWrapper_Short .paymentServices .applePayPayment{
+    margin-right: 5%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+    margin-top: 40px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment h4{
+    margin-bottom: 0px;
+    margin-top: 0;
+    font-size: 18px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment span{
+    font-size: 13px;
+    font-weight: 400;
+    color: #656565;
+  
+    margin-top: 0;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForMonthActive{
+    width: 31%;
+    height: 80px;
+    border-radius: 20px;
+    border: 1px solid #F8C02F;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForMonth{
+    width: 31%;
+    height: 80px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+  
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23BCBCBCFF' stroke-width='1' stroke-dasharray='7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 20px;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForThreeMonthActive{
+    width: 31%;
+    height: 80px;
+    border-radius: 20px;
+    border: 1px solid #F8C02F;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForThreeMonth{
+    width: 31%;
+    height: 80px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+  
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23BCBCBCFF' stroke-width='1' stroke-dasharray='7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 20px;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYearActive{
+    width: 31%;
+    height: 99px;
+    border-radius: 21px;
+    border: 1px solid #fff;
+  
+    border: 1px solid #F8C02F;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+  
+    position: relative;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYear{
+    width: 31%;
+    height: 99px;
+    border-radius: 21px;
+    border: 1px solid #fff;
+  
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23BCBCBCFF' stroke-width='1' stroke-dasharray='7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 20px;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+  
+    position: relative;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYear label, .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYearActive label{
+    margin-top: 20px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYear .titleOfPriceBlock, .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYearActive .titleOfPriceBlock{
+    position: absolute;
+    top: 0px;
+  
+    color: #fff;
+    background-color: #F8C02F;
+    width: 100%;
+  
+    border-radius: 20px 20px 0 0;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYear .titleOfPriceBlock h5, .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .priceForYearActive .titleOfPriceBlock h5{
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .discountOfPrice{
+    color: #27AE60;
+    margin-left: 12px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn{
+    --size: 15px;
+    min-width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* changes from the video   */
+    
+    margin: 0 0px;
+    position: relative;
+    margin-right: 13px;
+    margin-left: 15px;
+    /* padding-left: var(--size); */
+  }
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn input {
+    display: none;
+  }
+  
+  /* handle if you want label on the left of the checkmark instead */
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn.left {
+    padding-left: 0;
+    padding-right: var(--size);
+  }
+  
+  /* label  */
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn .label {
+    margin-left: 5px;
+  }
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn.left .label {
+    margin: 0 5px;
+  }
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn[aria-label]::after {
+    content: attr(aria-label);
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  /* checkmark */
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn .checkmark {
+    --gap: 0px;
+    --border: 1.5px;
+    --check-color: #F8C02E;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    /* changes from the video  */
+    
+    border: var(--border) solid #F8C02E;
+    padding: var(--gap);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn.left .checkmark {
+    left: auto;
+    right: 0;
+  }
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .variantsOfPricePayment .custom_radio_btn input:checked ~ .checkmark {
+    /* changes from the video  */
+  
+    /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(
+      circle at center, 
+      var(--check-color) 
+       /* the size of the check mark is determined by subtracting from the size of the circle
+       the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+         calc((var(--size) - (var(--border) * 3) - (var(--gap) * 2)) / 2), 
+      rgba(255, 255, 255, 0) 0);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .paymentInformation{
+    width: 75%;
+    margin: 0 auto;
+  
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .paymentInformation h2{
+    font-size: 24px;
+    font-weight: 700;
+  
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .paymentInformation span{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom{
+    width: 70%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgba(96, 96, 96, 0.25);
+    margin: 0 auto;
+  
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    padding-top: 50px;
+    padding-bottom: 60px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+    /* padding: 40px; */
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom label{
+    font-size: 17px;
+    font-weight: 600;
+  
+    display: block;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom .numberOfCard{
+    width: 60%;
+  
+    margin-bottom: 40px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom .validityOfCard{
+    width: 30%;
+  
+    margin-bottom: 40px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom .ownersNameOfCard{
+    width: 60%;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom .cvv2CodeOfCard{
+    width: 30%;
+  }
+  
+  
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom input{
+    margin-top: 13px;
+    width: 100%;
+  
+    font-size: 17px;
+    font-weight: 400;
+  
+    padding-bottom: 7px;
+    padding-top: 7px;
+  
+    color: #000;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1.7px solid #e2e2e2;
+
+    border-radius: 3px;
+  }
+
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .cardPaymentFrom input::placeholder{
+    color: #C9C9C9;
+  }
+  
+  
+
+
+  
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .btnBuy_Payment{
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .btnBuy_Payment_DeActive{
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    opacity: 0.7;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .btnBuy_Payment img, .stepsToBuyWrapper_Short .stepsToPaymentWrapper .btnBuy_Payment_DeActive img{
+    width: 290px;
+  }
+  .stepsToBuyWrapper_Short .stepsToPaymentWrapper .btnBuy_Payment span, .stepsToBuyWrapper_Short .stepsToPaymentWrapper .btnBuy_Payment_DeActive span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 9px;
+    align-items: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .PageOfBuyingMainCourse .loginBlock h5{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  .PageOfBuyingMainCourse .loginBlock span{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  
+    color: #E84747;
+  }
+  
+  

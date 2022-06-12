@@ -8,7 +8,6 @@ import deschuleShopItemPhoto from '../../assets/images/deschuleShopItemPhoto.png
 import stoneDownTitle from '../../assets/images/stoneDownTitle.png';
 import DeschuleShop from './DeschuleShop';
 import AdditionalTopics from './AdditionalTopics';
-import FooterCourses from './FooterCourses';
 import Subscriptions from './Subscriptions';
 import { NavLink, Route } from 'react-router-dom';
 
@@ -33,8 +32,6 @@ const Courses = (props) => {
       <Route path="/courses/subscriptions" render={ () => <Subscriptions /> } /> 
       <Route path="/courses/additional_topics" render={ () => <AdditionalTopics /> } /> 
       <Route path="/courses/deschule_shop" render={ () => <DeschuleShop /> } /> 
-
-      <FooterCourses />
       
     </div>
   )

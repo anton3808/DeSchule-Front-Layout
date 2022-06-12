@@ -1,13 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
 
-.nav{
+
+
+.navbarWrapper{
   grid-area: n;
   background-color: #fff;
+  border-right: 2px solid #F4F4F4;
+  
+/* 
+  position: fixed; */
+
+  font-family: 'Montserrat', sans-serif;
+}
+.nav{
   padding: 20px;
-  padding-top: 0;
-  border-bottom: 2px solid #F4F4F4;
-  height: 550px;
-  width: 300px;
+  padding-top: 0px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #C4C4C4;
+  
+  /* height: 550px; */
+  /* height: 900px; */
+  width: 265px;
+  
  }
 
 
@@ -28,8 +42,8 @@
 }
 
  .nav .item{
-   margin-top: 20px;
-   margin-bottom: 30px;
+   margin-top: 30px;
+   margin-bottom: 40px;
  }
  .nav .item a{
    color: #929292;
@@ -40,25 +54,92 @@
    border: 1px solid transparent;
 
    font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+
    font-size: 15px;
  }
 
  .nav .item a.activeLink{
-  color: gold;
+  color: #F8C02E;
   text-decoration: none;
   text-transform: uppercase;
 
-  padding: 15px;
-  border-radius: 8px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-radius: 16px;
   border: 1px solid #F8C02E;
+
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .nav img{
-  height: 30px;
+  height: 28px;
   vertical-align: middle;
-  margin-right: 12px;
+  margin-right: 15px;
 }
 
 .nav .icon {
   fill: #000
+}
+
+
+
+
+
+.languageSelectWrapper{
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-right: 20px;
+
+  margin-top: 40px;
+  /* padding-right: 10px; */
+}
+.languageSelectWrapper .verticalLine{
+  height: 13px;
+  width: 2px;
+  background-color: #929292;
+}
+.languageSelectWrapper .languageSelect{
+  display: flex;
+  align-items: center;
+}
+.languageSelectWrapper .languageSelect img{
+  margin-right: 7px;
+  height: 24px;
+}
+.languageSelectWrapper .languageSelect span{
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+.logout{
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+
+  margin-top: 30px;
+}
+.logout img{
+  cursor: pointer;
+}
+.logout span{
+  color: #929292;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 15px;
+  border: 1px solid transparent;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+  font-size: 15px;
+
+  cursor: pointer;
 }
